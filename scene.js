@@ -38,6 +38,36 @@ function openModal({ en, ja, nuance, grammar, expected_responses }) {
     nuanceEl.style.display = 'none';
   }
 
+  // 返答の例（デフォルトは開いた状態）
+  const responsesEl      = document.getElementById('card-responses');
+  const responsesToggle  = document.getElementById('card-responses-toggle');
+  const responsesBody    = document.getElementById('card-responses-body');
+  const responseCards    = document.getElementById('response-cards');
+  responsesToggle.classList.add('open');
+  responsesBody.classList.add('open');
+  responsesToggle.textContent = '👆 返答の例 ▲';
+
+  if (expected_responses && expected_responses.length > 0) {
+    responseCards.innerHTML = expected_responses.map(r => `
+      <button class="response-card" data-en="${escAttr(r.en)}">
+        <div class="response-card-en">${r.en}</div>
+        <div class="response-card-ja">${r.ja}</div>
+      </button>
+    `).join('');
+    responseCards.querySelectorAll('.response-card').forEach(btn => {
+      btn.addEventListener('click', () => speak(btn.dataset.en));
+    });
+    responsesEl.style.display = '';
+  } else {
+    responsesEl.style.display = 'none';
+  }
+
+  responsesToggle.onclick = () => {
+    const isOpen = responsesBody.classList.toggle('open');
+    responsesToggle.classList.toggle('open', isOpen);
+    responsesToggle.textContent = isOpen ? '👆 返答の例 ▲' : '👆 返答の例 ▼';
+  };
+
   // 文法解説
   const grammarEl   = document.getElementById('card-grammar');
   const grammarBody = document.getElementById('card-grammar-body');
@@ -69,26 +99,15 @@ function openModal({ en, ja, nuance, grammar, expected_responses }) {
       const isOpen = grammarBody.classList.toggle('open');
       grammarToggle.classList.toggle('open', isOpen);
       grammarToggle.textContent = isOpen ? '📖 文法を閉じる ▲' : '📖 文法を見る ▼';
+      // 文法を開いたら返答例を閉じる
+      if (isOpen) {
+        responsesBody.classList.remove('open');
+        responsesToggle.classList.remove('open');
+        responsesToggle.textContent = '👆 返答の例 ▼';
+      }
     };
   } else {
     grammarEl.style.display = 'none';
-  }
-
-  const responsesEl  = document.getElementById('card-responses');
-  const responseCards = document.getElementById('response-cards');
-  if (expected_responses && expected_responses.length > 0) {
-    responseCards.innerHTML = expected_responses.map(r => `
-      <button class="response-card" data-en="${escAttr(r.en)}">
-        <div class="response-card-en">${r.en}</div>
-        <div class="response-card-ja">${r.ja}</div>
-      </button>
-    `).join('');
-    responseCards.querySelectorAll('.response-card').forEach(btn => {
-      btn.addEventListener('click', () => speak(btn.dataset.en));
-    });
-    responsesEl.style.display = '';
-  } else {
-    responsesEl.style.display = 'none';
   }
 
   const listenBtn = document.getElementById('card-listen-btn');

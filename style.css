@@ -652,6 +652,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
+  max-width: 100%;
 }
 
 .grammar-part-text {
@@ -662,7 +663,9 @@ body {
   border-radius: 0.4rem;
   padding: 0.3rem 0.5rem;
   border: 1.5px solid #E2E8F0;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
 }
 
 .grammar-part-role {
@@ -704,14 +707,31 @@ body {
   margin-bottom: 1.25rem;
 }
 
-.card-responses-title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #94A3B8;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.625rem;
+.card-responses-toggle {
+  background: none;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 0.625rem;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+  text-align: left;
+  transition: background 0.15s;
+  margin-bottom: 0;
 }
+
+.card-responses-toggle:active { background: #F8FAFC; }
+.card-responses-toggle.open   { border-color: #86EFAC; color: #166534; }
+
+.card-responses-body {
+  display: none;
+  margin-top: 0.625rem;
+}
+
+.card-responses-body.open { display: block; }
 
 .response-cards {
   display: flex;
