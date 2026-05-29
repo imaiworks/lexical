@@ -47,7 +47,6 @@ function buildCards() {
     revealBtn.addEventListener('click', () => {
       answerBlock.style.display = '';
       revealBtn.style.display = 'none';
-      if (isJaEn) speak(chunk.en);
     });
 
     closeBtn.addEventListener('click', () => {
