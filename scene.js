@@ -84,7 +84,8 @@ function openModal({ en, ja, nuance, grammar, expected_responses }) {
     const partsHTML = grammar.parts.map(p => `
       <div class="grammar-part">
         <span class="grammar-part-text">${p.text}</span>
-        <span class="grammar-part-role ${ROLE_CLASS[p.role] || 'role-mod'}">${p.role}${p.note ? '・' + p.note : ''}</span>
+        <span class="grammar-part-role ${ROLE_CLASS[p.role] || 'role-mod'}">${p.role}</span>
+        ${p.note ? `<span class="grammar-part-note">${p.note}</span>` : ''}
       </div>
     `).join('');
 
