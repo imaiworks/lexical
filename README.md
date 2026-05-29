@@ -4,7 +4,7 @@ Scene-based English chunk app for travelers — learn phrases, not grammar.
 
 旅行・日常英会話を「チャンク」で学ぶWebアプリ。8シーン・350フレーズ収録、心構えカード＋ネイティブ発音対応。
 
-🔗 https://github.com/imaiworks/lexical
+🔗 https://imaiworks.github.io/lexical/
 
 ## シーン一覧
 
