@@ -1,0 +1,195 @@
+{
+  "scene_id": "meeting",
+  "scene_label": "会議・打ち合わせ",
+  "scene_icon": "💼",
+  "mindset": {
+    "flow": ["アジェンダ確認", "各議題を議論", "意見・懸念を出す", "アクションアイテムを決める", "次回日程を確認"],
+    "from_them": [
+      { "en": "Shall we get started?", "ja": "始めましょうか？" },
+      { "en": "Any questions so far?", "ja": "ここまでで質問はありますか？" },
+      { "en": "Who will own this?", "ja": "これの担当は誰ですか？" },
+      { "en": "Let's wrap up.", "ja": "まとめましょう" }
+    ],
+    "from_you": [
+      { "en": "Could you elaborate on that?", "ja": "詳しく説明してもらえますか？" },
+      { "en": "I'd like to raise a concern.", "ja": "懸念点を挙げたいのですが" },
+      { "en": "Can we set a deadline?", "ja": "締め切りを決めましょうか？" },
+      { "en": "Let me confirm my understanding.", "ja": "理解を確認させてください" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "get-started",
+      "en": "Shall we get started?",
+      "ja": "始めましょうか？",
+      "level": "beginner",
+      "nuance": "会議の開始を促す定番フレーズ。Let's get started. でも同じ。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Sure, let's go ahead.", "ja": "はい、始めましょう" },
+        { "en": "Can we wait a few minutes for ~?", "ja": "〜を少し待ってもいいですか？" }
+      ],
+      "branches": [
+        { "en": "Let's get started.", "ja": "始めましょう（カジュアル）", "type": "variation" },
+        { "en": "Today's agenda is ~.", "ja": "今日の議題は〜です", "type": "related" },
+        { "en": "We have ~ items to cover.", "ja": "議題が〜つあります", "type": "related" }
+      ]
+    },
+    {
+      "id": "elaborate",
+      "en": "Could you elaborate on that?",
+      "ja": "もう少し詳しく説明してもらえますか？",
+      "level": "intermediate",
+      "nuance": "理解を深めたいときの丁寧な表現。Can you explain more? より上品。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Sure, what I mean is ~.", "ja": "はい、つまり〜ということです" },
+        { "en": "Of course, let me give an example.", "ja": "もちろん、例を挙げますね" }
+      ],
+      "branches": [
+        { "en": "Can you give an example?", "ja": "例を挙げてもらえますか？", "type": "related" },
+        { "en": "What do you mean by ~?", "ja": "〜というのはどういう意味ですか？", "type": "related" },
+        { "en": "Could you clarify that?", "ja": "明確にしてもらえますか？", "type": "variation" }
+      ]
+    },
+    {
+      "id": "raise-concern",
+      "en": "I'd like to raise a concern.",
+      "ja": "懸念点を挙げたいのですが",
+      "level": "intermediate",
+      "nuance": "反対意見や問題点を柔らかく切り出すフレーズ。直接的すぎず丁寧。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Please go ahead.", "ja": "どうぞ、おっしゃってください" },
+        { "en": "That's a valid point.", "ja": "それは重要な指摘です" },
+        { "en": "Let's address that.", "ja": "それについて対処しましょう" }
+      ],
+      "branches": [
+        { "en": "My concern is that ~.", "ja": "懸念点は〜ということです", "type": "pattern" },
+        { "en": "I see a potential issue with ~.", "ja": "〜に潜在的な問題があると思います", "type": "related" },
+        { "en": "Have we considered ~?", "ja": "〜については検討しましたか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "agree",
+      "en": "I agree with your point.",
+      "ja": "おっしゃる通りだと思います",
+      "level": "beginner",
+      "nuance": "同意を示す定番。That's a good point. も合わせて覚えると便利。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Thank you, glad we're on the same page.", "ja": "ありがとう、同じ認識で良かったです" },
+        { "en": "Great, let's move forward then.", "ja": "では、進めましょう" }
+      ],
+      "branches": [
+        { "en": "That's a good point.", "ja": "良い指摘ですね", "type": "variation" },
+        { "en": "Absolutely.", "ja": "全くその通りです", "type": "variation" },
+        { "en": "I see your point, but ~.", "ja": "おっしゃることはわかりますが〜", "type": "related" }
+      ]
+    },
+    {
+      "id": "table-discussion",
+      "en": "Can we table this for now?",
+      "ja": "これは一旦保留にしませんか？",
+      "level": "intermediate",
+      "nuance": "英語のtableは「保留」の意味（日本語と逆）。米語では棚上げ。議論が長引いたときに使う。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Sure, let's come back to it later.", "ja": "わかりました、後で戻りましょう" },
+        { "en": "Agreed, let's move on.", "ja": "同意です、次に進みましょう" }
+      ],
+      "branches": [
+        { "en": "Let's revisit this next time.", "ja": "次回また話し合いましょう", "type": "related" },
+        { "en": "Let's park that for now.", "ja": "それは一旦置いておきましょう", "type": "variation" },
+        { "en": "We're running out of time.", "ja": "時間がなくなってきました", "type": "related" }
+      ]
+    },
+    {
+      "id": "action-item",
+      "en": "Who will own this action item?",
+      "ja": "このアクションアイテムの担当は誰ですか？",
+      "level": "intermediate",
+      "nuance": "会議の締めで必ず確認する。owner = 担当者。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "I'll take care of it.", "ja": "私が担当します" },
+        { "en": "Can ~ handle this?", "ja": "〜さんにお願いできますか？" },
+        { "en": "Let's assign it to ~.", "ja": "〜さんに割り当てましょう" }
+      ],
+      "branches": [
+        { "en": "I'll take care of it.", "ja": "私が担当します", "type": "answer" },
+        { "en": "Can we set a deadline?", "ja": "締め切りを決めましょうか？", "type": "related" },
+        { "en": "I'll follow up by ~.", "ja": "〜までにフォローアップします", "type": "related" }
+      ]
+    },
+    {
+      "id": "move-on",
+      "en": "Shall we move on to the next item?",
+      "ja": "次の議題に移りましょうか？",
+      "level": "beginner",
+      "nuance": "進行役がよく使うフレーズ。会議をスムーズに進めるのに便利。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Yes, let's move on.", "ja": "はい、次に行きましょう" },
+        { "en": "Actually, I have one more thing.", "ja": "実はもう一点あります" }
+      ],
+      "branches": [
+        { "en": "Let's move on.", "ja": "次に進みましょう（カジュアル）", "type": "variation" },
+        { "en": "Are we done with this topic?", "ja": "この議題は終わりですか？", "type": "related" },
+        { "en": "Let's keep moving.", "ja": "どんどん進みましょう", "type": "variation" }
+      ]
+    },
+    {
+      "id": "confirm-understanding",
+      "en": "Let me make sure I understand.",
+      "ja": "理解を確認させてください",
+      "level": "intermediate",
+      "nuance": "自分の理解が正しいか確認する丁寧な表現。誤解を防ぐのに効果的。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Of course, go ahead.", "ja": "もちろん、どうぞ" },
+        { "en": "Sure, what's your understanding?", "ja": "はい、どのように理解されましたか？" }
+      ],
+      "branches": [
+        { "en": "So what you're saying is ~.", "ja": "つまりおっしゃっているのは〜ということですね", "type": "pattern" },
+        { "en": "Just to confirm, ~.", "ja": "確認ですが、〜ですよね", "type": "related" },
+        { "en": "Did I get that right?", "ja": "理解は合っていますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "wrap-up",
+      "en": "Let's wrap up.",
+      "ja": "まとめに入りましょう",
+      "level": "beginner",
+      "nuance": "会議の締めくくりを促すフレーズ。To summarize... と続けることが多い。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Sure, let's do a quick recap.", "ja": "はい、簡単に振り返りましょう" },
+        { "en": "Already? Time flies!", "ja": "もうですか？時間が経つのは早いですね！" }
+      ],
+      "branches": [
+        { "en": "To summarize what we discussed...", "ja": "議論をまとめると...", "type": "related" },
+        { "en": "Let's recap the action items.", "ja": "アクションアイテムを確認しましょう", "type": "related" },
+        { "en": "Same time next week?", "ja": "来週も同じ時間で？", "type": "related" }
+      ]
+    },
+    {
+      "id": "connection-issue",
+      "en": "Can you hear me?",
+      "ja": "聞こえますか？",
+      "level": "beginner",
+      "nuance": "オンライン会議でよく使う。音声トラブルのときの第一声。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Yes, loud and clear!", "ja": "はい、よく聞こえます！" },
+        { "en": "You're breaking up.", "ja": "音声が途切れています" },
+        { "en": "We can't hear you, you might be on mute.", "ja": "聞こえません、ミュートになっているかも" }
+      ],
+      "branches": [
+        { "en": "You're on mute.", "ja": "ミュートになっています", "type": "related" },
+        { "en": "I think you're breaking up.", "ja": "音声が途切れているようです", "type": "related" },
+        { "en": "Let me reconnect.", "ja": "再接続してみます", "type": "related" }
+      ]
+    }
+  ]
+}

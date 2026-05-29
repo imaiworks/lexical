@@ -1,0 +1,213 @@
+{
+  "scene_id": "email",
+  "scene_label": "メール・Slack",
+  "scene_icon": "📧",
+  "mindset": {
+    "flow": ["件名・宛先を明確に", "用件を一言で先に言う", "依頼・確認・情報共有を簡潔に", "Next stepを明記して締める"],
+    "from_them": [
+      { "en": "Could you take a look?", "ja": "確認してもらえますか？" },
+      { "en": "Any updates on this?", "ja": "進捗はどうですか？" },
+      { "en": "LGTM!", "ja": "良さそうです！" },
+      { "en": "Let me know if you have questions.", "ja": "質問があればお知らせください" }
+    ],
+    "from_you": [
+      { "en": "Just following up on ~.", "ja": "〜についてフォローアップします" },
+      { "en": "Please find attached.", "ja": "添付をご確認ください" },
+      { "en": "Does that work for you?", "ja": "それで問題ありませんか？" },
+      { "en": "I'll get back to you by ~.", "ja": "〜までに返信します" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "follow-up",
+      "en": "Just following up on this.",
+      "ja": "これについてフォローアップします",
+      "level": "beginner",
+      "nuance": "返信がないときに催促するときの定番チャンク。角が立たない自然な表現。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Sorry for the delay! I'll get to it today.", "ja": "遅れてすみません！今日対応します" },
+        { "en": "Thanks for the reminder.", "ja": "リマインドありがとうございます" }
+      ],
+      "branches": [
+        { "en": "Just wanted to follow up on ~.", "ja": "〜についてフォローアップしたく", "type": "pattern" },
+        { "en": "Any updates on this?", "ja": "進捗はどうですか？", "type": "variation" },
+        { "en": "Circling back on this.", "ja": "これについて戻ります", "type": "variation" }
+      ]
+    },
+    {
+      "id": "take-a-look",
+      "en": "Could you take a look at this?",
+      "ja": "これを確認してもらえますか？",
+      "level": "beginner",
+      "nuance": "レビューや確認をお願いするときの定番。please review より柔らかい。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Sure, I'll review it today.", "ja": "はい、今日確認します" },
+        { "en": "LGTM! Looks good.", "ja": "良さそうです！" },
+        { "en": "I have a few comments.", "ja": "コメントがいくつかあります" }
+      ],
+      "branches": [
+        { "en": "Could you review ~?", "ja": "〜をレビューしてもらえますか？", "type": "pattern" },
+        { "en": "Let me know your thoughts.", "ja": "ご意見をお聞かせください", "type": "related" },
+        { "en": "No rush, but ~.", "ja": "急ぎではありませんが、〜", "type": "related" }
+      ]
+    },
+    {
+      "id": "please-find-attached",
+      "en": "Please find attached.",
+      "ja": "添付をご確認ください",
+      "level": "beginner",
+      "nuance": "ビジネスメールで最もよく使うチャンクのひとつ。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Got it, thanks!", "ja": "受け取りました、ありがとう！" },
+        { "en": "I don't see the attachment.", "ja": "添付が見当たりません" },
+        { "en": "I'll take a look.", "ja": "確認します" }
+      ],
+      "branches": [
+        { "en": "Please find attached the ~.", "ja": "〜を添付しました", "type": "pattern" },
+        { "en": "I've attached ~ for your reference.", "ja": "参考までに〜を添付しました", "type": "variation" },
+        { "en": "Let me know if you can't open it.", "ja": "開けない場合はお知らせください", "type": "related" }
+      ]
+    },
+    {
+      "id": "does-that-work",
+      "en": "Does that work for you?",
+      "ja": "それで問題ありませんか？",
+      "level": "beginner",
+      "nuance": "提案や日程調整の最後によく使う。相手の都合を確認する丁寧な表現。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Works for me!", "ja": "問題ありません！" },
+        { "en": "That works. See you then.", "ja": "大丈夫です。それでは" },
+        { "en": "Sorry, that time doesn't work. How about ~?", "ja": "すみません、その時間は無理です。〜はどうですか？" }
+      ],
+      "branches": [
+        { "en": "Works for me!", "ja": "問題ありません！", "type": "answer" },
+        { "en": "Let me know if that works.", "ja": "問題なければお知らせください", "type": "variation" },
+        { "en": "Does Tuesday at 3 work?", "ja": "火曜日の3時はどうですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "get-back-to-you",
+      "en": "I'll get back to you by end of day.",
+      "ja": "今日中に返信します",
+      "level": "beginner",
+      "nuance": "すぐ回答できないときの定番。end of day = 今日中、end of week = 今週中。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "No rush, take your time.", "ja": "急がなくていいですよ" },
+        { "en": "Thanks, I'll wait to hear from you.", "ja": "ありがとう、連絡をお待ちしています" }
+      ],
+      "branches": [
+        { "en": "I'll get back to you by ~.", "ja": "〜までに返信します（パターン）", "type": "pattern" },
+        { "en": "end of day / end of week / tomorrow", "ja": "今日中 / 今週中 / 明日", "type": "vocabulary" },
+        { "en": "I need more time on this.", "ja": "もう少し時間が必要です", "type": "related" }
+      ]
+    },
+    {
+      "id": "loop-in",
+      "en": "Let me loop in ~.",
+      "ja": "〜も話に加えます",
+      "level": "intermediate",
+      "nuance": "メールのCCに追加するときや、話し合いに誰かを加えるときに使う。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Good idea, please do.", "ja": "いいですね、お願いします" },
+        { "en": "Actually, let's keep this between us.", "ja": "実は、私たちだけにしておきましょう" }
+      ],
+      "branches": [
+        { "en": "I'm looping in ~ for visibility.", "ja": "情報共有のために〜を追加します", "type": "variation" },
+        { "en": "Adding ~ to this thread.", "ja": "このスレッドに〜を追加します", "type": "related" },
+        { "en": "FYI", "ja": "参考までに（For Your Information）", "type": "vocabulary" }
+      ]
+    },
+    {
+      "id": "jump-on-call",
+      "en": "Happy to jump on a call if helpful.",
+      "ja": "必要であれば通話しましょう",
+      "level": "intermediate",
+      "nuance": "文章で説明が難しいとき。happy to = 喜んで〜します、という前向きな表現。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Yes, let's schedule a call.", "ja": "はい、通話をスケジュールしましょう" },
+        { "en": "It's okay, your message is clear.", "ja": "大丈夫です、メッセージで理解できました" }
+      ],
+      "branches": [
+        { "en": "Want to jump on a quick call?", "ja": "少し通話しませんか？", "type": "variation" },
+        { "en": "Are you free for a 15-minute call?", "ja": "15分通話できますか？", "type": "related" },
+        { "en": "Let's sync up.", "ja": "話し合いましょう", "type": "related" }
+      ]
+    },
+    {
+      "id": "sorry-late-reply",
+      "en": "Sorry for the late reply.",
+      "ja": "返信が遅くなりすみません",
+      "level": "beginner",
+      "nuance": "メールの冒頭でよく使う。Apologies for the delayed response. はより丁寧な表現。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "No worries at all!", "ja": "全然気にしないでください！" },
+        { "en": "No problem, thanks for getting back to me.", "ja": "問題ありません、返信ありがとうございます" }
+      ],
+      "branches": [
+        { "en": "Apologies for the delayed response.", "ja": "返信が遅れて申し訳ありません（丁寧）", "type": "variation" },
+        { "en": "I was out of office.", "ja": "不在にしていました", "type": "related" },
+        { "en": "Thanks for your patience.", "ja": "お待ちいただきありがとうございます", "type": "related" }
+      ]
+    },
+    {
+      "id": "lgtm",
+      "en": "LGTM!",
+      "ja": "良さそうです！",
+      "level": "beginner",
+      "nuance": "Looks Good To Me の略。SlackやGitHubで頻出。承認・賛成の意味で使う。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Great, I'll proceed then.", "ja": "ありがとう、では進めます" },
+        { "en": "Thanks for the quick review!", "ja": "素早いレビューありがとうございます！" }
+      ],
+      "branches": [
+        { "en": "Looks good to me.", "ja": "問題なさそうです", "type": "variation" },
+        { "en": "Approved!", "ja": "承認します！", "type": "variation" },
+        { "en": "Ship it!", "ja": "リリースしましょう！", "type": "related" }
+      ]
+    },
+    {
+      "id": "let-me-know",
+      "en": "Please let me know if you have any questions.",
+      "ja": "ご不明な点があればお知らせください",
+      "level": "beginner",
+      "nuance": "メールの締めの定番チャンク。ほぼ全てのビジネスメールで使える。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Will do, thanks!", "ja": "わかりました、ありがとう！" },
+        { "en": "Actually, I do have a question.", "ja": "実は質問があります" },
+        { "en": "Noted, thank you.", "ja": "了解です、ありがとうございます" }
+      ],
+      "branches": [
+        { "en": "Feel free to reach out anytime.", "ja": "いつでも気軽に連絡してください", "type": "variation" },
+        { "en": "Happy to help!", "ja": "お役に立てて嬉しいです", "type": "related" },
+        { "en": "Thanks in advance.", "ja": "よろしくお願いします", "type": "related" }
+      ]
+    },
+    {
+      "id": "per-my-email",
+      "en": "As per my previous email,",
+      "ja": "前のメールに記載の通り、",
+      "level": "intermediate",
+      "nuance": "以前送った内容を再確認するときに使う。少し強めのニュアンスあり。",
+      "google_translate_url": "",
+      "expected_responses": [
+        { "en": "Right, sorry I missed that.", "ja": "そうでした、見落としていました、すみません" },
+        { "en": "Could you resend it?", "ja": "再送してもらえますか？" }
+      ],
+      "branches": [
+        { "en": "As mentioned before,", "ja": "前述の通り、", "type": "variation" },
+        { "en": "To reiterate,", "ja": "改めて申し上げますと、", "type": "variation" },
+        { "en": "Resending for visibility.", "ja": "見やすいよう再送します", "type": "related" }
+      ]
+    }
+  ]
+}

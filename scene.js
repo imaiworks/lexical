@@ -126,6 +126,7 @@ async function loadScene() {
 
   document.getElementById('scene-title').textContent = `${data.scene_icon} ${data.scene_label}`;
   document.title = `${data.scene_label} - Lexical`;
+  document.getElementById('practice-btn').href = `practice.html?scene=${sceneId}`;
 
   // 心構えカードを描画
   if (data.mindset) {

@@ -32,6 +32,33 @@ body {
   font-weight: 400;
 }
 
+/* ===== INDEX: カテゴリタブ ===== */
+.category-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem 0;
+}
+
+.category-tab {
+  flex: 1;
+  padding: 0.65rem 0.5rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #E2E8F0;
+  background: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94A3B8;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.category-tab.active {
+  background: #4F46E5;
+  border-color: #4F46E5;
+  color: white;
+}
+
 /* ===== INDEX: シーングリッド ===== */
 .scene-grid {
   display: grid;
@@ -110,6 +137,126 @@ body {
   font-weight: 700;
   color: #0F172A;
 }
+
+/* ===== 練習ボタン ===== */
+.practice-btn {
+  display: block;
+  margin: 1rem 1rem 0;
+  background: #0F172A;
+  color: white;
+  border: none;
+  border-radius: 0.875rem;
+  padding: 0.875rem;
+  width: calc(100% - 2rem);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.practice-btn:active { opacity: 0.85; }
+
+/* ===== 練習モード切り替え ===== */
+.practice-mode-toggle {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #E2E8F0;
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #94A3B8;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.mode-btn.active {
+  background: #0F172A;
+  border-color: #0F172A;
+  color: white;
+}
+
+/* ===== 練習カード ===== */
+.practice-list {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 3rem;
+}
+
+.practice-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.practice-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 0.875rem;
+  line-height: 1.5;
+}
+
+.practice-reveal-btn {
+  background: #F1F5F9;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.practice-reveal-btn:active { background: #E2E8F0; }
+
+.practice-answer {
+  border-top: 1px solid #F1F5F9;
+  padding-top: 0.875rem;
+  margin-top: 0.875rem;
+}
+
+.practice-answer-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4F46E5;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.practice-en-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.practice-speak-btn,
+.practice-close-btn {
+  background: none;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 0.625rem;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.practice-speak-btn:active,
+.practice-close-btn:active { background: #F8FAFC; }
 
 /* ===== 心構えカード ===== */
 .mindset-card {

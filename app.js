@@ -1,18 +1,59 @@
-const SCENES = [
-  { id: 'restaurant',     label: 'レストラン・カフェ', icon: '🍽️' },
-  { id: 'airport',        label: '空港',               icon: '✈️' },
-  { id: 'hotel',          label: 'ホテル',              icon: '🏨' },
-  { id: 'shopping',       label: 'ショッピング',        icon: '🛍️' },
-  { id: 'transportation', label: '交通・移動',          icon: '🚕' },
-  { id: 'sightseeing',    label: '観光',                icon: '🗺️' },
-  { id: 'emergency',      label: '緊急・トラブル',      icon: '🆘' },
-  { id: 'daily',          label: '日常会話',            icon: '💬' },
+const CATEGORIES = [
+  {
+    id: 'travel',
+    label: '✈️ 旅行',
+    scenes: [
+      { id: 'airport',        label: '空港',          icon: '✈️' },
+      { id: 'hotel',          label: 'ホテル',         icon: '🏨' },
+      { id: 'restaurant',     label: 'レストラン・カフェ', icon: '🍽️' },
+      { id: 'shopping',       label: 'ショッピング',   icon: '🛍️' },
+      { id: 'transportation', label: '交通・移動',     icon: '🚕' },
+      { id: 'sightseeing',    label: '観光',           icon: '🗺️' },
+      { id: 'emergency',      label: '緊急・トラブル', icon: '🆘' },
+    ]
+  },
+  {
+    id: 'daily',
+    label: '💬 日常',
+    scenes: [
+      { id: 'daily', label: '日常会話', icon: '💬' },
+    ]
+  },
+  {
+    id: 'business',
+    label: '💼 仕事',
+    scenes: [
+      { id: 'meeting', label: '会議・打ち合わせ', icon: '💼' },
+      { id: 'email',   label: 'メール・Slack',   icon: '📧' },
+    ]
+  },
 ];
 
-async function init() {
-  const grid = document.getElementById('scene-grid');
+let currentCategory = 'travel';
 
-  for (const scene of SCENES) {
+function renderTabs() {
+  const tabs = document.getElementById('category-tabs');
+  tabs.innerHTML = CATEGORIES.map(cat => `
+    <button class="category-tab ${cat.id === currentCategory ? 'active' : ''}"
+            data-id="${cat.id}">${cat.label}</button>
+  `).join('');
+
+  tabs.querySelectorAll('.category-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentCategory = btn.dataset.id;
+      renderTabs();
+      renderScenes();
+    });
+  });
+}
+
+async function renderScenes() {
+  const grid = document.getElementById('scene-grid');
+  grid.innerHTML = '';
+
+  const cat = CATEGORIES.find(c => c.id === currentCategory);
+
+  for (const scene of cat.scenes) {
     const card = document.createElement('a');
     card.href = `scene.html?scene=${scene.id}`;
     card.className = 'scene-card';
@@ -23,7 +64,6 @@ async function init() {
     `;
     grid.appendChild(card);
 
-    // 非同期でチャンク数を取得して表示
     fetch(`data/${scene.id}.json`)
       .then(r => r.json())
       .then(data => {
@@ -38,4 +78,5 @@ async function init() {
   }
 }
 
-init();
+renderTabs();
+renderScenes();
