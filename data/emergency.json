@@ -24,6 +24,13 @@
       "ja": "助けてください！",
       "level": "beginner",
       "nuance": "緊急時の第一声。これだけで注意を引ける。大声でためらわずに。",
+      "grammar": {
+        "pattern": "感嘆詞・呼びかけ語（一語で完結する緊急表現）",
+        "parts": [
+          { "text": "Help!", "role": "V", "note": "「助けて！」という命令形。主語Youが省略された命令文の最短形。または感嘆詞として使う" }
+        ],
+        "note": "Help!は命令文（Help me!の短縮）か感嘆詞として機能します。緊急時には一語でも完全に通じます。英語の命令文は主語を省略して動詞だけで成立します。Help me!（私を助けて）、Somebody help!（誰か助けて）と続けることもできます。このような短い表現が緊急時には最も力を持ちます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Help!&op=translate",
       "expected_responses": [
         { "en": "What's wrong? Are you okay?", "ja": "どうしましたか？大丈夫ですか？" },
@@ -42,6 +49,15 @@
       "ja": "救急車が必要です",
       "level": "beginner",
       "nuance": "緊急電話（911、999など）でも使える。場所を聞かれるので答える準備を。",
+      "grammar": {
+        "pattern": "S＋need＋an＋名詞（必要性を伝えるシンプルな文）",
+        "parts": [
+          { "text": "I", "role": "S", "note": "主語「私は」" },
+          { "text": "need", "role": "V", "note": "「必要とする」という動詞。want（欲しい）より緊急性・必要性が強い" },
+          { "text": "an ambulance", "role": "O", "note": "「救急車（一台）」。ambulanceは母音始まりなのでan。緊急サービスの乗り物" }
+        ],
+        "note": "needはwantより強い必要性を表します。I want an ambulance.は「救急車が欲しい」というぼんやりした要望に聞こえますが、I need an ambulance.は「救急車が必要だ（ないと困る）」という緊迫感があります。緊急時はneedを使いましょう。Please call an ambulance.（救急車を呼んでください）と命令形にすることもできます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20an%20ambulance.&op=translate",
       "expected_responses": [
         { "en": "What's your location?", "ja": "今どこにいますか？" },
@@ -60,6 +76,15 @@
       "ja": "気分が悪いです",
       "level": "beginner",
       "nuance": "体調不良を伝える万能フレーズ。具体的な症状を続けると伝わりやすい。",
+      "grammar": {
+        "pattern": "S＋be動詞＋not＋〜ing（現在進行形の否定で体調の状態を表す）",
+        "parts": [
+          { "text": "I'm not", "role": "S", "note": "「私は〜ではない」という否定のbe動詞" },
+          { "text": "feeling", "role": "V", "note": "「感じている」という現在進行形。feelは状態動詞だが、体調表現では進行形が使われる特例" },
+          { "text": "well", "role": "C", "note": "「良い・健康な」という形容詞。goodとの違いは、wellは健康状態に特化した意味で使われる" }
+        ],
+        "note": "wellとgoodは似ていますが、体調の文脈ではwellを使います。I don't feel good.（気分が良くない）も使えますが、I'm not feeling well.の方が「体調不良の状態が続いている」というニュアンスが出ます。feelは本来状態動詞（進行形にしない）ですが、体調表現のfeel wellは進行形が自然に使われる特例です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20not%20feeling%20well.&op=translate",
       "expected_responses": [
         { "en": "Do you need to sit down?", "ja": "座りますか？" },
@@ -79,6 +104,15 @@
       "ja": "財布をなくしました",
       "level": "beginner",
       "nuance": "紛失したものを変えるだけで応用できる。lost = 紛失した。",
+      "grammar": {
+        "pattern": "S＋lost＋my＋O（過去形で紛失を報告する文）",
+        "parts": [
+          { "text": "I", "role": "S", "note": "主語「私は」" },
+          { "text": "lost", "role": "V", "note": "lose（失う・なくす）の過去形。「（気づかないうちに）失った」という意味。misplacedより深刻なニュアンス" },
+          { "text": "my wallet", "role": "O", "note": "「私の財布」。myで所有を示す。wallet（二つ折り財布）のほかpurse（小銭入れ）なども使える" }
+        ],
+        "note": "lostはloseの過去形で「失った（その事実）」を表します。I've lost my wallet.（現在完了形）は「財布をなくしてしまった（今もない）」という状態を強調します。I lost vs. I've lostの違いは、過去形は出来事の事実を、現在完了形は現在への影響を強調します。緊急時はどちらでも通じますが、現在完了形の方がより自然です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20lost%20my%20wallet.&op=translate",
       "expected_responses": [
         { "en": "When and where did you last have it?", "ja": "最後に持っていたのはいつ、どこですか？" },
@@ -98,6 +132,15 @@
       "ja": "警察署に行く必要があります",
       "level": "intermediate",
       "nuance": "盗難・紛失の届け出には警察証明書が必要。保険請求にも使える。",
+      "grammar": {
+        "pattern": "S＋need to＋V（必要性・義務を表すneed to不定詞）",
+        "parts": [
+          { "text": "I", "role": "S", "note": "主語「私は」" },
+          { "text": "need to go", "role": "V", "note": "「行く必要がある」。need to＋動詞原形で「〜する必要がある」という義務・必要性を表す" },
+          { "text": "to the police station", "role": "前置詞句", "note": "「警察署へ」という目的地。toは到達点を示す前置詞" }
+        ],
+        "note": "need toとhave toは似ていますが微妙な差があります。need to = 「〜する必要がある（自分の判断から）」、have to = 「〜しなければならない（外部の義務から）」。I need to go（自分でそうする必要があると判断）はより自律的なニュアンスです。must toとは言えないので注意（mustの後は動詞原形のみ）。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20to%20go%20to%20the%20police%20station.&op=translate",
       "expected_responses": [
         { "en": "The nearest station is two blocks away.", "ja": "最寄りの警察署は2ブロック先です" },
@@ -116,6 +159,15 @@
       "ja": "最寄りの病院はどこですか？",
       "level": "beginner",
       "nuance": "緊急ではないが医療が必要なときに。pharmacy = 薬局も合わせて覚える。",
+      "grammar": {
+        "pattern": "Where is＋the＋最上級形容詞＋名詞？（最も近い場所を尋ねる疑問文）",
+        "parts": [
+          { "text": "Where is", "role": "V", "note": "「どこにありますか？」という場所を問うbe動詞疑問文" },
+          { "text": "the nearest", "role": "修飾", "note": "「最も近い」という最上級形容詞。near（近い）→ nearer（より近い）→ nearest（最も近い）" },
+          { "text": "hospital", "role": "S", "note": "「病院」。定冠詞theがnearest（唯一の最も近いもの）とセットで使われる" }
+        ],
+        "note": "最上級には必ず定冠詞theが必要です（the nearest, the best, the closest）。nearestは「最も近い」という意味で、closest（最も近い）とほぼ同義です。Where's the closest pharmacy?（最寄りの薬局はどこですか？）と応用できます。nearestを使うことで「数ある選択肢の中で一番近い」という意味が明確になります。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20is%20the%20nearest%20hospital%3F&op=translate",
       "expected_responses": [
         { "en": "It's about a 5-minute drive.", "ja": "車で約5分です" },
@@ -134,6 +186,15 @@
       "ja": "日本語は話せますか？",
       "level": "beginner",
       "nuance": "英語が難しくなったときの切り札。意外と話せる人がいることも。",
+      "grammar": {
+        "pattern": "Do you speak＋言語名？（言語能力を確認するシンプルな疑問文）",
+        "parts": [
+          { "text": "Do you", "role": "助動詞", "note": "二人称疑問文を作るdo動詞。「あなたは〜しますか？」という確認" },
+          { "text": "speak", "role": "V", "note": "「話す」という動詞。言語能力を問う場合はspeakを使うのが慣用的" },
+          { "text": "Japanese", "role": "O", "note": "「日本語」。言語名は大文字で始める。冠詞なしで使う（×the Japanese）" }
+        ],
+        "note": "言語名に冠詞はつけません（Japanese, English, Frenchなど）。Do you speak ~?は「〜語を話せますか？」という言語能力の確認に使う最もシンプルな表現です。Can you speak ~?も同じ意味ですが、Do you speak ~?の方がより一般的です。言語能力を「話せるか」と聞くときはspeakを使います（×Do you talk Japanese?は不自然）。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20speak%20Japanese%3F&op=translate",
       "expected_responses": [
         { "en": "Sorry, I don't.", "ja": "すみません、話せません" },
@@ -152,6 +213,15 @@
       "ja": "日本大使館に連絡する必要があります",
       "level": "intermediate",
       "nuance": "パスポート紛失や緊急事態のとき。大使館の連絡先は事前にメモしておく。",
+      "grammar": {
+        "pattern": "S＋need to＋V＋the＋名詞（必要性と特定の機関への行動を表す文）",
+        "parts": [
+          { "text": "I need to", "role": "助動詞", "note": "「〜する必要がある」という必要性の表現" },
+          { "text": "contact", "role": "V", "note": "「連絡する・連絡を取る」という動詞。call（電話）やreach out（連絡する）とも言える" },
+          { "text": "the Japanese embassy", "role": "O", "note": "「日本大使館」。定冠詞theは「この国にある（唯一の）日本大使館」を示す" }
+        ],
+        "note": "contactは「連絡する」という動詞で、電話・メール・訪問など手段を問わず使えます。call（電話のみ）より幅広い意味を持ちます。embassyは「大使館」で、the Japanese embassy（日本大使館）のようにtheをつけます。consulate（領事館）も合わせて覚えておくと役立ちます（大使館より数が多い）。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20to%20contact%20the%20Japanese%20embassy.&op=translate",
       "expected_responses": [
         { "en": "I'll help you find the number.", "ja": "番号を探すのをお手伝いします" },
@@ -168,6 +238,14 @@
       "ja": "火事！逃げてください！",
       "level": "beginner",
       "nuance": "火災のときは大声で周囲に知らせる。消火器はfire extinguisher。",
+      "grammar": {
+        "pattern": "感嘆詞＋命令文（緊急警告の二段構え表現）",
+        "parts": [
+          { "text": "Fire!", "role": "S", "note": "「火事！」という警告の感嘆詞・名詞。There's a fire!（火事だ！）の短縮形としても機能する" },
+          { "text": "Get out!", "role": "V", "note": "「出ろ！逃げろ！」という緊急の命令文。get outは「外に出る」という句動詞。主語Youが省略されている" }
+        ],
+        "note": "緊急命令文は主語を省略して動詞から始めます。Get out!はEvacuate!（避難しろ！）より口語的で即座に伝わります。Fire!という一語が「火事だ」という警告として機能するのは、文脈から明らかだからです。緊急時は短く・大きく・はっきりと言うことが重要です。Two words（二語）でも完全に意味が伝わる英語の力を覚えておきましょう。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Fire!%20Get%20out!&op=translate",
       "expected_responses": [
         { "en": "Everyone evacuate now!", "ja": "全員今すぐ避難してください！" },
@@ -184,6 +262,15 @@
       "ja": "頭痛薬が欲しいのですが",
       "level": "beginner",
       "nuance": "薬局で症状を伝えるシンプルな方法。something for ~ = 〜の薬。",
+      "grammar": {
+        "pattern": "S＋need＋something for＋症状（症状を伝えて薬を求める慣用表現）",
+        "parts": [
+          { "text": "I need", "role": "V", "note": "「必要とする」という動詞。want（欲しい）より強い必要性を示す" },
+          { "text": "something", "role": "O", "note": "「何か」という不定代名詞。具体的な薬の名前がわからなくても使える便利な表現" },
+          { "text": "for a headache", "role": "前置詞句", "note": "「頭痛のための・頭痛に効く」。forは目的・用途を表す前置詞。symptoms（症状）を入れ替えれば自由に応用できる" }
+        ],
+        "note": "something for ~は「〜に効く何か（薬）」という意味の非常に便利な表現です。薬の名前がわからなくても症状を言えば店員が提案してくれます。for aの「a」は「ある種の頭痛」という意味のaです。I have a headache.（頭痛がします）→ I need something for it.（それに効く薬が欲しい）とつなげることもできます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20something%20for%20a%20headache.&op=translate",
       "expected_responses": [
         { "en": "We have ibuprofen or acetaminophen.", "ja": "イブプロフェンとアセトアミノフェンがあります" },

@@ -25,7 +25,16 @@
       "ja": "ラージコーヒーをください",
       "level": "beginner",
       "nuance": "一番カジュアルで自然な注文フレーズ。I'd like より口語的。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20get%20a%20large%20coffee%3F&op=translate",
+      "grammar": {
+        "pattern": "Can + S + V + O?",
+        "parts": [
+          { "text": "Can",           "role": "助動詞", "note": "依頼・許可" },
+          { "text": "I",             "role": "S" },
+          { "text": "get",           "role": "V" },
+          { "text": "a large coffee","role": "O" }
+        ],
+        "note": "Can I ~? は許可・依頼を求める最もカジュアルな疑問文。「〜をもらえますか？」のニュアンス。"
+      },
       "expected_responses": [
         { "en": "Sure! Anything else?", "ja": "もちろん！他にご注文は？" },
         { "en": "Coming right up!", "ja": "すぐにお持ちします！" },
@@ -44,7 +53,15 @@
       "ja": "店内ですか、お持ち帰りですか？",
       "level": "beginner",
       "nuance": "店員が聞いてくる定番フレーズ。答えは For here. か To go. だけでOK。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=For%20here%20or%20to%20go%3F&op=translate",
+      "grammar": {
+        "pattern": "前置詞句 or 前置詞句?（省略形）",
+        "parts": [
+          { "text": "For here", "role": "前置詞句", "note": "店内" },
+          { "text": "or",       "role": "接続詞" },
+          { "text": "to go",    "role": "前置詞句", "note": "持ち帰り" }
+        ],
+        "note": "本来は \"Will it be for here or to go?\" だが主語・動詞が省略された超短縮形。チャンクとして丸ごと覚えるのが実践的。"
+      },
       "expected_responses": [
         { "en": "For here, please.", "ja": "店内でお願いします" },
         { "en": "To go, please.", "ja": "持ち帰りでお願いします" }
@@ -61,7 +78,14 @@
       "ja": "他にご注文はありますか？",
       "level": "beginner",
       "nuance": "店員が追加注文を確認する定番フレーズ。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Anything%20else%3F&op=translate",
+      "grammar": {
+        "pattern": "不定代名詞 + 副詞?（省略形）",
+        "parts": [
+          { "text": "Anything", "role": "O", "note": "不定代名詞" },
+          { "text": "else",     "role": "修飾", "note": "他に" }
+        ],
+        "note": "\"Is there anything else?\" の省略形。主語・動詞・補語が全部省かれている。英語はこうした省略が日常的に起きる。"
+      },
       "expected_responses": [
         { "en": "That's all, thank you.", "ja": "以上です、ありがとう" },
         { "en": "Actually, can I also get ~?", "ja": "あ、〜も追加できますか？" }
@@ -77,7 +101,16 @@
       "ja": "2名で予約しています",
       "level": "beginner",
       "nuance": "レストランの入口で伝える定番フレーズ。人数と名前を準備しておく。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20a%20reservation%20for%20two.&op=translate",
+      "grammar": {
+        "pattern": "S + V + O + 修飾",
+        "parts": [
+          { "text": "I",              "role": "S" },
+          { "text": "have",           "role": "V", "note": "持っている→ある" },
+          { "text": "a reservation",  "role": "O" },
+          { "text": "for two",        "role": "修飾", "note": "2名の" }
+        ],
+        "note": "have = 「持っている」→「予約があります」という表現。for two で人数を追加するだけで応用できる。"
+      },
       "expected_responses": [
         { "en": "Can I get your name?", "ja": "お名前をお聞かせください" },
         { "en": "Right this way, please.", "ja": "こちらへどうぞ" },
@@ -95,7 +128,16 @@
       "ja": "メニューを見せてもらえますか？",
       "level": "beginner",
       "nuance": "着席後に店員に頼む。Do you have an English menu? も合わせて覚える。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20see%20the%20menu%3F&op=translate",
+      "grammar": {
+        "pattern": "Can + S + V + O?",
+        "parts": [
+          { "text": "Can",      "role": "助動詞", "note": "許可・依頼" },
+          { "text": "I",        "role": "S" },
+          { "text": "see",      "role": "V" },
+          { "text": "the menu", "role": "O" }
+        ],
+        "note": "Can I get ~? と同じパターン。see（見る）/ get（もらう）/ have（持つ）を入れ替えるだけで多くの依頼文が作れる。"
+      },
       "expected_responses": [
         { "en": "Of course, here you go.", "ja": "もちろんです、どうぞ" },
         { "en": "We have an English menu, one moment.", "ja": "英語メニューがあります、少々お待ちください" },
@@ -113,7 +155,16 @@
       "ja": "ご注文はお決まりですか？",
       "level": "beginner",
       "nuance": "店員から聞かれる定番フレーズ。まだなら Just a minute. と言えばOK。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Are%20you%20ready%20to%20order%3F&op=translate",
+      "grammar": {
+        "pattern": "Be + S + 形容詞 + to不定詞?",
+        "parts": [
+          { "text": "Are",      "role": "V", "note": "Be動詞" },
+          { "text": "you",      "role": "S" },
+          { "text": "ready",    "role": "C", "note": "形容詞" },
+          { "text": "to order", "role": "修飾", "note": "to不定詞・副詞的用法" }
+        ],
+        "note": "be ready to ~ = 「〜する準備ができている」。to orderはreadyを修飾するto不定詞（副詞的用法）。"
+      },
       "expected_responses": [
         { "en": "Just a minute, please.", "ja": "もう少し待ってください" },
         { "en": "Yes, I'll have the ~.", "ja": "はい、〜にします" }
@@ -130,7 +181,15 @@
       "ja": "ナッツアレルギーがあります",
       "level": "intermediate",
       "nuance": "アレルギーは必ず伝える。命に関わることなので明確に伝えよう。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20allergic%20to%20nuts.&op=translate",
+      "grammar": {
+        "pattern": "S + be + 形容詞 + to + O",
+        "parts": [
+          { "text": "I'm",      "role": "S", "note": "I am の短縮" },
+          { "text": "allergic", "role": "C", "note": "形容詞" },
+          { "text": "to nuts",  "role": "修飾", "note": "前置詞句・対象" }
+        ],
+        "note": "be allergic to ~ は固定表現（コロケーション）。to の後に食べ物・物質を入れるだけで応用できる。"
+      },
       "expected_responses": [
         { "en": "Thank you for letting us know.", "ja": "教えていただきありがとうございます" },
         { "en": "We'll make sure to avoid that.", "ja": "必ず避けるようにします" },
@@ -148,7 +207,14 @@
       "ja": "お会計をお願いします",
       "level": "beginner",
       "nuance": "アメリカでは Check please. イギリスでは Bill please. が一般的。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Check%2C%20please.&op=translate",
+      "grammar": {
+        "pattern": "O + please（超省略形）",
+        "parts": [
+          { "text": "Check",  "role": "O", "note": "会計・伝票" },
+          { "text": "please", "role": "修飾", "note": "丁寧さを加える" }
+        ],
+        "note": "\"Can I have the check, please?\" の超省略形。目的語だけで意図が通じる。pleaseを添えることで丁寧さを保っている。"
+      },
       "expected_responses": [
         { "en": "Of course, I'll be right back.", "ja": "もちろん、すぐに参ります" },
         { "en": "How would you like to pay?", "ja": "お支払い方法はいかがですか？" },
@@ -166,7 +232,15 @@
       "ja": "これは美味しい！",
       "level": "beginner",
       "nuance": "料理への感想は店員や料理人に喜ばれる。積極的に使おう。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=This%20is%20delicious!&op=translate",
+      "grammar": {
+        "pattern": "S + V + C（SVC）",
+        "parts": [
+          { "text": "This",      "role": "S", "note": "これ" },
+          { "text": "is",        "role": "V", "note": "Be動詞" },
+          { "text": "delicious", "role": "C", "note": "補語・形容詞" }
+        ],
+        "note": "SVCは「S = C」の関係。This = delicious（これ＝美味しい）。Be動詞＋形容詞で状態を表す最もシンプルな構造。"
+      },
       "expected_responses": [
         { "en": "Thank you so much!", "ja": "ありがとうございます！" },
         { "en": "I'm glad you're enjoying it!", "ja": "お気に召していただけて嬉しいです！" }
@@ -183,11 +257,18 @@
       "ja": "注文したものと違うと思うのですが",
       "level": "intermediate",
       "nuance": "丁寧に伝えるためにI think を使うのがポイント。断言より柔らかくなる。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20think%20this%20isn%27t%20what%20I%20ordered.&op=translate",
+      "grammar": {
+        "pattern": "S + V + O（that節）",
+        "parts": [
+          { "text": "I",                    "role": "S" },
+          { "text": "think",                "role": "V" },
+          { "text": "this isn't what I ordered", "role": "O", "note": "that節（目的語節）" }
+        ],
+        "note": "\"I think ~\" を前に置くことで断言を避け柔らかい表現になる。直接 \"This is wrong\" より相手への配慮が伝わる。"
+      },
       "expected_responses": [
         { "en": "I'm so sorry! Let me fix that.", "ja": "大変申し訳ありません！すぐに直します" },
-        { "en": "Could you tell me what you ordered?", "ja": "何をご注文されたか教えていただけますか？" },
-        { "en": "I apologize for the confusion.", "ja": "ご迷惑をおかけして申し訳ありません" }
+        { "en": "Could you tell me what you ordered?", "ja": "何をご注文されたか教えていただけますか？" }
       ],
       "branches": [
         { "en": "I ordered the ~, not the ~.", "ja": "〜を頼みました、〜ではなく", "type": "related" },
@@ -200,7 +281,16 @@
       "ja": "水をもらえますか？",
       "level": "beginner",
       "nuance": "海外ではお水は有料の国も多い。tap water（水道水）なら無料のことが多い。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20have%20some%20water%3F&op=translate",
+      "grammar": {
+        "pattern": "Can + S + V + O?",
+        "parts": [
+          { "text": "Can",        "role": "助動詞", "note": "依頼" },
+          { "text": "I",          "role": "S" },
+          { "text": "have",       "role": "V", "note": "もらう・いただく" },
+          { "text": "some water", "role": "O", "note": "some＝いくらかの" }
+        ],
+        "note": "Can I have ~? は丁寧な依頼の定番パターン。someは肯定文で使う不定量を表す語で「少し・いくらかの」という意味。"
+      },
       "expected_responses": [
         { "en": "Still or sparkling?", "ja": "炭酸なしですか、炭酸ありですか？" },
         { "en": "Of course! Here you go.", "ja": "もちろんです！どうぞ" },
@@ -219,7 +309,15 @@
       "ja": "テイクアウトを注文したいのですが",
       "level": "beginner",
       "nuance": "電話やカウンターでテイクアウトを頼むとき。place an order = 注文する。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27d%20like%20to%20place%20a%20takeout%20order.&op=translate",
+      "grammar": {
+        "pattern": "S + would like + to不定詞 + O",
+        "parts": [
+          { "text": "I'd like",       "role": "S", "note": "I would like の短縮" },
+          { "text": "to place",       "role": "V", "note": "to不定詞" },
+          { "text": "a takeout order","role": "O" }
+        ],
+        "note": "would like to ~ = 「〜したい」。I want to ~ より丁寧でビジネス・サービス場面で多用される。place an order は「注文を置く」→「注文する」という固定表現。"
+      },
       "expected_responses": [
         { "en": "Sure! What can I get you?", "ja": "もちろんです！ご注文をどうぞ" },
         { "en": "It'll be about 15 minutes.", "ja": "約15分かかります" },

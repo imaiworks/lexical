@@ -24,6 +24,16 @@
       "ja": "〜まで連れて行ってもらえますか？",
       "level": "beginner",
       "nuance": "タクシーに乗ったらまずこれ。住所やホテル名を続ける。",
+      "grammar": {
+        "pattern": "Can you take＋me＋to＋場所？（移動の依頼文）",
+        "parts": [
+          { "text": "Can you", "role": "助動詞", "note": "「〜してもらえますか？」という依頼の表現" },
+          { "text": "take", "role": "V", "note": "「連れて行く」。takeは人を連れて移動する意味を持つ。bringは話し手のいる方向への移動" },
+          { "text": "me", "role": "O", "note": "「私を」。takeの直接目的語" },
+          { "text": "to ~", "role": "前置詞句", "note": "「〜まで・〜へ」という目的地を示す前置詞句。toは到達点を示す" }
+        ],
+        "note": "takeとbringは方向が違います。take = 「（話し手が）連れて行く」（離れる方向）、bring = 「連れてくる」（こちらに向かう方向）。タクシーで「〜まで連れて行って」はtakeを使います。Please take me to ~.という命令文でも通じますが、Can you ~?の方が丁寧です。目的地はホテル名・住所・建物名など何でもOKです。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20you%20take%20me%20to%20the%20hotel%3F&op=translate",
       "expected_responses": [
         { "en": "Sure, hop in!", "ja": "もちろん、乗ってください！" },
@@ -42,6 +52,17 @@
       "ja": "〜まではいくらかかりますか？",
       "level": "beginner",
       "nuance": "乗る前に金額確認するのが安全。メーター制かどうかも確認する。",
+      "grammar": {
+        "pattern": "How much will it cost to＋場所？（費用を事前に確認する疑問文）",
+        "parts": [
+          { "text": "How much", "role": "修飾", "note": "「いくら」という金額を問う疑問詞" },
+          { "text": "will", "role": "助動詞", "note": "「〜だろう・〜になるでしょう」という未来の推量を示す助動詞" },
+          { "text": "it", "role": "S", "note": "形式主語。費用・時間などを表すときの非人称のit" },
+          { "text": "cost", "role": "V", "note": "「（費用が）かかる」という動詞。costは目的語に金額を取ることもできる（It costs $20.）" },
+          { "text": "to ~", "role": "前置詞句", "note": "「〜まで」という目的地。費用の基準となる行き先を示す" }
+        ],
+        "note": "costは「費用がかかる」という動詞で、主語にはitを使います（非人称主語）。willを使うことで「これからの移動の費用はいくらになりますか？」という未来の見積もりを聞いています。How much is it to ~?とも言えますが、willを使う方が「これから起こること」の見積もりとしてより自然です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=How%20much%20will%20it%20cost%20to%20the%20airport%3F&op=translate",
       "expected_responses": [
         { "en": "About $25, depending on traffic.", "ja": "交通状況次第ですが約25ドルです" },
@@ -60,6 +81,15 @@
       "ja": "ここで止めてください",
       "level": "beginner",
       "nuance": "目的地の手前で降りたいときや、場所を指示するときに使う。",
+      "grammar": {
+        "pattern": "You can＋V＋here（相手に行動を許可・指示する柔らかい表現）",
+        "parts": [
+          { "text": "You can", "role": "助動詞", "note": "「〜してもいいですよ」という許可・指示。命令のStop here.より柔らかい" },
+          { "text": "stop", "role": "V", "note": "「止まる」という自動詞。ここでは「車を止める」という意味" },
+          { "text": "here", "role": "修飾", "note": "「ここで」という場所の副詞。指差しと組み合わせると伝わりやすい" }
+        ],
+        "note": "You can ~. は「〜してください」という指示を、命令ではなく許可として表現する柔らかい言い方です。Please stop here.（命令）やStop here.（命令）より自然で丁寧な響きがあります。英語では直接的な命令より、このような間接的な表現が好まれることがあります。ドライバーへの指示として非常によく使われます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=You%20can%20stop%20here.&op=translate",
       "expected_responses": [
         { "en": "That'll be $18.50.", "ja": "18ドル50セントです" },
@@ -77,6 +107,16 @@
       "ja": "このバスは〜に行きますか？",
       "level": "beginner",
       "nuance": "バス停やバス内で確認するときに使う。",
+      "grammar": {
+        "pattern": "Does＋this＋名詞＋go to＋場所？（乗り物の行き先を確認する疑問文）",
+        "parts": [
+          { "text": "Does", "role": "V", "note": "三人称単数の疑問文を作るdo動詞。this busが主語なのでdoesを使う" },
+          { "text": "this bus", "role": "S", "note": "「このバス」。目の前にある特定のバスを指す" },
+          { "text": "go to", "role": "V", "note": "「〜に行く」という句動詞。乗り物のルートを表す" },
+          { "text": "~", "role": "前置詞句", "note": "目的地の名前（駅名・地名・観光地名など）を入れる" }
+        ],
+        "note": "Does ~ go to ~?は「〜は〜に行きますか？」という乗り物の行き先確認の定番パターンです。この文ではバス自体が主語（三人称単数）なのでdoesを使います。go toは「目的地に向かう」という方向性を示します。Is this the bus to ~?（これは〜行きのバスですか？）という表現も同じ意味で使えます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Does%20this%20bus%20go%20to%20downtown%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, it does.", "ja": "はい、行きます" },
@@ -95,6 +135,15 @@
       "ja": "〜まで1枚ください",
       "level": "beginner",
       "nuance": "窓口での切符購入の基本。自動販売機が主流の国では使わない場合も。",
+      "grammar": {
+        "pattern": "数量＋名詞＋to＋目的地＋please（チケット購入の定型表現）",
+        "parts": [
+          { "text": "One ticket", "role": "O", "note": "「1枚の切符」。数量＋名詞の形で枚数を指定する" },
+          { "text": "to ~", "role": "前置詞句", "note": "「〜まで・〜行きの」という目的地を示す前置詞句" },
+          { "text": "please", "role": "修飾", "note": "「お願いします」という丁寧さを加える副詞。命令文や名詞句を丁寧にする" }
+        ],
+        "note": "この文は動詞が省略されています。完全な文はI'd like one ticket to ~, please.ですが、窓口ではOne ticket to ~ please.という名詞句だけで十分通じます。英語は文脈が明確なら動詞を省略できます。Two tickets, please.（2枚ください）のようにシンプルに数を言うだけでもOKです。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=One%20ticket%20to%20downtown%20please.&op=translate",
       "expected_responses": [
         { "en": "That's $3.50.", "ja": "3ドル50セントです" },
@@ -113,6 +162,16 @@
       "ja": "〜に行くには何線に乗ればいいですか？",
       "level": "intermediate",
       "nuance": "乗り換えが必要な場合に聞くフレーズ。",
+      "grammar": {
+        "pattern": "Which＋名詞＋should I＋V＋to＋場所？（選択肢の中から適切なものを問う疑問文）",
+        "parts": [
+          { "text": "Which line", "role": "O", "note": "「どの路線」。whichは選択肢がある場合に使う疑問詞（whatより選択肢が限られている場合）" },
+          { "text": "should I", "role": "助動詞", "note": "「〜すべきですか？」という助言・推奨を求めるshouldの疑問文" },
+          { "text": "take", "role": "V", "note": "「（乗り物に）乗る」。take a bus / take the subway のように使う" },
+          { "text": "to ~", "role": "前置詞句", "note": "「〜に行くために・〜へ向かうために」という目的を示す前置詞句" }
+        ],
+        "note": "whichとwhatの使い分けが重要です。Which line?（路線がいくつかある中でどれ？）、What line?（どんな路線か情報がない）。乗り換えのある電車では選択肢があるのでwhichが適切です。shouldは「〜すべき・〜した方がいい」という助言を求める表現で、「どの路線が正解ですか？」という意味になります。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Which%20line%20should%20I%20take%20to%20get%20to%20downtown%3F&op=translate",
       "expected_responses": [
         { "en": "Take the red line to Central, then transfer to the blue line.", "ja": "レッドラインでセントラル駅まで行き、ブルーラインに乗り換えてください" },
@@ -131,6 +190,16 @@
       "ja": "〜行きの電車は何番ホームですか？",
       "level": "intermediate",
       "nuance": "大きな駅でホームを探すときに使う。platform = ホーム（番線）。",
+      "grammar": {
+        "pattern": "Which platform＋does＋S＋leave from？（出発場所を問う倒置疑問文）",
+        "parts": [
+          { "text": "Which platform", "role": "修飾", "note": "「何番ホームから」という場所の疑問詞句。fromの目的語が文頭に出ている" },
+          { "text": "does", "role": "助動詞", "note": "疑問文を作るdo動詞。the trainが三人称単数なのでdoes" },
+          { "text": "the train to ~", "role": "S", "note": "「〜行きの電車」。to ~がtrainを後ろから修飾する" },
+          { "text": "leave from", "role": "V", "note": "「〜から出発する」という句動詞。fromが文頭に出ているため語順に注意" }
+        ],
+        "note": "この文はWhich platform does the train leave from?という形で、fromの目的語（which platform）が文頭に移動しています。元の語順はThe train leaves from Platform 3.です。疑問詞が前置詞の目的語になる場合、前置詞は文末に残ります（from where → where ... from）。英語の疑問文の語順変化の典型例です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Which%20platform%20does%20the%20train%20to%20London%20leave%20from%3F&op=translate",
       "expected_responses": [
         { "en": "Platform 3, over there.", "ja": "3番ホームです、あちらです" },
@@ -148,6 +217,16 @@
       "ja": "配車を予約しています",
       "level": "beginner",
       "nuance": "UberやLyft等で待ち合わせするときに使う。",
+      "grammar": {
+        "pattern": "S＋have＋O＋過去分詞（完了・準備済みの状態を表す構文）",
+        "parts": [
+          { "text": "I", "role": "S", "note": "主語「私は」" },
+          { "text": "have", "role": "V", "note": "「持っている」。ここではhave + O + 過去分詞の構文を使う" },
+          { "text": "a ride", "role": "O", "note": "「配車・乗車」。rideはここで「Uber等の配車サービスの予約」を意味する" },
+          { "text": "booked", "role": "C", "note": "「予約された（状態の）」という過去分詞。bookの過去分詞形。have + O + 過去分詞で「Oが〜された状態にある」を表す" }
+        ],
+        "note": "have + O + 過去分詞は「OをVしてある・Oが〜された状態だ」という完了・準備済みを表す重要構文です。I have a ride booked. ＝「配車が予約済みの状態にある」。I had my hair cut.（髪を切ってもらった）と同じ構造です。I booked a ride.（配車を予約した）という過去形とは違い、「今現在予約が確定している状態」を強調します。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20a%20ride%20booked.&op=translate",
       "expected_responses": [
         { "en": "Are you ~? I'm your driver.", "ja": "〜さんですか？ドライバーです" },
@@ -165,6 +244,15 @@
       "ja": "すみません、迷ってしまいました",
       "level": "beginner",
       "nuance": "道に迷ったときの第一声。これで助けを求める姿勢が伝わる。",
+      "grammar": {
+        "pattern": "Excuse me,＋S＋be動詞＋形容詞（呼びかけ＋状況説明）",
+        "parts": [
+          { "text": "Excuse me", "role": "修飾", "note": "「すみません」という呼びかけの慣用句。知らない人に話しかけるときの必須フレーズ" },
+          { "text": "I'm", "role": "S", "note": "「私は」＋be動詞" },
+          { "text": "lost", "role": "C", "note": "「道に迷った状態の」という過去分詞が形容詞として機能。lose（迷う）の過去分詞がbeと合わさって「迷った状態」を表す" }
+        ],
+        "note": "lostはlose（失う・迷う）の過去分詞が形容詞化したものです。I got lost.（迷ってしまった）が過去の出来事なのに対し、I'm lost.は「今この瞬間迷っている状態」を示します。be + 過去分詞は「その状態にある」という状態の継続を表します。Excuse meは知らない人に話しかける際に必ず使いましょう。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Excuse%20me%2C%20I%27m%20lost.&op=translate",
       "expected_responses": [
         { "en": "No problem! Where are you trying to go?", "ja": "大丈夫です！どこに行きたいですか？" },
@@ -183,6 +271,16 @@
       "ja": "ここから歩いて行けますか？",
       "level": "beginner",
       "nuance": "タクシーに乗るべきか判断したいときに使う。",
+      "grammar": {
+        "pattern": "Can I＋V＋there＋from here？（移動の可能性を確認する疑問文）",
+        "parts": [
+          { "text": "Can I", "role": "助動詞", "note": "「〜できますか？」という可能性の確認" },
+          { "text": "walk", "role": "V", "note": "「歩く」という自動詞。交通手段として「歩いて行く」の意味" },
+          { "text": "there", "role": "修飾", "note": "「そこへ・そこまで」という方向を示す副詞。前置詞なしで使える（to thereとは言わない）" },
+          { "text": "from here", "role": "前置詞句", "note": "「ここから」という出発点を示す前置詞句。fromは起点を示す" }
+        ],
+        "note": "thereは副詞なので前置詞なしで使えます（go there, walk thereなど）。toをつけてgo to thereとするのは誤りです。一方fromは前置詞なのでfrom hereと使います。Can I walk there?だけでも通じますが、from hereを加えると「現在地から」という情報が明確になります。Is it walkable?（歩いて行ける距離ですか？）という表現も覚えると便利です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20walk%20there%20from%20here%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, it's about a 10-minute walk.", "ja": "はい、歩いて約10分です" },

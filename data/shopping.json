@@ -24,6 +24,16 @@
       "ja": "見ているだけです、ありがとう",
       "level": "beginner",
       "nuance": "店員に声をかけられたときの定番の返し。笑顔で言えばOK。",
+      "grammar": {
+        "pattern": "I'm＋just＋〜ing（「ただ〜しているだけ」と限定する現在進行形）",
+        "parts": [
+          { "text": "I'm", "role": "S", "note": "I am の短縮形" },
+          { "text": "just", "role": "修飾", "note": "「ただ〜だけ」という限定の副詞。「それ以外の目的はない」というニュアンスを加える" },
+          { "text": "looking", "role": "V", "note": "「見ている」という現在進行形。look aroundとも言える" },
+          { "text": "thanks", "role": "修飾", "note": "「ありがとう」という感謝を添えることで丁寧かつ断るニュアンスを和らげる" }
+        ],
+        "note": "justは「ただ〜だけ」と行動を限定することで、「手伝いは不要です」という意図をやわらかく伝えます。I'm looking. だけだと少し素っ気ない印象になります。thanksを加えることで断りつつも感謝を示す、英語らしい社交的な表現になります。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20just%20looking%2C%20thanks.&op=translate",
       "expected_responses": [
         { "en": "No problem! Let me know if you need anything.", "ja": "わかりました！何かあればお声がけください" },
@@ -40,6 +50,15 @@
       "ja": "これの別の色はありますか？",
       "level": "beginner",
       "nuance": "色・サイズ違いを聞く定番フレーズ。in a different ~ で応用できる。",
+      "grammar": {
+        "pattern": "Do you have＋this＋in＋a different＋名詞？（在庫・バリエーションを尋ねる）",
+        "parts": [
+          { "text": "Do you have", "role": "V", "note": "「〜を持っていますか？／〜はありますか？」という在庫確認の定番表現" },
+          { "text": "this", "role": "O", "note": "「これ」。手に持っているものや指差したものを指す" },
+          { "text": "in a different color", "role": "前置詞句", "note": "「別の色で」。inは「〜の形で・〜の状態で」という仕様を表す前置詞。in red / in size Mのように使える" }
+        ],
+        "note": "in a different colorのinは「〜の仕様・バリエーションで」という意味を持つ特別な使い方です。Do you have this in red?（これの赤はありますか？）、Do you have this in a larger size?（これのもっと大きいサイズはありますか？）と自由に応用できます。differentの代わりにother（別の）も使えます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20have%20this%20in%20a%20different%20color%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, we have it in black and white.", "ja": "はい、黒と白があります" },
@@ -58,6 +77,16 @@
       "ja": "試着してもいいですか？",
       "level": "beginner",
       "nuance": "服を試着したいときの一言。フィッティングルームは fitting room。",
+      "grammar": {
+        "pattern": "Can I＋V＋O＋副詞？（句動詞を使った許可依頼）",
+        "parts": [
+          { "text": "Can I", "role": "助動詞", "note": "「〜してもいいですか？」という許可を求める表現" },
+          { "text": "try", "role": "V", "note": "「試す」という動詞。onと組み合わせて句動詞を作る" },
+          { "text": "this", "role": "O", "note": "「これを」。目的語。try it onとも言える（代名詞は句動詞の間に入る）" },
+          { "text": "on", "role": "修飾", "note": "「身につけて」という副詞。try on = 試着する（着用してみる）という句動詞を構成する" }
+        ],
+        "note": "try onは「試着する」という句動詞（phrasal verb）です。目的語が名詞の場合はtry this onまたはtry on thisのどちらでも可。しかし代名詞（it, them）の場合は必ずtry it on（間に入れる）とし、try on itは誤りです。句動詞は英語の核心なので、この仕組みを覚えておくと他の句動詞にも応用できます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20try%20this%20on%3F&op=translate",
       "expected_responses": [
         { "en": "Of course! The fitting rooms are over there.", "ja": "もちろんです！試着室はあちらです" },
@@ -77,6 +106,15 @@
       "ja": "これはいくらですか？",
       "level": "beginner",
       "nuance": "値段を聞く最もシンプルなフレーズ。指差せば通じる。",
+      "grammar": {
+        "pattern": "How much＋is＋S？（価格・量を尋ねる疑問文）",
+        "parts": [
+          { "text": "How much", "role": "修飾", "note": "「いくら・どのくらいの量」を問う疑問詞。不可算名詞や価格に使う（How manyは可算名詞に使う）" },
+          { "text": "is", "role": "V", "note": "be動詞。価格という「状態」を問う" },
+          { "text": "this", "role": "S", "note": "「これ」。指差しや手に取っているものを指す代名詞" }
+        ],
+        "note": "How much?だけでも通じますが、How much is this?は最も礼儀正しい形です。How much does this cost?（これはいくらかかりますか？）とも言えます。How muchはお金（不可算）に使い、How many?は数（可算）に使います。How many tickets?（チケットは何枚？）と使い分けましょう。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=How%20much%20is%20this%3F&op=translate",
       "expected_responses": [
         { "en": "That's $29.99.", "ja": "29ドル99セントです" },
@@ -95,6 +133,15 @@
       "ja": "カードで払えますか？",
       "level": "beginner",
       "nuance": "現金が必要な店もあるので確認するのが無難。",
+      "grammar": {
+        "pattern": "Can I pay by＋支払い方法？（支払い手段を確認する疑問文）",
+        "parts": [
+          { "text": "Can I", "role": "助動詞", "note": "「〜できますか？」という可能性・許可の確認" },
+          { "text": "pay", "role": "V", "note": "「支払う」という動詞" },
+          { "text": "by card", "role": "前置詞句", "note": "「カードで（手段として）」。byは手段・方法を表す前置詞。by cash / by credit card / by cashと続く" }
+        ],
+        "note": "支払い手段を表すにはbyを使います。by card, by cash, by credit card, by check。withは使えません（×with card）。一方、「現金で」はin cashとも言います。Can I pay with card?という人もいますが、by cardが標準的です。pay forは「何かのために払う」、payだけは「支払い行為そのもの」を指します。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20pay%20by%20card%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, we accept all major cards.", "ja": "はい、主要なカードは全て使えます" },
@@ -113,6 +160,15 @@
       "ja": "レシートをもらえますか？",
       "level": "beginner",
       "nuance": "海外では自動でレシートをくれない場合もある。",
+      "grammar": {
+        "pattern": "Can I have＋a＋名詞？（物を要求する丁寧な依頼文）",
+        "parts": [
+          { "text": "Can I", "role": "助動詞", "note": "「〜してもいいですか？」という許可・依頼の表現" },
+          { "text": "have", "role": "V", "note": "「もらう・受け取る」という意味のhave。getよりやや丁寧なニュアンス" },
+          { "text": "a receipt", "role": "O", "note": "「レシート（1枚）」。不定冠詞aは一枚のレシートを意味する" }
+        ],
+        "note": "Can I have ~?とCan I get ~?はほぼ同じ意味で使えますが、haveの方がわずかに丁寧な印象です。どちらも日常会話で自然に使えます。receiptは「領収書・レシート」で、英語圏では自動でくれないことがあるため積極的に請求しましょう。Can I get a receipt?とも言えます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20have%20a%20receipt%3F&op=translate",
       "expected_responses": [
         { "en": "Of course, here you go.", "ja": "もちろんです、どうぞ" },
@@ -129,6 +185,15 @@
       "ja": "これを返品したいのですが",
       "level": "intermediate",
       "nuance": "返品はreturn、交換はexchange。レシートを持参するのが基本。",
+      "grammar": {
+        "pattern": "I'd like to＋V＋O（丁寧な希望・要望を伝える文）",
+        "parts": [
+          { "text": "I'd like to", "role": "助動詞", "note": "I would like to の短縮形。「〜したいのですが」という丁寧な希望表現。I want toより柔らかく大人な印象" },
+          { "text": "return", "role": "V", "note": "「返品する・返す」という動詞。returnはここでは「店に戻す」という意味" },
+          { "text": "this", "role": "O", "note": "「これを」。手に持っているもの・返品したい商品を指す" }
+        ],
+        "note": "I want to return this.は少し直接的すぎる場合があります。I'd like to return this.のwould likeを使うことで「〜したいのですが」という丁寧さが加わり、クレームや要望を伝えるときに適切です。ビジネス・サービス場面ではI'd like to ~を使う習慣をつけると自然に聞こえます。returnとexchangeは明確に使い分けましょう。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27d%20like%20to%20return%20this.&op=translate",
       "expected_responses": [
         { "en": "Do you have your receipt?", "ja": "レシートはお持ちですか？" },
@@ -148,6 +213,16 @@
       "ja": "〜はどこにありますか？",
       "level": "beginner",
       "nuance": "大型スーパーや百貨店で商品の場所を聞くときの定番。",
+      "grammar": {
+        "pattern": "Where can I find＋O？（場所を尋ねる疑問文・can＋V形）",
+        "parts": [
+          { "text": "Where", "role": "修飾", "note": "「どこで」という場所を問う疑問詞。文頭に置く" },
+          { "text": "can I", "role": "助動詞", "note": "「〜できますか？」。可能性を問う助動詞。Where is ~?よりも行動的なニュアンス" },
+          { "text": "find", "role": "V", "note": "「見つける」。Where is ~?（どこにありますか？）よりも「どこで手に入れられますか？」という意味合いが強い" },
+          { "text": "~", "role": "O", "note": "探している商品や場所の名前を入れる" }
+        ],
+        "note": "Where is ~?とWhere can I find ~?は似ていますが、find（見つける）を使うことで「私が行動して見つけられる場所はどこか」というニュアンスになります。大型店舗で商品を探すときはfindの方が自然です。Where can I find the dairy section?（乳製品売り場はどこですか？）のように目的語に売り場名や商品を入れて使います。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20can%20I%20find%20the%20dairy%20section%3F&op=translate",
       "expected_responses": [
         { "en": "It's on the second floor.", "ja": "2階にあります" },
@@ -166,6 +241,15 @@
       "ja": "これは在庫がありますか？",
       "level": "intermediate",
       "nuance": "売り切れかどうか確認するフレーズ。in stock = 在庫あり。",
+      "grammar": {
+        "pattern": "Is＋S＋in stock？（状態を確認する疑問文・慣用句）",
+        "parts": [
+          { "text": "Is", "role": "V", "note": "be動詞疑問文。「〜の状態ですか？」と状態を問う" },
+          { "text": "this", "role": "S", "note": "「これは」。手に持っているまたは指差している商品" },
+          { "text": "in stock", "role": "C", "note": "「在庫がある状態で」という慣用的な前置詞句。stockは「在庫・備蓄」を意味し、inは状態を示す" }
+        ],
+        "note": "in stockとout of stockは在庫を表す重要なペア表現です。in stock（在庫あり）⟺ out of stock（在庫切れ）。stockは「蓄え・在庫」を意味し、inは「その状態の中にある」というイメージです。Do you have this in stock?とも言えます。ビジネス英語でも頻出の表現です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20this%20in%20stock%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, we have plenty in stock.", "ja": "はい、在庫は十分あります" },
@@ -184,6 +268,15 @@
       "ja": "これは免税ですか？",
       "level": "intermediate",
       "nuance": "免税店や空港ショップで使う。duty-free = 免税品。",
+      "grammar": {
+        "pattern": "Is＋S＋形容詞？（属性・状態を確認するシンプルな疑問文）",
+        "parts": [
+          { "text": "Is", "role": "V", "note": "be動詞疑問文" },
+          { "text": "this", "role": "S", "note": "「これは」。商品を指す" },
+          { "text": "duty-free", "role": "C", "note": "「免税の」という複合形容詞。duty（税・関税）+ free（免除されている）。ハイフンで結んで形容詞として使う" }
+        ],
+        "note": "duty-freeのdutyは「義務」だけでなく「税・関税」の意味もあります。freeは「無料」ではなく「〜が免除されている」という意味（例：sugar-free 砂糖不使用、hands-free 手を使わない）。このように「名詞+free」で「〜なし・〜免除」という複合形容詞を作るパターンは英語で非常に生産的です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20this%20duty-free%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, everything here is duty-free.", "ja": "はい、こちらは全て免税です" },
@@ -201,6 +294,14 @@
       "ja": "袋はありますか？",
       "level": "beginner",
       "nuance": "海外ではレジ袋が有料や廃止の国が多い。先に確認するのが無難。",
+      "grammar": {
+        "pattern": "Do you have＋a＋名詞？（在庫・有無を確認する最もシンプルな疑問文）",
+        "parts": [
+          { "text": "Do you have", "role": "V", "note": "「〜を持っていますか？／〜はありますか？」という存在・在庫確認の定型句" },
+          { "text": "a bag", "role": "O", "note": "「袋（一枚）」。不定冠詞aは「何か一つ」を意味する。特定の袋ではなくany bagというニュアンス" }
+        ],
+        "note": "Do you have ~?は「〜はありますか？」と確認する最も基本的な疑問文です。Have you got ~?（英国英語）とも言えます。bagはplastic bag（ビニール袋）、paper bag（紙袋）、shopping bag（ショッピングバッグ）など種類を指定することもできます。海外では袋の有無や価格が日本と異なるため、この一言が非常に役立ちます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20have%20a%20bag%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, bags are 10 cents each.", "ja": "はい、袋は1枚10セントです" },

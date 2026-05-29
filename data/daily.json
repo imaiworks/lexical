@@ -24,7 +24,16 @@
       "ja": "おはようございます！お元気ですか？",
       "level": "beginner",
       "nuance": "英語圏では挨拶に How are you? がセットになっていることが多い。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Good%20morning!%20How%20are%20you%3F&op=translate",
+      "grammar": {
+        "pattern": "感嘆句 + 疑問文（SVC倒置）",
+        "parts": [
+          { "text": "Good morning", "role": "C", "note": "感嘆句・挨拶" },
+          { "text": "How", "role": "修飾", "note": "疑問詞・状態" },
+          { "text": "are", "role": "V", "note": "Be動詞" },
+          { "text": "you", "role": "S" }
+        ],
+        "note": "How are you? は「あなたはどのような状態ですか？」を聞くSVC疑問文。Be動詞が主語の前に出る倒置形。挨拶として形式化されたチャンク。"
+      },
       "expected_responses": [
         { "en": "I'm good, thanks! And you?", "ja": "元気です、ありがとう！あなたは？" },
         { "en": "Not bad! Pretty busy lately.", "ja": "まあまあです！最近かなり忙しくて" },
@@ -43,7 +52,15 @@
       "ja": "はじめまして",
       "level": "beginner",
       "nuance": "初対面の定番。Nice to meet you, too. が返し。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Nice%20to%20meet%20you.&op=translate",
+      "grammar": {
+        "pattern": "形容詞 + to不定詞 + O（省略形）",
+        "parts": [
+          { "text": "Nice", "role": "C", "note": "形容詞" },
+          { "text": "to meet", "role": "修飾", "note": "to不定詞・副詞的用法" },
+          { "text": "you", "role": "O" }
+        ],
+        "note": "It's nice to meet you. の主語・Be動詞を省略した形。to meet you は「あなたに会えて」という感情の原因を表すto不定詞（副詞的用法）。"
+      },
       "expected_responses": [
         { "en": "Nice to meet you, too!", "ja": "こちらこそ、はじめまして！" },
         { "en": "Likewise! Where are you from?", "ja": "こちらこそ！どちらのご出身ですか？" }
@@ -60,7 +77,14 @@
       "ja": "日本から来ました",
       "level": "beginner",
       "nuance": "出身を聞かれたらこれ。都市名を加えると具体的になる。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20from%20Japan.&op=translate",
+      "grammar": {
+        "pattern": "S + Be + 前置詞句",
+        "parts": [
+          { "text": "I'm", "role": "S", "note": "I am の短縮" },
+          { "text": "from Japan", "role": "修飾", "note": "前置詞句・出身" }
+        ],
+        "note": "from + 地名 で出身を表す。be from ~ = 「〜出身である」固定表現。Japan は固有名詞なので大文字始まり。"
+      },
       "expected_responses": [
         { "en": "Oh, Japan! I'd love to visit someday.", "ja": "日本ですか！いつか行ってみたいです" },
         { "en": "Really? What city?", "ja": "本当ですか？どの都市ですか？" },
@@ -78,7 +102,15 @@
       "ja": "今日はいい天気ですね",
       "level": "beginner",
       "nuance": "英語圏で最も定番の雑談ネタ。相手との距離を縮める第一歩。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Nice%20weather%20today%2C%20isn%27t%20it%3F&op=translate",
+      "grammar": {
+        "pattern": "省略形 + 付加疑問文",
+        "parts": [
+          { "text": "Nice weather", "role": "C", "note": "省略形" },
+          { "text": "today", "role": "修飾", "note": "副詞" },
+          { "text": "isn't it", "role": "修飾", "note": "付加疑問文" }
+        ],
+        "note": "付加疑問文は「〜ですよね？」と同意を求める表現。肯定文には否定の付加疑問（isn't it?）を使う。Nice weather = It's nice weather の省略。"
+      },
       "expected_responses": [
         { "en": "Yeah, finally! It's been raining all week.", "ja": "ええ、やっとですね！一週間ずっと雨でした" },
         { "en": "Enjoy it, I heard it'll rain tomorrow.", "ja": "楽しんで、明日は雨だそうですよ" },
@@ -96,7 +128,17 @@
       "ja": "すみません、もう一度言ってもらえますか？",
       "level": "beginner",
       "nuance": "聞き取れなかったときの定番フレーズ。これを使うのをためらわないことが大事。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Sorry%2C%20could%20you%20say%20that%20again%3F&op=translate",
+      "grammar": {
+        "pattern": "感嘆詞 + Could + S + V + O?",
+        "parts": [
+          { "text": "Sorry", "role": "修飾", "note": "感嘆詞・謝罪" },
+          { "text": "could", "role": "助動詞", "note": "丁寧な依頼" },
+          { "text": "you", "role": "S" },
+          { "text": "say", "role": "V" },
+          { "text": "that again", "role": "O", "note": "that＋副詞" }
+        ],
+        "note": "Could you ~? は Can you ~? の丁寧形。過去形を使うことで柔らかくなる（仮定法的用法）。again = もう一度、という副詞。"
+      },
       "expected_responses": [
         { "en": "Sure! I said ~.", "ja": "もちろん！〜と言いました" },
         { "en": "No problem, of course.", "ja": "もちろん、大丈夫ですよ" },
@@ -114,7 +156,14 @@
       "ja": "本当にありがとうございます！",
       "level": "beginner",
       "nuance": "thank youよりも強い感謝の気持ちを込めた表現。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Thank%20you%20so%20much!&op=translate",
+      "grammar": {
+        "pattern": "感謝表現 + 強調副詞句",
+        "parts": [
+          { "text": "Thank you", "role": "V", "note": "感謝の定型表現" },
+          { "text": "so much", "role": "修飾", "note": "副詞句・程度の強調" }
+        ],
+        "note": "Thank you は動詞句として機能する定型表現。so much で感謝の度合いを強調。very much と同じ意味でよりカジュアルな印象。"
+      },
       "expected_responses": [
         { "en": "You're welcome!", "ja": "どういたしまして！" },
         { "en": "No problem at all!", "ja": "全然問題ないですよ！" },
@@ -132,7 +181,15 @@
       "ja": "それは申し訳ありませんでした",
       "level": "beginner",
       "nuance": "謝罪の基本フレーズ。軽いミスには My bad. や Sorry! でもOK。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20sorry%20about%20that.&op=translate",
+      "grammar": {
+        "pattern": "S + Be + 形容詞 + 前置詞句",
+        "parts": [
+          { "text": "I'm", "role": "S", "note": "I am の短縮" },
+          { "text": "sorry", "role": "C", "note": "形容詞" },
+          { "text": "about that", "role": "修飾", "note": "前置詞句・対象" }
+        ],
+        "note": "be sorry about ~ = 「〜について申し訳ない」。about で謝罪の対象を示す。thatは先ほどの出来事を指す指示代名詞。"
+      },
       "expected_responses": [
         { "en": "No worries!", "ja": "気にしないで！" },
         { "en": "It's okay, don't worry about it.", "ja": "大丈夫ですよ、気にしないでください" },
@@ -150,7 +207,16 @@
       "ja": "一緒にどうですか？",
       "level": "intermediate",
       "nuance": "食事や観光に誘うときの丁寧なフレーズ。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Would%20you%20like%20to%20join%20us%3F&op=translate",
+      "grammar": {
+        "pattern": "Would + S + like + to不定詞?",
+        "parts": [
+          { "text": "Would", "role": "助動詞", "note": "丁寧・仮定" },
+          { "text": "you", "role": "S" },
+          { "text": "like", "role": "V" },
+          { "text": "to join us", "role": "修飾", "note": "to不定詞+O" }
+        ],
+        "note": "Would you like to ~? = 「〜しませんか？」丁寧な誘いの定番表現。Do you want to ~? より格段に丁寧。"
+      },
       "expected_responses": [
         { "en": "Sure, I'd love to!", "ja": "ぜひ！喜んで！" },
         { "en": "That sounds great, thank you!", "ja": "いいですね、ありがとう！" },
@@ -168,7 +234,16 @@
       "ja": "お話しできてよかったです",
       "level": "beginner",
       "nuance": "会話の締めくくりに使う丁寧なフレーズ。別れ際の定番。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=It%20was%20nice%20talking%20to%20you.&op=translate",
+      "grammar": {
+        "pattern": "It + Be + 形容詞 + 動名詞句（形式主語構文）",
+        "parts": [
+          { "text": "It", "role": "S", "note": "形式主語" },
+          { "text": "was", "role": "V", "note": "Be動詞・過去形" },
+          { "text": "nice", "role": "C", "note": "形容詞" },
+          { "text": "talking to you", "role": "修飾", "note": "動名詞句・真主語" }
+        ],
+        "note": "It was ~ talking to you. は形式主語構文。本当の主語は talking to you（あなたと話すこと）。過去形 was で「話せてよかった」という完了のニュアンスを出す。"
+      },
       "expected_responses": [
         { "en": "Likewise! Have a great trip!", "ja": "こちらこそ！良い旅を！" },
         { "en": "Same! Take care!", "ja": "こちらこそ！お気をつけて！" },
@@ -186,7 +261,15 @@
       "ja": "英語がお上手ですね！",
       "level": "beginner",
       "nuance": "ほめるとコミュニケーションがスムーズに。返し方も覚えておく。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Your%20English%20is%20great!&op=translate",
+      "grammar": {
+        "pattern": "S + V + C（SVC）",
+        "parts": [
+          { "text": "Your English", "role": "S", "note": "所有格+名詞" },
+          { "text": "is", "role": "V", "note": "Be動詞" },
+          { "text": "great", "role": "C", "note": "形容詞・補語" }
+        ],
+        "note": "SVCの基本形。Be動詞でS（Your English）とC（great）を結ぶ。Your は所有格で「あなたの」。greatは形容詞として補語になる。"
+      },
       "expected_responses": [
         { "en": "Thank you! I'm still learning.", "ja": "ありがとう！まだ勉強中です" },
         { "en": "Oh, you're too kind!", "ja": "ご親切に、ありがとうございます！" },
@@ -204,7 +287,16 @@
       "ja": "どう思いますか？",
       "level": "beginner",
       "nuance": "相手の意見を聞くシンプルなフレーズ。会話を続けるのに便利。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20do%20you%20think%3F&op=translate",
+      "grammar": {
+        "pattern": "疑問詞(O) + 助動詞 + S + V?",
+        "parts": [
+          { "text": "What", "role": "O", "note": "疑問詞・目的語" },
+          { "text": "do", "role": "助動詞" },
+          { "text": "you", "role": "S" },
+          { "text": "think", "role": "V" }
+        ],
+        "note": "What が動詞 think の目的語になっている。「何を考えますか？」→「どう思いますか？」。疑問詞が目的語になる疑問文の形。"
+      },
       "expected_responses": [
         { "en": "I think it's a great idea!", "ja": "素晴らしいアイデアだと思います！" },
         { "en": "Honestly, I'm not sure.", "ja": "正直なところ、よくわかりません" },
@@ -222,7 +314,17 @@
       "ja": "趣味は何ですか？",
       "level": "beginner",
       "nuance": "What's your hobby? より自然な聞き方。会話が広がりやすい。",
-      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20do%20you%20do%20for%20fun%3F&op=translate",
+      "grammar": {
+        "pattern": "疑問詞(O) + 助動詞 + S + V + 前置詞句?",
+        "parts": [
+          { "text": "What", "role": "O", "note": "疑問詞・目的語" },
+          { "text": "do", "role": "助動詞" },
+          { "text": "you", "role": "S" },
+          { "text": "do", "role": "V", "note": "本動詞・する" },
+          { "text": "for fun", "role": "修飾", "note": "前置詞句・目的" }
+        ],
+        "note": "do が2回登場する。最初は助動詞、2番目は「する・やる」という本動詞。for fun = 「楽しみのために」。What's your hobby? より口語的で自然。"
+      },
       "expected_responses": [
         { "en": "I love hiking and photography.", "ja": "ハイキングと写真が大好きです" },
         { "en": "Mostly reading and cooking.", "ja": "主に読書と料理です" },

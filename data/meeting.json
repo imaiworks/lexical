@@ -24,6 +24,14 @@
       "ja": "始めましょうか？",
       "level": "beginner",
       "nuance": "会議の開始を促す定番フレーズ。Let's get started. でも同じ。",
+      "grammar": {
+        "pattern": "Shall we＋V？（「〜しましょうか？」という提案の疑問文）",
+        "parts": [
+          { "text": "Shall we", "role": "助動詞", "note": "「〜しましょうか？」という提案・勧誘の表現。Let's ~?より少し改まった響き。weを使うことで「全員一緒に」という意味を込める" },
+          { "text": "get started", "role": "V", "note": "「始める」という句動詞。get + 過去分詞で「〜な状態になる」という変化を表す。start＝beginよりも口語的" }
+        ],
+        "note": "Shall we ~?はLet's ~.より丁寧で、相手の同意を求める提案表現です。ビジネス会議の開始に非常によく使われます。get startedはstartとほぼ同義ですが、「準備が整って始まる」という動的なニュアンスがあります。Shall I ~?（私が〜しましょうか？）はShall we ~?（みんなで〜しましょうか？）と主語で意味が変わります。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Sure, let's go ahead.", "ja": "はい、始めましょう" },
@@ -41,6 +49,15 @@
       "ja": "もう少し詳しく説明してもらえますか？",
       "level": "intermediate",
       "nuance": "理解を深めたいときの丁寧な表現。Can you explain more? より上品。",
+      "grammar": {
+        "pattern": "Could you＋V＋on＋that？（詳細説明を丁寧に依頼する表現）",
+        "parts": [
+          { "text": "Could you", "role": "助動詞", "note": "「〜していただけますか？」という丁寧な依頼。Can you?より改まった表現" },
+          { "text": "elaborate", "role": "V", "note": "「詳しく説明する・詳述する」という動詞。explainより知的でフォーマルな印象" },
+          { "text": "on that", "role": "前置詞句", "note": "「それについて」。elaborateはon + 名詞の形を取る自動詞（×elaborate that）。onは「テーマ・話題」を示す" }
+        ],
+        "note": "elaborateは他動詞ではなく自動詞として使うため、必ずon + 名詞という形が必要です（×elaborate that / ○elaborate on that）。この点はexplain（他動詞：explain that / explain it）と異なります。Could you elaborate on that?はビジネス英語の定番で、「もう少し詳しく話してください」という意図を上品に伝えます。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Sure, what I mean is ~.", "ja": "はい、つまり〜ということです" },
@@ -58,6 +75,15 @@
       "ja": "懸念点を挙げたいのですが",
       "level": "intermediate",
       "nuance": "反対意見や問題点を柔らかく切り出すフレーズ。直接的すぎず丁寧。",
+      "grammar": {
+        "pattern": "I'd like to＋V＋a＋名詞（丁寧な意図表明で議論に参加する表現）",
+        "parts": [
+          { "text": "I'd like to", "role": "助動詞", "note": "「〜したいのですが」という丁寧な希望。I want toより柔らかく、発言の前置きとして機能する" },
+          { "text": "raise", "role": "V", "note": "「（問題・話題などを）持ち出す・挙げる」。raiseは「持ち上げる」が転じて「提起する」という意味になる" },
+          { "text": "a concern", "role": "O", "note": "「懸念（一つ）」。不定冠詞aは「一つの懸念点」。concernは「心配・懸念・問題」という意味" }
+        ],
+        "note": "raiseは「声に出す・提起する」という意味のビジネス英語頻出動詞です。raise a question（質問を提起する）、raise an issue（問題を挙げる）、raise a concern（懸念を示す）と使います。I'd like to raise a concern.はその後に具体的な懸念を続ける前置きの表現で、会議の場で柔らかく切り出す定番フレーズです。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Please go ahead.", "ja": "どうぞ、おっしゃってください" },
@@ -76,6 +102,15 @@
       "ja": "おっしゃる通りだと思います",
       "level": "beginner",
       "nuance": "同意を示す定番。That's a good point. も合わせて覚えると便利。",
+      "grammar": {
+        "pattern": "S＋agree with＋O（同意を表す句動詞文）",
+        "parts": [
+          { "text": "I", "role": "S", "note": "主語「私は」" },
+          { "text": "agree", "role": "V", "note": "「同意する・賛成する」という自動詞。他動詞ではないので目的語を直接取れない（×I agree your point）" },
+          { "text": "with your point", "role": "前置詞句", "note": "「あなたの意見に」。agree withで「〜に同意する」という意味。withは同伴・一致を示す前置詞" }
+        ],
+        "note": "agreeは自動詞なので必ずwith（人・意見に同意）やon（テーマについて合意）やto（提案・計画に同意）の前置詞と一緒に使います。I agree with you.（あなたに同意します）、I agree on the point.（その点で合意します）、I agree to the proposal.（提案に同意します）と使い分けましょう。×I agree youは誤りです。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Thank you, glad we're on the same page.", "ja": "ありがとう、同じ認識で良かったです" },
@@ -93,6 +128,16 @@
       "ja": "これは一旦保留にしませんか？",
       "level": "intermediate",
       "nuance": "英語のtableは「保留」の意味（日本語と逆）。米語では棚上げ。議論が長引いたときに使う。",
+      "grammar": {
+        "pattern": "Can we＋V＋O＋for now？（提案疑問文＋一時的な限定）",
+        "parts": [
+          { "text": "Can we", "role": "助動詞", "note": "「〜しませんか？」という提案・勧誘。全員に向けた共同行動を提案する" },
+          { "text": "table", "role": "V", "note": "「保留にする・棚上げする」という動詞（米英語）。※英国英語では逆に「議題に上げる」という意味になるので注意" },
+          { "text": "this", "role": "O", "note": "「これを」。現在議論中の話題・議題を指す" },
+          { "text": "for now", "role": "修飾", "note": "「今は・とりあえず・一旦」という一時的な限定を表す副詞句。「後で戻る」という含意がある" }
+        ],
+        "note": "tableという動詞は英米で意味が逆なので要注意。米国英語：table = 「保留にする・棚上げにする」、英国英語：table = 「（議題として）提出する・取り上げる」。ビジネスの場ではpark this（一旦置いておく）という表現がより安全で国際的に通じます。for nowは「今だけ・とりあえず」という意味で、「後で戻る」という含意を自然に伝えます。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Sure, let's come back to it later.", "ja": "わかりました、後で戻りましょう" },
@@ -110,6 +155,16 @@
       "ja": "このアクションアイテムの担当は誰ですか？",
       "level": "intermediate",
       "nuance": "会議の締めで必ず確認する。owner = 担当者。",
+      "grammar": {
+        "pattern": "Who will＋V＋O？（未来の行動の主体を問う疑問文）",
+        "parts": [
+          { "text": "Who", "role": "S", "note": "「誰が」という主語の疑問詞。whoが主語の場合、語順は通常通り（倒置なし）" },
+          { "text": "will", "role": "助動詞", "note": "「〜するだろう・〜する予定」という未来・意志を示す助動詞" },
+          { "text": "own", "role": "V", "note": "「（責任を）持つ・担当する」。ownは本来「所有する」という意味だが、ビジネスでは「担当する・責任を持つ」の意味で使われる" },
+          { "text": "this action item", "role": "O", "note": "「このアクションアイテム」。action item = 会議で決まった具体的なタスク・担当業務" }
+        ],
+        "note": "ownは所有の動詞ですが、ビジネス英語ではown a task / own the project（タスク・プロジェクトを担当する・責任を持つ）という使い方が定着しています。Whoが主語の場合、疑問文でも語順はSVOのまま変わりません（Who will own → 倒置なし）。この点をdoを使う疑問文（Does he own it?）と混同しないように注意しましょう。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "I'll take care of it.", "ja": "私が担当します" },
@@ -128,6 +183,15 @@
       "ja": "次の議題に移りましょうか？",
       "level": "beginner",
       "nuance": "進行役がよく使うフレーズ。会議をスムーズに進めるのに便利。",
+      "grammar": {
+        "pattern": "Shall we＋句動詞＋to＋the next＋名詞？（前進の提案文）",
+        "parts": [
+          { "text": "Shall we", "role": "助動詞", "note": "「〜しましょうか？」という丁寧な提案。全員を巻き込む" },
+          { "text": "move on", "role": "V", "note": "「前進する・次に移る」という句動詞。move on = 「（ある話題から）離れて次へ」というニュアンス" },
+          { "text": "to the next item", "role": "前置詞句", "note": "「次の議題へ」。toは方向・移行先を示す前置詞。next itemは「次の議題」" }
+        ],
+        "note": "move onはmoveとonの組み合わせで「前に進む・次へ移る」という意味の句動詞です。「過去や現在の話題から離れる」というニュアンスが含まれます。move to the next item（次の項目に移動する）と比べると、move on（前に進む）の方が「十分議論した」という区切りの意味合いがあります。進行役として会議をリードするのに便利な表現です。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Yes, let's move on.", "ja": "はい、次に行きましょう" },
@@ -145,6 +209,15 @@
       "ja": "理解を確認させてください",
       "level": "intermediate",
       "nuance": "自分の理解が正しいか確認する丁寧な表現。誤解を防ぐのに効果的。",
+      "grammar": {
+        "pattern": "Let me＋V＋that節（自分の行動を宣言する使役表現）",
+        "parts": [
+          { "text": "Let me", "role": "助動詞", "note": "「私に〜させてください」という使役の許可を求める表現。Let + me + 動詞原形の形" },
+          { "text": "make sure", "role": "V", "note": "「確認する・確かめる」という句動詞。「間違いなくそうであるようにする」という意味" },
+          { "text": "I understand", "role": "O", "note": "「私が理解していること」というthat節（thatは省略可能）。make sureの確認内容" }
+        ],
+        "note": "Let me ~は「〜させてください」という自分の行動を宣言する表現です。Please let me ~より口語的で自然です。make sureは「確認する」という意味で、make certain、verify、confirmとも言えますが、make sureが最も日常的です。I understandのthatは省略するのが普通です（Let me make sure that I understand.→ Let me make sure I understand.）。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Of course, go ahead.", "ja": "もちろん、どうぞ" },
@@ -162,6 +235,14 @@
       "ja": "まとめに入りましょう",
       "level": "beginner",
       "nuance": "会議の締めくくりを促すフレーズ。To summarize... と続けることが多い。",
+      "grammar": {
+        "pattern": "Let's＋句動詞（みんなへの提案・号令）",
+        "parts": [
+          { "text": "Let's", "role": "助動詞", "note": "「〜しましょう」という提案・号令。Let us の短縮形。全員（私たち）を含む行動を呼びかける" },
+          { "text": "wrap up", "role": "V", "note": "「まとめる・終わらせる」という句動詞。wrap（包む）＋up（完結）で「包んで片付ける」→「締めくくる」という意味" }
+        ],
+        "note": "wrap upは会議やプレゼンを「締めくくる」という意味のビジネス英語定番句動詞です。Let's wrap up.の後にTo summarize...（まとめると）やLet's recap the action items.（アクションアイテムを確認しましょう）を続けると自然な流れになります。Let's + 動詞は「〜しましょう」という提案で、相手の同意を求める感覚があります。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Sure, let's do a quick recap.", "ja": "はい、簡単に振り返りましょう" },
@@ -179,6 +260,15 @@
       "ja": "聞こえますか？",
       "level": "beginner",
       "nuance": "オンライン会議でよく使う。音声トラブルのときの第一声。",
+      "grammar": {
+        "pattern": "Can you＋知覚動詞＋me？（知覚・感覚の可能性を確認する疑問文）",
+        "parts": [
+          { "text": "Can you", "role": "助動詞", "note": "「〜できますか？」という能力・可能性の確認" },
+          { "text": "hear", "role": "V", "note": "「聞こえる」という知覚動詞。listenは意識的に聞く行為、hearは自然に音が耳に届くこと。音声の受信を確認するにはhearが適切" },
+          { "text": "me", "role": "O", "note": "「私の（声・音）が」。hearの目的語。Can you hear my voice?の省略形" }
+        ],
+        "note": "hearとlistenの違いが重要です。hear = 「（意識しなくても）聞こえる・音が届く」（知覚）、listen = 「（意識的に）聴く」（行為）。オンライン会議で音声が届いているか確認するにはCan you hear me?（聞こえますか？）が正しく、Can you listen to me?（聴いてください）は別の意味になります。知覚動詞は進行形にしないのが原則です（×Are you hearing me?）。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Yes, loud and clear!", "ja": "はい、よく聞こえます！" },

@@ -24,6 +24,15 @@
       "ja": "予約しています",
       "level": "beginner",
       "nuance": "フロントに着いたら最初に言う一言。名前を聞かれるので答えるだけ。",
+      "grammar": {
+        "pattern": "S＋V＋O（現在形で「〜を持っている」＝状態を表す）",
+        "parts": [
+          { "text": "I", "role": "S", "note": "主語「私は」" },
+          { "text": "have", "role": "V", "note": "「持っている」。haveは現在進行形にしない動詞（状態動詞）。×I am having は不可" },
+          { "text": "a reservation", "role": "O", "note": "「予約（という事実）」。予約番号や名前という『実体』を持っているイメージ" }
+        ],
+        "note": "haveは「所有・状態」を表す動詞で、現在形のまま使います。「予約してある」という完了した状態を示しており、I made a reservation.（予約を取った）と違い、今その予約が有効であることを強調します。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20a%20reservation.&op=translate",
       "expected_responses": [
         { "en": "Can I get your name?", "ja": "お名前をお聞かせください" },
@@ -42,6 +51,15 @@
       "ja": "チェックアウトは何時ですか？",
       "level": "beginner",
       "nuance": "チェックイン時または翌朝に確認しておくと安心。",
+      "grammar": {
+        "pattern": "What time＋is＋S？（時刻を尋ねる疑問文）",
+        "parts": [
+          { "text": "What time", "role": "修飾", "note": "「何時」という時刻を問う疑問詞。文頭に置くことで焦点を時間に絞る" },
+          { "text": "is", "role": "V", "note": "be動詞。「checkout」の性質（時間）を問う" },
+          { "text": "checkout", "role": "S", "note": "「チェックアウト（の時間）」。冠詞なしで制度・ルールとして扱う" }
+        ],
+        "note": "What time is ~?は「〜は何時ですか？」という時刻を聞く最もシンプルな形。checkoutに冠詞がないのは、ホテルの制度・ルールとして捉えているから。What time does checkout start?とも言えますが、短い方がより自然です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20time%20is%20checkout%3F&op=translate",
       "expected_responses": [
         { "en": "Checkout is at 11 a.m.", "ja": "チェックアウトは午前11時です" },
@@ -59,6 +77,15 @@
       "ja": "部屋に問題があります",
       "level": "beginner",
       "nuance": "困ったことがあったらまずこれ。具体的な問題を続けて言う。",
+      "grammar": {
+        "pattern": "There is＋S＋前置詞句（存在構文）",
+        "parts": [
+          { "text": "There's", "role": "V", "note": "There is の短縮形。「〜がある・存在する」を表す存在構文の定型表現" },
+          { "text": "a problem", "role": "S", "note": "「問題（が一つ）」。不定冠詞aは「何か一つの問題」という意味" },
+          { "text": "with my room", "role": "前置詞句", "note": "「私の部屋に関して」。withは「〜に関して/〜において」という関係を示す" }
+        ],
+        "note": "There is構文は「〜に〜がある」と存在を示すのに使います。My room has a problem.とも言えますが、There's a problem with...の方が問題を切り出すニュアンスが強く、クレームの導入として自然です。withは「関係性・関連」を表し、「部屋に関する問題」という意味になります。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=There%27s%20a%20problem%20with%20my%20room.&op=translate",
       "expected_responses": [
         { "en": "I'm sorry to hear that. What seems to be the problem?", "ja": "申し訳ありません。どのような問題ですか？" },
@@ -78,6 +105,15 @@
       "ja": "タオルを追加でもらえますか？",
       "level": "beginner",
       "nuance": "フロントに電話するか、直接言いに行く。extra = 追加の、は覚えておくと便利。",
+      "grammar": {
+        "pattern": "Can I get＋O？（依頼・許可を求める疑問文）",
+        "parts": [
+          { "text": "Can I", "role": "助動詞", "note": "「〜してもいいですか？／〜できますか？」。許可と依頼の両方の意味を持つ便利な表現" },
+          { "text": "get", "role": "V", "note": "「もらう・受け取る」。getはここで「入手する」という意味。haveより行動的なニュアンス" },
+          { "text": "extra towels", "role": "O", "note": "「追加のタオル」。extraは「余分な・追加の」という形容詞。複数形で複数枚を意味する" }
+        ],
+        "note": "Can I get ~?は「〜をもらえますか？」という非常に使いやすい依頼表現です。May I have ~?より口語的で自然。extraは「標準より多く」というニュアンスで、「もともとあるものに加えて」という含みがあります。この構文はextraをother（別の）に替えても使えます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20get%20extra%20towels%3F&op=translate",
       "expected_responses": [
         { "en": "Of course! How many do you need?", "ja": "もちろんです！いくつ必要ですか？" },
@@ -95,6 +131,14 @@
       "ja": "Wi-Fiのパスワードは何ですか？",
       "level": "beginner",
       "nuance": "チェックイン時に聞いておくのがベスト。",
+      "grammar": {
+        "pattern": "What's＋the＋名詞？（特定の情報を尋ねる疑問文）",
+        "parts": [
+          { "text": "What's", "role": "V", "note": "What is の短縮形。「〜は何ですか？」と情報を問う" },
+          { "text": "the Wi-Fi password", "role": "S", "note": "「Wi-Fiのパスワード」。定冠詞theは「このホテルの（特定の）パスワード」という意味。一つに決まっているものにtheを使う" }
+        ],
+        "note": "What's the ~?は「〜は何ですか？」と具体的な情報を聞く定番パターン。theを使うのは「このホテルに一つしかないパスワード」という特定性があるから。What is a password?（パスワードとは何か？）とは全く意味が違います。theの有無が「特定のもの」か「一般論」かを分けます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%27s%20the%20Wi-Fi%20password%3F&op=translate",
       "expected_responses": [
         { "en": "It's on the card in your room.", "ja": "お部屋のカードに記載されています" },
@@ -113,6 +157,15 @@
       "ja": "7時にモーニングコールをお願いできますか？",
       "level": "beginner",
       "nuance": "フロントに電話してリクエストする。時間の部分を入れ替えるだけ。",
+      "grammar": {
+        "pattern": "Can I get＋a＋名詞＋at＋時刻？（サービスを依頼する疑問文）",
+        "parts": [
+          { "text": "Can I get", "role": "助動詞", "note": "「〜してもらえますか？」という依頼表現" },
+          { "text": "a wake-up call", "role": "O", "note": "「モーニングコール（一回）」。複合名詞。wake-upが形容詞的に使われている" },
+          { "text": "at 7", "role": "修飾", "note": "「7時に」。at は特定の時刻に使う前置詞（in the morning / on Monday との使い分けが重要）" }
+        ],
+        "note": "時刻の前置詞はat（特定時刻）、in（時間帯・月・年）、on（曜日・日付）と使い分けます。at 7は「午前7時のその瞬間」を指します。wake-up callは「起こすための電話」という複合名詞で、日本語の「モーニングコール」と同義ですが、英語ではmorning callとは言いません。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20get%20a%20wake-up%20call%20at%207%3F&op=translate",
       "expected_responses": [
         { "en": "Of course! We'll call you at 7 a.m.", "ja": "もちろんです！午前7時にお電話します" },
@@ -129,6 +182,15 @@
       "ja": "朝食は含まれていますか？",
       "level": "beginner",
       "nuance": "予約確認時または到着時に確認しておくと便利。",
+      "grammar": {
+        "pattern": "Is＋S＋過去分詞？（受動態の疑問文）",
+        "parts": [
+          { "text": "Is", "role": "V", "note": "be動詞。受動態の疑問文を作る" },
+          { "text": "breakfast", "role": "S", "note": "「朝食」。冠詞なしで食事全般を指す慣用的な使い方" },
+          { "text": "included", "role": "C", "note": "「含まれている」という過去分詞。be＋過去分詞で受動態を作る。include（含む）の受け身形" }
+        ],
+        "note": "Is ~ included?は「〜は（料金に）含まれていますか？」という受動態の疑問文です。includedはincludeの過去分詞で、「誰かが含めた」という動作の結果として「含まれている状態」を表します。Does it include breakfast?（それは朝食を含みますか？）と能動態でも言えますが、Is breakfast included?の方が「朝食」を主役にした自然な表現です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20breakfast%20included%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, breakfast is included. It's served from 7 to 10.", "ja": "はい、朝食込みです。7時から10時のご提供です" },
@@ -147,6 +209,16 @@
       "ja": "近くのおすすめレストランを教えてもらえますか？",
       "level": "intermediate",
       "nuance": "コンシェルジュに相談する定番フレーズ。nearby = 近くの。",
+      "grammar": {
+        "pattern": "Can you＋V＋O＋修飾語？（相手への依頼疑問文）",
+        "parts": [
+          { "text": "Can you", "role": "助動詞", "note": "「〜してもらえますか？」という依頼。Could you?より少しカジュアル" },
+          { "text": "recommend", "role": "V", "note": "「推薦する・おすすめする」。他動詞なので目的語が必要" },
+          { "text": "a good restaurant", "role": "O", "note": "「良いレストラン（一軒）」。不定冠詞aは「どれか一つ」を意味する" },
+          { "text": "nearby", "role": "修飾", "note": "「近くの・近くにある」。副詞として文末に置き、レストランの位置を修飾する" }
+        ],
+        "note": "recommendは「recommend + 名詞」または「recommend + that節」の形を取ります。「recommend a restaurant nearby」のnearbyは副詞で、文末に置いて「近くにある」という情報を追加します。nearbyを形容詞として使うと「a nearby restaurant」とも言えます。どちらも正しいですが、文末nearbyの方が情報を後から加える英語らしいリズムです。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20you%20recommend%20a%20good%20restaurant%20nearby%3F&op=translate",
       "expected_responses": [
         { "en": "I'd recommend the place around the corner.", "ja": "角を曲がったところのお店がおすすめです" },
@@ -165,6 +237,15 @@
       "ja": "うるさすぎます",
       "level": "intermediate",
       "nuance": "隣室や外の騒音を訴えるときに使う。丁寧に言うなら It's a bit noisy. と和らげる。",
+      "grammar": {
+        "pattern": "It's＋too＋形容詞（過度な状態を表す文）",
+        "parts": [
+          { "text": "It's", "role": "S", "note": "形式主語のIt。「状況・環境」を漠然と指す。特定のものを指していない" },
+          { "text": "too", "role": "修飾", "note": "「〜すぎる」という過度を表す副詞。too + 形容詞で「許容範囲を超えている」ことを示す" },
+          { "text": "noisy", "role": "C", "note": "「うるさい・騒がしい」という形容詞。補語として主語の状態を説明する" }
+        ],
+        "note": "tooはveryと混同しがちですが、意味が大きく違います。very noisy = 「とてもうるさい」（ただの強調）、too noisy = 「うるさすぎる」（問題・不満のニュアンスがある）。クレームを伝えるときはtooを使うと「だから対処してほしい」という意図が伝わります。やわらかく言いたいときはa bit noisy（少しうるさい）を使いましょう。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=It%27s%20too%20noisy.&op=translate",
       "expected_responses": [
         { "en": "I'm sorry about that. We'll look into it.", "ja": "申し訳ありません。確認します" },
@@ -181,6 +262,15 @@
       "ja": "請求書を見せてもらえますか？",
       "level": "beginner",
       "nuance": "チェックアウト時に明細を確認する。請求は bill または invoice。",
+      "grammar": {
+        "pattern": "Can I see＋the＋名詞？（特定のものを見せてもらう依頼）",
+        "parts": [
+          { "text": "Can I", "role": "助動詞", "note": "「〜してもいいですか？」という許可・依頼の表現" },
+          { "text": "see", "role": "V", "note": "「見る」。lookは能動的に見る、seeは「（目に）入る・確認する」というニュアンス" },
+          { "text": "the bill", "role": "O", "note": "「請求書」。定冠詞theは「今回のこの（特定の）請求書」を指す。チェックアウト時には一つに決まっているのでtheが適切" }
+        ],
+        "note": "seeとlookの違いは重要です。Can I see ~?は「見せてもらえますか？（確認したい）」、Can I look at ~?は「ちょっと見てもいいですか？（じっくり見たい）」というニュアンスの差があります。請求書確認のようなビジネス場面ではseeが自然です。billは飲食店・ホテルの請求、invoiceは会社間取引の請求書に使い分けます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20see%20the%20bill%3F&op=translate",
       "expected_responses": [
         { "en": "Of course, here you go.", "ja": "もちろんです、こちらです" },
@@ -199,6 +289,14 @@
       "ja": "カードキーが使えません",
       "level": "beginner",
       "nuance": "部屋に入れないときに使う。フロントに言えばすぐ対応してくれる。",
+      "grammar": {
+        "pattern": "S＋doesn't work（機械・物が機能しないことを伝える）",
+        "parts": [
+          { "text": "My key card", "role": "S", "note": "「私のカードキー」。myで所有を示す" },
+          { "text": "doesn't work", "role": "V", "note": "「機能しない・動かない」。workは物が「正常に動く」ことを意味する汎用動詞。doesn'tで否定形" }
+        ],
+        "note": "workは人が「働く」だけでなく、機械・システムが「機能する・動く」という意味でも非常よく使われます。The elevator isn't working.（エレベーターが動いていない）、The air conditioner doesn't work.（エアコンが動かない）など応用が広い表現です。is brokenは「壊れた（物理的な損傷）」、doesn't workは「機能しない（故障・不具合）」とニュアンスが少し違います。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=My%20key%20card%20doesn%27t%20work.&op=translate",
       "expected_responses": [
         { "en": "I'll reprogram it for you right away.", "ja": "すぐに再設定します" },
@@ -215,6 +313,16 @@
       "ja": "起こさないでください",
       "level": "beginner",
       "nuance": "ドアのサインと同じ意味。電話口でも使える。",
+      "grammar": {
+        "pattern": "Please＋don't＋V（丁寧な否定命令文）",
+        "parts": [
+          { "text": "Please", "role": "修飾", "note": "命令文を丁寧にする副詞。文頭に置くと「〜してください」という依頼のトーンになる" },
+          { "text": "don't", "role": "助動詞", "note": "「〜しないで」という否定の命令。do notの短縮形" },
+          { "text": "disturb", "role": "V", "note": "「邪魔する・起こす」。他動詞で目的語meを取る" },
+          { "text": "me", "role": "O", "note": "「私を」。命令文の目的語" }
+        ],
+        "note": "命令文は主語を省いて動詞から始めます。否定命令はDon't/Please don't + 動詞の形です。Do Not Disturb（ドアサイン）と同じ意味ですが、口語ではPlease don't disturb me.と言います。disturb（邪魔する）は「部屋の掃除・電話・訪問などで邪魔しないで」という幅広い意味を持つ便利な動詞です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Please%20don%27t%20disturb%20me.&op=translate",
       "expected_responses": [
         { "en": "Of course, we'll leave you undisturbed.", "ja": "もちろんです、お邪魔しません" },

@@ -24,6 +24,14 @@
       "ja": "2枚ください",
       "level": "beginner",
       "nuance": "観光スポットのチケット購入の定番。数字を変えるだけ。",
+      "grammar": {
+        "pattern": "数量＋名詞 please（動詞省略のシンプルな注文・購入表現）",
+        "parts": [
+          { "text": "Two tickets", "role": "O", "note": "「チケット2枚」。数量＋名詞で購入数を指定する。動詞（I'd like / I'll take）が省略されている" },
+          { "text": "please", "role": "修飾", "note": "「お願いします」。文末につけることで丁寧さを加える副詞" }
+        ],
+        "note": "窓口や注文の場面では動詞を省略して「数量＋名詞＋please」だけで通じます。I'd like two tickets, please.の短縮形です。英語では文脈が明らかなとき動詞を省略する文が自然に使われます。数字の部分だけ変えれば（one ticket, three tickets）応用が効く便利なパターンです。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Two%20tickets%2C%20please.&op=translate",
       "expected_responses": [
         { "en": "That'll be $30.", "ja": "30ドルです" },
@@ -42,6 +50,15 @@
       "ja": "営業時間は何時から何時までですか？",
       "level": "beginner",
       "nuance": "事前に確認しておくと安心。定休日の確認も合わせてできる。",
+      "grammar": {
+        "pattern": "What are＋the＋複数名詞？（複数の情報を問う疑問文）",
+        "parts": [
+          { "text": "What", "role": "修飾", "note": "「何・どんな」という疑問詞。情報を問う" },
+          { "text": "are", "role": "V", "note": "be動詞の複数形。hoursが複数なのでareを使う（What is the opening time?との違い）" },
+          { "text": "the opening hours", "role": "S", "note": "「営業時間」。複数形hoursを使うのは「開始時刻と終了時刻」のように複数の時刻情報があるため" }
+        ],
+        "note": "opening hoursとopening timeは使い分けがあります。hours（複数）は「何時から何時まで」という営業時間の範囲を、time（単数）は「開始時刻のみ」を指すことが多いです。What are the hours?と短くしても自然に通じます。定冠詞theを使うのは「この施設に決まっている営業時間」という特定性があるからです。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20are%20the%20opening%20hours%3F&op=translate",
       "expected_responses": [
         { "en": "We're open from 9 a.m. to 6 p.m.", "ja": "午前9時から午後6時まで開いています" },
@@ -60,6 +77,16 @@
       "ja": "写真を撮ってもらえますか？",
       "level": "beginner",
       "nuance": "旅の定番お願い。撮ってあげるときは「こちらこそどうぞ」でOK。",
+      "grammar": {
+        "pattern": "Could you＋V＋O＋of us？（丁寧な依頼文）",
+        "parts": [
+          { "text": "Could you", "role": "助動詞", "note": "「〜していただけますか？」という丁寧な依頼。Can you?よりも改まった表現" },
+          { "text": "take", "role": "V", "note": "「撮る」。take a photo / take a pictureという組み合わせで写真を撮る意味になる" },
+          { "text": "a photo", "role": "O", "note": "「写真（1枚）」。不定冠詞aは「一枚の写真」。a few photos（何枚か）とも言える" },
+          { "text": "of us", "role": "前置詞句", "note": "「私たちの（写真）」。ofは「〜の内容・対象」を示す前置詞。a photo of us = 私たちが写った写真" }
+        ],
+        "note": "Could you ~?はCan you ~?よりも丁寧で、見知らぬ人に頼むときに最適です。take a photo of us（私たちを撮る）のofは「写真に写っているもの」を示します。take a photo for us（私たちのために撮る）のforとは意味が違うので注意しましょう。for usは「私たちのために（代わりに）」という意味になります。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Could%20you%20take%20a%20photo%20of%20us%3F&op=translate",
       "expected_responses": [
         { "en": "Of course! Say cheese!", "ja": "もちろん！はいチーズ！" },
@@ -78,6 +105,15 @@
       "ja": "英語のガイドツアーはありますか？",
       "level": "intermediate",
       "nuance": "英語のガイドツアーを探すときに使う。日本語ガイドがある施設も意外と多い。",
+      "grammar": {
+        "pattern": "Is there＋a＋名詞＋in English？（サービスの有無を確認する存在構文）",
+        "parts": [
+          { "text": "Is there", "role": "V", "note": "「〜はありますか？」という存在を問うThere is構文の疑問形" },
+          { "text": "a guided tour", "role": "S", "note": "「ガイド付きツアー（一つ）」。guidedは「案内された・ガイドがついた」という過去分詞が形容詞として使われている" },
+          { "text": "in English", "role": "修飾", "note": "「英語で（の）」。inは言語・媒体を表す前置詞（in Japanese / in French と使い回せる）" }
+        ],
+        "note": "in Englishのinは言語を表す特別な使い方です。「英語という言語の中で行われる」というイメージです。guidedはguide（案内する）の過去分詞が形容詞として使われており、「ガイドされた＝ガイド付きの」という意味です。a self-guided tour（自分のペースで回るツアー）と対比して覚えると理解が深まります。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20there%20a%20guided%20tour%20in%20English%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, the next one starts at 2 p.m.", "ja": "はい、次は午後2時からです" },
@@ -96,6 +132,16 @@
       "ja": "ここで一番のおすすめは何ですか？",
       "level": "beginner",
       "nuance": "地元の人やガイドにおすすめを聞く会話のきっかけフレーズ。",
+      "grammar": {
+        "pattern": "What's＋the best＋名詞＋to V＋here？（最上級を使っておすすめを尋ねる疑問文）",
+        "parts": [
+          { "text": "What's", "role": "V", "note": "What is の短縮形。「何ですか？」と情報を問う" },
+          { "text": "the best thing", "role": "S", "note": "「一番良いもの」。最上級the bestを使うことで「数ある中で一番」という意味を込める" },
+          { "text": "to see", "role": "修飾", "note": "「見るべき」というto不定詞の形容詞的用法。thingを後ろから修飾する" },
+          { "text": "here", "role": "修飾", "note": "「ここで・ここにある」という場所の副詞" }
+        ],
+        "note": "to不定詞の形容詞的用法は「〜するための・〜すべき」という意味でその前の名詞を修飾します。the best thing to see（見るべき最高のもの）、something to eat（食べるもの）、a place to visit（訪れるべき場所）などよく使われます。the bestは最上級で「一番」という意味。bestは一つに絞ってほしい場合に使いましょう。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%27s%20the%20best%20thing%20to%20see%20here%3F&op=translate",
       "expected_responses": [
         { "en": "Definitely the main gallery on the third floor.", "ja": "絶対に3階のメインギャラリーです" },
@@ -114,6 +160,15 @@
       "ja": "〜の展示はどこですか？",
       "level": "beginner",
       "nuance": "美術館や博物館で目当ての展示を探すときに使う。",
+      "grammar": {
+        "pattern": "Where is＋the＋名詞？（特定の場所・物の位置を尋ねる疑問文）",
+        "parts": [
+          { "text": "Where", "role": "修飾", "note": "「どこに」という場所を問う疑問詞" },
+          { "text": "is", "role": "V", "note": "be動詞。「〜はどこにあるか」という位置を問う" },
+          { "text": "the ~ exhibit", "role": "S", "note": "「〜の展示」。定冠詞theは「この施設にある特定の展示」を示す。exhibitは「展示品・展示」" }
+        ],
+        "note": "Where is ~?は最もシンプルな場所確認の疑問文です。定冠詞theを使うことで「この館内にある特定の展示」を指しています。Where can I find ~?（〜はどこで見つけられますか？）と比べると、Where is ~?はより直接的で場所の情報だけを求めます。exhibitは名詞（展示・展示品）と動詞（展示する）の両方で使える単語です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20is%20the%20modern%20art%20exhibit%3F&op=translate",
       "expected_responses": [
         { "en": "It's on the second floor, to your right.", "ja": "2階の右側です" },
@@ -132,6 +187,14 @@
       "ja": "入場料はありますか？",
       "level": "beginner",
       "nuance": "無料の観光スポットも多いので事前に確認。free admission = 入場無料。",
+      "grammar": {
+        "pattern": "Is there＋an＋名詞？（費用・制度の有無を確認する存在構文）",
+        "parts": [
+          { "text": "Is there", "role": "V", "note": "「〜はありますか？」という存在を問うThere is構文の疑問形" },
+          { "text": "an entry fee", "role": "S", "note": "「入場料」。entry（入場）＋fee（料金・手数料）。不定冠詞anはentry（母音始まり）の前に使う" }
+        ],
+        "note": "feeは特定の目的のために支払う「手数料・料金」を指します。chargeやcostと意味が近いですが、feeはサービスや入場に対する「固定の料金」というニュアンスが強いです。entry feeの他にadmission fee（入館料）、registration fee（登録料）などに使われます。Is it free?（無料ですか？）と言い換えることもできます。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20there%20an%20entry%20fee%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, it's $15 for adults.", "ja": "はい、大人は15ドルです" },
@@ -150,6 +213,14 @@
       "ja": "地元の名物は何ですか？",
       "level": "beginner",
       "nuance": "地元ならではの食べ物を知りたいときに使う。旅の醍醐味フレーズ。",
+      "grammar": {
+        "pattern": "What's＋the＋形容詞＋名詞？（特定の情報を尋ねる疑問文）",
+        "parts": [
+          { "text": "What's", "role": "V", "note": "What is の短縮形。「何ですか？」と情報を問う" },
+          { "text": "the local specialty", "role": "S", "note": "「地元の名物・特産品」。定冠詞theは「その地域を代表する（特定の）名物」を示す" }
+        ],
+        "note": "specialtyはspeciality（英)とも綴ります。「専門性の高いもの・得意なもの」が転じて「名物・特産品」の意味になっています。localは「地元の・その地域の」という形容詞で、local food（地元料理）、local people（地元の人）、local restaurant（地元のレストラン）と幅広く使えます。theを使うのは「この場所ならではの（唯一の）名物」というニュアンスを出すためです。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%27s%20the%20local%20specialty%3F&op=translate",
       "expected_responses": [
         { "en": "You have to try the clam chowder here.", "ja": "ここのクラムチャウダーは絶対食べてみて" },
@@ -168,6 +239,16 @@
       "ja": "お土産はどこで買えますか？",
       "level": "beginner",
       "nuance": "観光スポット内や近くのショップを案内してもらえる。",
+      "grammar": {
+        "pattern": "Where can I＋V＋O？（買い物・行動の場所を尋ねる疑問文）",
+        "parts": [
+          { "text": "Where", "role": "修飾", "note": "「どこで」という場所を問う疑問詞" },
+          { "text": "can I", "role": "助動詞", "note": "「〜できますか？」という可能性の確認。Where is ~?より行動的なニュアンス" },
+          { "text": "buy", "role": "V", "note": "「買う」という動詞" },
+          { "text": "souvenirs", "role": "O", "note": "「お土産（複数）」。souvenir（スーベニア）はフランス語由来で「記念の品」という意味" }
+        ],
+        "note": "Where can I buy ~?とWhere is ~?の違いは行動のニュアンスにあります。Where can I buy souvenirs?は「お土産を買うことができる場所はどこか」と行動主体の視点から聞いています。souvenirは複数形を使うのが一般的です（どこかの一つを指定していないため）。memorabilia（記念品）、gift（贈り物）との使い分けも覚えると便利です。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20can%20I%20buy%20souvenirs%3F&op=translate",
       "expected_responses": [
         { "en": "The gift shop is on the ground floor.", "ja": "ギフトショップは1階です" },
@@ -185,6 +266,15 @@
       "ja": "このエリアの地図はありますか？",
       "level": "beginner",
       "nuance": "観光案内所やホテルで配っていることが多い。無料の場合がほとんど。",
+      "grammar": {
+        "pattern": "Do you have＋a＋名詞＋of the area？（資料・物の有無を確認する疑問文）",
+        "parts": [
+          { "text": "Do you have", "role": "V", "note": "「〜はありますか？／〜を持っていますか？」という有無確認の定型句" },
+          { "text": "a map", "role": "O", "note": "「地図（一枚）」。不定冠詞aは「何か一枚」という意味。特定の地図を指していない" },
+          { "text": "of the area", "role": "前置詞句", "note": "「このエリアの」。ofは「〜の（内容・対象）」を示す前置詞。a map of the area = このエリアを表した地図" }
+        ],
+        "note": "ofは所属・内容を示す前置詞です。a map of the area（このエリアの地図）、a photo of the building（その建物の写真）のように使います。a map for the areaとすると「このエリアのために（用意された）地図」というニュアンスになり、ほぼ同義ですがofの方が一般的です。the areaのtheは「今いるこの特定のエリア」を指しています。"
+      },
       "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20have%20a%20map%20of%20the%20area%3F&op=translate",
       "expected_responses": [
         { "en": "Yes, here's a free map.", "ja": "はい、無料地図をどうぞ" },

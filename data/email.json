@@ -24,6 +24,15 @@
       "ja": "これについてフォローアップします",
       "level": "beginner",
       "nuance": "返信がないときに催促するときの定番チャンク。角が立たない自然な表現。",
+      "grammar": {
+        "pattern": "Just＋〜ing＋on＋this（主語省略の口語的な進行形でやわらかく催促する表現）",
+        "parts": [
+          { "text": "Just", "role": "修飾", "note": "「ただ〜しているだけ」という限定の副詞。催促のトーンを和らげる効果がある" },
+          { "text": "following up", "role": "V", "note": "「フォローアップする」という句動詞の現在分詞形。I'm just following up...のI'mが省略されている" },
+          { "text": "on this", "role": "前置詞句", "note": "「これについて」。follow upはonと組み合わせて使う（follow up on ~）" }
+        ],
+        "note": "メール冒頭で主語（I'm）を省略することは英語のビジネスライティングでは非常に一般的です。Justを加えることで「大したことではないけど確認したい」という謙虚なトーンになり、催促の角が取れます。follow up on ~は「〜についてその後どうなったか確認する」という意味のビジネス英語必須句動詞です。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Sorry for the delay! I'll get to it today.", "ja": "遅れてすみません！今日対応します" },
@@ -41,6 +50,15 @@
       "ja": "これを確認してもらえますか？",
       "level": "beginner",
       "nuance": "レビューや確認をお願いするときの定番。please review より柔らかい。",
+      "grammar": {
+        "pattern": "Could you＋take a look at＋O？（句動詞を使ったやわらかい確認依頼）",
+        "parts": [
+          { "text": "Could you", "role": "助動詞", "note": "「〜していただけますか？」という丁寧な依頼" },
+          { "text": "take a look", "role": "V", "note": "「（ちょっと）確認する・見る」という句動詞。lookの名詞形を使った慣用表現。Please review ~より口語的でやわらかい" },
+          { "text": "at this", "role": "前置詞句", "note": "「これを」。look atのatが必要（×take a look this）。atは注目・視線の対象を示す" }
+        ],
+        "note": "take a look at ~は「〜をちょっと見る・確認する」という意味で、Please review ~よりカジュアルで圧迫感が少ない表現です。atが必要な点に注意してください（look atのatはセット）。Could you take a look?とthisを省略しても、文脈が明らかなら通じます。ビジネスメール・Slackで最もよく使われる確認依頼の表現の一つです。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Sure, I'll review it today.", "ja": "はい、今日確認します" },
@@ -59,6 +77,15 @@
       "ja": "添付をご確認ください",
       "level": "beginner",
       "nuance": "ビジネスメールで最もよく使うチャンクのひとつ。",
+      "grammar": {
+        "pattern": "Please find＋形容詞（ビジネスメールの定型受動態構文）",
+        "parts": [
+          { "text": "Please", "role": "修飾", "note": "「〜してください」という丁寧な命令を作る副詞" },
+          { "text": "find", "role": "V", "note": "「見つける・確認する」という動詞。ここでは「添付されていることをご確認ください」という意味のビジネス定型表現" },
+          { "text": "attached", "role": "C", "note": "「添付された（状態の）」という過去分詞が形容詞として使われる。本来はPlease find the attached file.の省略形" }
+        ],
+        "note": "Please find attached.はビジネスメールの慣用的な定型表現です。完全な形はPlease find the attached [file/document].ですが、attachedだけで通じます。findはここで「見る・確認する」という意味で使われており、「探す」という通常の意味ではありません。より現代的にはI've attached ~/Attached is ~という表現も増えています。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Got it, thanks!", "ja": "受け取りました、ありがとう！" },
@@ -77,6 +104,15 @@
       "ja": "それで問題ありませんか？",
       "level": "beginner",
       "nuance": "提案や日程調整の最後によく使う。相手の都合を確認する丁寧な表現。",
+      "grammar": {
+        "pattern": "Does that work for you？（提案が相手に合うか確認する慣用疑問文）",
+        "parts": [
+          { "text": "Does that", "role": "S", "note": "「それは」。thatは直前に提案した内容（日程・計画・条件など）を指す指示代名詞" },
+          { "text": "work", "role": "V", "note": "「うまくいく・都合が合う」という意味。ここでの「機能する」は「問題なく受け入れられる」というニュアンス" },
+          { "text": "for you", "role": "前置詞句", "note": "「あなたにとって・あなたの都合で」。forは「〜にとって」という観点を示す前置詞" }
+        ],
+        "note": "workは「機能する」という意味から発展し、「（提案・日程が）都合がいい・問題ない」という意味で使われます。Does that work for you?は「それはあなたにとって機能しますか？」→「それで問題ありませんか？」という意味になります。返答はWorks for me!（問題ありません）が定番。That works.でも可。日程調整やビジネスの合意確認に非常によく使われる必須表現です。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Works for me!", "ja": "問題ありません！" },
@@ -95,6 +131,15 @@
       "ja": "今日中に返信します",
       "level": "beginner",
       "nuance": "すぐ回答できないときの定番。end of day = 今日中、end of week = 今週中。",
+      "grammar": {
+        "pattern": "I'll＋get back to you＋by＋期限（返信の期限を約束する表現）",
+        "parts": [
+          { "text": "I'll", "role": "助動詞", "note": "I will の短縮形。「〜します・〜するつもりです」という意志・約束を示す" },
+          { "text": "get back to you", "role": "V", "note": "「（あなたに）返信する・連絡を返す」という句動詞。reply to youより口語的でビジネスで頻用される" },
+          { "text": "by end of day", "role": "前置詞句", "note": "「今日中に」。byは「〜までに（期限）」を示す前置詞。end of day = EOD = 終業時刻まで" }
+        ],
+        "note": "byは期限を表す重要な前置詞です。by end of day（今日中に）、by end of week（今週中に）、by tomorrow（明日までに）のように使います。untilとの違いも重要で、byは「その時点までに完了する」（期限）、untilは「その時点まで続く」（継続）を意味します。I'll reply by 5 PM.（5時までに返信します）のように応用できます。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "No rush, take your time.", "ja": "急がなくていいですよ" },
@@ -112,6 +157,15 @@
       "ja": "〜も話に加えます",
       "level": "intermediate",
       "nuance": "メールのCCに追加するときや、話し合いに誰かを加えるときに使う。",
+      "grammar": {
+        "pattern": "Let me＋句動詞＋O（自分の行動を宣言する使役表現）",
+        "parts": [
+          { "text": "Let me", "role": "助動詞", "note": "「私に〜させてください」という行動宣言。Let + me + 動詞原形の形" },
+          { "text": "loop in", "role": "V", "note": "「（人）をループ（情報の輪）に加える」という句動詞。CCに追加したり、会話に参加させる行為を指す" },
+          { "text": "~", "role": "O", "note": "追加する人の名前。loop ~ inとloop in ~の語順どちらも可" }
+        ],
+        "note": "loop inはビジネス英語のモダンな句動詞で「情報のループ（循環）に加える」というイメージです。メールのCC追加、Slackでの@メンション、会議への招待など幅広く使えます。反対語はloop out / take off the loop（情報共有から外す）です。I'm looping in ~ for visibility.（情報共有のために〜を追加します）というパターンも頻出です。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Good idea, please do.", "ja": "いいですね、お願いします" },
@@ -129,6 +183,15 @@
       "ja": "必要であれば通話しましょう",
       "level": "intermediate",
       "nuance": "文章で説明が難しいとき。happy to = 喜んで〜します、という前向きな表現。",
+      "grammar": {
+        "pattern": "Happy to＋V＋if＋条件（主語省略＋形容詞＋to不定詞の口語的提案文）",
+        "parts": [
+          { "text": "Happy to", "role": "C", "note": "「喜んで〜します」。I'm happy to ~のI'mが省略された口語的形式。I'm willing to ~より積極的な印象" },
+          { "text": "jump on a call", "role": "V", "note": "「通話に飛び乗る」→「すぐ電話する・通話する」という口語的な句動詞。jump onは「すぐに行動する」という積極性を示す" },
+          { "text": "if helpful", "role": "接続詞", "note": "「もし役に立つなら」。if it is helpfulのit isが省略された形。条件の簡潔な表現" }
+        ],
+        "note": "Happy to ~はI'm happy to ~の主語省略形で、ビジネスメールやSlackで非常によく使われる表現です。willing to（〜する意思がある）より前向きで積極的なニュアンスがあります。jump on a callのjump onは「すぐ飛びつく」という積極性を示し、「すぐ通話しましょう」というニュアンスになります。if helpfulのように条件節でもit isを省略できます。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Yes, let's schedule a call.", "ja": "はい、通話をスケジュールしましょう" },
@@ -146,6 +209,15 @@
       "ja": "返信が遅くなりすみません",
       "level": "beginner",
       "nuance": "メールの冒頭でよく使う。Apologies for the delayed response. はより丁寧な表現。",
+      "grammar": {
+        "pattern": "Sorry for＋the＋形容詞＋名詞（謝罪の慣用表現）",
+        "parts": [
+          { "text": "Sorry", "role": "C", "note": "「すみません・申し訳ない」という形容詞。I'm sorryのI'mが省略された口語的形式" },
+          { "text": "for", "role": "前置詞", "note": "「〜について・〜のことで」という理由を示す前置詞。Sorry for ~で謝罪の対象を示す" },
+          { "text": "the late reply", "role": "O", "note": "「遅い返信」。定冠詞theは「この（特定の）返信が遅かったこと」を指す。lateは「遅れた」という形容詞" }
+        ],
+        "note": "Sorry for ~は「〜についてすみません」という謝罪の定番パターンです。forの後には名詞または動名詞が来ます（Sorry for being late. / Sorry for the trouble.）。より丁寧にはApologies for the delayed response.（遅れた返信についてお詫び申し上げます）を使います。apologiesはI apologize.の名詞形で、ビジネスフォーマルな場面に適しています。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "No worries at all!", "ja": "全然気にしないでください！" },
@@ -163,6 +235,13 @@
       "ja": "良さそうです！",
       "level": "beginner",
       "nuance": "Looks Good To Me の略。SlackやGitHubで頻出。承認・賛成の意味で使う。",
+      "grammar": {
+        "pattern": "頭字語（略語）としての慣用表現",
+        "parts": [
+          { "text": "LGTM", "role": "V", "note": "Looks Good To Me の頭字語（initialism）。L=Looks, G=Good, T=To, M=Me。文全体が一つの評価表現として機能する" }
+        ],
+        "note": "LGTMはLooks Good To Me（私には良さそうに見える）の略で、GitHubのコードレビューやSlackのビジネスコミュニケーションで広く使われます。Looks good.（良さそう）の現在形（三人称単数のLooks）は主語がit（その内容）であることを示します。ITやスタートアップ文化から生まれた略語で、承認・合意の意味で使います。他にOOO（Out Of Office）、FYI（For Your Information）なども重要です。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Great, I'll proceed then.", "ja": "ありがとう、では進めます" },
@@ -180,6 +259,15 @@
       "ja": "ご不明な点があればお知らせください",
       "level": "beginner",
       "nuance": "メールの締めの定番チャンク。ほぼ全てのビジネスメールで使える。",
+      "grammar": {
+        "pattern": "Please let me know＋if節（丁寧な情報提供依頼の定型表現）",
+        "parts": [
+          { "text": "Please", "role": "修飾", "note": "「〜してください」という丁寧さを加える副詞" },
+          { "text": "let me know", "role": "V", "note": "「私に知らせる」という使役動詞＋目的語＋動詞原形の構文。let + me（目的語）+ know（動詞原形）で「私が知ることを許可する」→「教えてください」" },
+          { "text": "if you have any questions", "role": "接続詞", "note": "「もし何か質問があれば」という条件節。anyは否定・疑問・条件文で使う不定代名詞" }
+        ],
+        "note": "let me knowのletは使役動詞で、let + O + 動詞原形という構文です。「私（me）が知る（know）ことを許可してください」というのが直訳で、「教えてください」という意味になります。anyは肯定文ではsomeを使いますが（I have some questions.）、条件節（if）や疑問文ではanyを使います。ビジネスメールの締め括りとして最も使われるフレーズの一つです。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Will do, thanks!", "ja": "わかりました、ありがとう！" },
@@ -198,6 +286,14 @@
       "ja": "前のメールに記載の通り、",
       "level": "intermediate",
       "nuance": "以前送った内容を再確認するときに使う。少し強めのニュアンスあり。",
+      "grammar": {
+        "pattern": "As per＋名詞句（「〜に従って・〜の通り」という準接続詞的表現）",
+        "parts": [
+          { "text": "As per", "role": "接続詞", "note": "「〜によると・〜の通り」という意味の慣用表現。perはラテン語由来で「〜を通じて・〜に従って」という意味。ビジネス英語でよく使われる" },
+          { "text": "my previous email", "role": "修飾", "note": "「私の前のメール」。previousは「直前の・以前の」という形容詞。formerより最近のものを指す" }
+        ],
+        "note": "as perはビジネス英語やリーガル英語でよく使われる「〜に従って・〜の通りに」という表現です。According to my previous email.とほぼ同義です。As mentioned before（前述の通り）より少し硬いニュアンスがあり、「あのメールに書いたはずなのに」という念押しのニュアンスを含むことがあります。相手が見落としていた場合に使うと若干プレッシャーを与えることもあるため、トーンに注意しましょう。"
+      },
       "google_translate_url": "",
       "expected_responses": [
         { "en": "Right, sorry I missed that.", "ja": "そうでした、見落としていました、すみません" },

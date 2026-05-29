@@ -26,7 +26,7 @@ function speak(text) {
   speechSynthesis.speak(utterance);
 }
 
-function openModal({ en, ja, nuance, expected_responses }) {
+function openModal({ en, ja, nuance, grammar, expected_responses }) {
   document.getElementById('card-en').textContent = en;
   document.getElementById('card-ja').textContent = ja;
 
@@ -36,6 +36,42 @@ function openModal({ en, ja, nuance, expected_responses }) {
     nuanceEl.style.display = '';
   } else {
     nuanceEl.style.display = 'none';
+  }
+
+  // 文法解説
+  const grammarEl   = document.getElementById('card-grammar');
+  const grammarBody = document.getElementById('card-grammar-body');
+  const grammarToggle = document.getElementById('card-grammar-toggle');
+  grammarToggle.classList.remove('open');
+  grammarBody.classList.remove('open');
+  grammarToggle.textContent = '📖 文法を見る ▼';
+
+  if (grammar) {
+    const ROLE_CLASS = {
+      'S': 'role-s', 'V': 'role-v', 'O': 'role-o', 'C': 'role-c',
+      '助動詞': 'role-aux', '修飾': 'role-mod', '接続詞': 'role-conj', '前置詞句': 'role-prep'
+    };
+    const partsHTML = grammar.parts.map(p => `
+      <div class="grammar-part">
+        <span class="grammar-part-text">${p.text}</span>
+        <span class="grammar-part-role ${ROLE_CLASS[p.role] || 'role-mod'}">${p.role}${p.note ? '・' + p.note : ''}</span>
+      </div>
+    `).join('');
+
+    grammarBody.innerHTML = `
+      <div class="grammar-parts">${partsHTML}</div>
+      <div class="grammar-pattern">${grammar.pattern}</div>
+      <div class="grammar-note">${grammar.note}</div>
+    `;
+    grammarEl.style.display = '';
+
+    grammarToggle.onclick = () => {
+      const isOpen = grammarBody.classList.toggle('open');
+      grammarToggle.classList.toggle('open', isOpen);
+      grammarToggle.textContent = isOpen ? '📖 文法を閉じる ▲' : '📖 文法を見る ▼';
+    };
+  } else {
+    grammarEl.style.display = 'none';
   }
 
   const responsesEl  = document.getElementById('card-responses');
@@ -184,6 +220,7 @@ async function loadScene() {
         en:                 chunk.en,
         ja:                 chunk.ja,
         nuance:             chunk.nuance,
+        grammar:            chunk.grammar || null,
         expected_responses: chunk.expected_responses || [],
       });
     });
