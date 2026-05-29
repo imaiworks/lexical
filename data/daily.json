@@ -1,0 +1,238 @@
+{
+  "scene_id": "daily",
+  "scene_label": "日常会話",
+  "scene_icon": "💬",
+  "mindset": {
+    "flow": ["挨拶 → How are you? はセット", "自己紹介：名前・出身・仕事/目的", "天気・趣味などで雑談を広げる", "聞き取れなかったら素直に聞き返してOK"],
+    "from_them": [
+      { "en": "How are you?", "ja": "お元気ですか？" },
+      { "en": "Where are you from?", "ja": "どちらのご出身ですか？" },
+      { "en": "What brings you here?", "ja": "何でここに？" },
+      { "en": "Sorry, could you say that again?", "ja": "もう一度言ってもらえますか？" }
+    ],
+    "from_you": [
+      { "en": "I'm good, thanks! And you?", "ja": "元気です！あなたは？" },
+      { "en": "I'm from Japan.", "ja": "日本から来ました" },
+      { "en": "Nice weather today, isn't it?", "ja": "今日はいい天気ですね" },
+      { "en": "Sorry, could you speak slowly?", "ja": "ゆっくり話してもらえますか？" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "greeting-morning",
+      "en": "Good morning! How are you?",
+      "ja": "おはようございます！お元気ですか？",
+      "level": "beginner",
+      "nuance": "英語圏では挨拶に How are you? がセットになっていることが多い。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Good%20morning!%20How%20are%20you%3F&op=translate",
+      "expected_responses": [
+        { "en": "I'm good, thanks! And you?", "ja": "元気です、ありがとう！あなたは？" },
+        { "en": "Not bad! Pretty busy lately.", "ja": "まあまあです！最近かなり忙しくて" },
+        { "en": "Great, thanks for asking!", "ja": "最高です、聞いてくれてありがとう！" }
+      ],
+      "branches": [
+        { "en": "I'm good, thanks! And you?", "ja": "元気です、ありがとう！あなたは？（定番の返し）", "type": "answer" },
+        { "en": "Not bad.", "ja": "まあまあです", "type": "answer" },
+        { "en": "Pretty good!", "ja": "かなりいい感じです", "type": "answer" },
+        { "en": "Good evening / Good afternoon", "ja": "こんばんは / こんにちは", "type": "vocabulary" }
+      ]
+    },
+    {
+      "id": "nice-to-meet",
+      "en": "Nice to meet you.",
+      "ja": "はじめまして",
+      "level": "beginner",
+      "nuance": "初対面の定番。Nice to meet you, too. が返し。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Nice%20to%20meet%20you.&op=translate",
+      "expected_responses": [
+        { "en": "Nice to meet you, too!", "ja": "こちらこそ、はじめまして！" },
+        { "en": "Likewise! Where are you from?", "ja": "こちらこそ！どちらのご出身ですか？" }
+      ],
+      "branches": [
+        { "en": "Nice to meet you, too.", "ja": "こちらこそ、はじめまして", "type": "answer" },
+        { "en": "What's your name?", "ja": "お名前は何ですか？", "type": "related" },
+        { "en": "I'm ~. Please call me ~.", "ja": "〜です。〜と呼んでください", "type": "pattern" }
+      ]
+    },
+    {
+      "id": "self-intro",
+      "en": "I'm from Japan.",
+      "ja": "日本から来ました",
+      "level": "beginner",
+      "nuance": "出身を聞かれたらこれ。都市名を加えると具体的になる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20from%20Japan.&op=translate",
+      "expected_responses": [
+        { "en": "Oh, Japan! I'd love to visit someday.", "ja": "日本ですか！いつか行ってみたいです" },
+        { "en": "Really? What city?", "ja": "本当ですか？どの都市ですか？" },
+        { "en": "I've been to Tokyo, it was amazing!", "ja": "東京に行ったことがあります、最高でした！" }
+      ],
+      "branches": [
+        { "en": "I'm from Tokyo / Osaka.", "ja": "東京 / 大阪から来ました", "type": "variation" },
+        { "en": "Where are you from?", "ja": "どこ出身ですか？", "type": "related" },
+        { "en": "I've been here for ~ days.", "ja": "〜日間ここにいます", "type": "related" }
+      ]
+    },
+    {
+      "id": "small-talk-weather",
+      "en": "Nice weather today, isn't it?",
+      "ja": "今日はいい天気ですね",
+      "level": "beginner",
+      "nuance": "英語圏で最も定番の雑談ネタ。相手との距離を縮める第一歩。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Nice%20weather%20today%2C%20isn%27t%20it%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yeah, finally! It's been raining all week.", "ja": "ええ、やっとですね！一週間ずっと雨でした" },
+        { "en": "Enjoy it, I heard it'll rain tomorrow.", "ja": "楽しんで、明日は雨だそうですよ" },
+        { "en": "Gorgeous, isn't it?", "ja": "素晴らしいですよね？" }
+      ],
+      "branches": [
+        { "en": "It's a bit cold today.", "ja": "今日は少し寒いですね", "type": "variation" },
+        { "en": "Yeah, finally!", "ja": "ええ、やっとですね！（返し）", "type": "answer" },
+        { "en": "I heard it might rain later.", "ja": "後で雨が降るかもしれないと聞きました", "type": "related" }
+      ]
+    },
+    {
+      "id": "sorry-repeat",
+      "en": "Sorry, could you say that again?",
+      "ja": "すみません、もう一度言ってもらえますか？",
+      "level": "beginner",
+      "nuance": "聞き取れなかったときの定番フレーズ。これを使うのをためらわないことが大事。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Sorry%2C%20could%20you%20say%20that%20again%3F&op=translate",
+      "expected_responses": [
+        { "en": "Sure! I said ~.", "ja": "もちろん！〜と言いました" },
+        { "en": "No problem, of course.", "ja": "もちろん、大丈夫ですよ" },
+        { "en": "Let me say it more slowly.", "ja": "もっとゆっくり言いますね" }
+      ],
+      "branches": [
+        { "en": "Could you speak more slowly?", "ja": "もう少しゆっくり話してもらえますか？", "type": "related" },
+        { "en": "Pardon?", "ja": "え？何ですか？（カジュアル）", "type": "variation" },
+        { "en": "I'm sorry, I didn't catch that.", "ja": "すみません、聞き取れませんでした", "type": "variation" }
+      ]
+    },
+    {
+      "id": "thank-you",
+      "en": "Thank you so much!",
+      "ja": "本当にありがとうございます！",
+      "level": "beginner",
+      "nuance": "thank youよりも強い感謝の気持ちを込めた表現。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Thank%20you%20so%20much!&op=translate",
+      "expected_responses": [
+        { "en": "You're welcome!", "ja": "どういたしまして！" },
+        { "en": "No problem at all!", "ja": "全然問題ないですよ！" },
+        { "en": "Happy to help!", "ja": "お役に立てて嬉しいです！" }
+      ],
+      "branches": [
+        { "en": "You're welcome!", "ja": "どういたしまして！", "type": "answer" },
+        { "en": "No problem.", "ja": "問題ないよ（カジュアル）", "type": "answer" },
+        { "en": "That's very kind of you.", "ja": "ご親切にありがとうございます", "type": "variation" }
+      ]
+    },
+    {
+      "id": "apology",
+      "en": "I'm sorry about that.",
+      "ja": "それは申し訳ありませんでした",
+      "level": "beginner",
+      "nuance": "謝罪の基本フレーズ。軽いミスには My bad. や Sorry! でもOK。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20sorry%20about%20that.&op=translate",
+      "expected_responses": [
+        { "en": "No worries!", "ja": "気にしないで！" },
+        { "en": "It's okay, don't worry about it.", "ja": "大丈夫ですよ、気にしないでください" },
+        { "en": "It happens!", "ja": "よくあることですよ！" }
+      ],
+      "branches": [
+        { "en": "My bad!", "ja": "私のミスです！（カジュアル）", "type": "variation" },
+        { "en": "No worries.", "ja": "気にしないで（返し）", "type": "answer" },
+        { "en": "It's okay.", "ja": "大丈夫ですよ（返し）", "type": "answer" }
+      ]
+    },
+    {
+      "id": "invitation",
+      "en": "Would you like to join us?",
+      "ja": "一緒にどうですか？",
+      "level": "intermediate",
+      "nuance": "食事や観光に誘うときの丁寧なフレーズ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Would%20you%20like%20to%20join%20us%3F&op=translate",
+      "expected_responses": [
+        { "en": "Sure, I'd love to!", "ja": "ぜひ！喜んで！" },
+        { "en": "That sounds great, thank you!", "ja": "いいですね、ありがとう！" },
+        { "en": "I'd love to, but I have other plans.", "ja": "ぜひそうしたいのですが、他に予定があります" }
+      ],
+      "branches": [
+        { "en": "Sure, I'd love to!", "ja": "ぜひ！（快諾）", "type": "answer" },
+        { "en": "That sounds great!", "ja": "いいですね！", "type": "answer" },
+        { "en": "I'd love to, but I have plans.", "ja": "ぜひそうしたいのですが、予定があります（丁寧な断り）", "type": "answer" }
+      ]
+    },
+    {
+      "id": "farewell",
+      "en": "It was nice talking to you.",
+      "ja": "お話しできてよかったです",
+      "level": "beginner",
+      "nuance": "会話の締めくくりに使う丁寧なフレーズ。別れ際の定番。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=It%20was%20nice%20talking%20to%20you.&op=translate",
+      "expected_responses": [
+        { "en": "Likewise! Have a great trip!", "ja": "こちらこそ！良い旅を！" },
+        { "en": "Same! Take care!", "ja": "こちらこそ！お気をつけて！" },
+        { "en": "You too! Safe travels!", "ja": "あなたも！安全な旅を！" }
+      ],
+      "branches": [
+        { "en": "Take care!", "ja": "お気をつけて！", "type": "related" },
+        { "en": "Have a great day!", "ja": "良い1日を！", "type": "related" },
+        { "en": "See you around!", "ja": "またね！（カジュアル）", "type": "variation" }
+      ]
+    },
+    {
+      "id": "compliment",
+      "en": "Your English is great!",
+      "ja": "英語がお上手ですね！",
+      "level": "beginner",
+      "nuance": "ほめるとコミュニケーションがスムーズに。返し方も覚えておく。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Your%20English%20is%20great!&op=translate",
+      "expected_responses": [
+        { "en": "Thank you! I'm still learning.", "ja": "ありがとう！まだ勉強中です" },
+        { "en": "Oh, you're too kind!", "ja": "ご親切に、ありがとうございます！" },
+        { "en": "Your Japanese is much better than my English!", "ja": "私の英語よりあなたの日本語の方が上手ですよ！" }
+      ],
+      "branches": [
+        { "en": "Thank you, I'm still learning.", "ja": "ありがとう、まだ勉強中です（謙虚な返し）", "type": "answer" },
+        { "en": "I've been studying for ~ years.", "ja": "〜年間勉強しています", "type": "related" },
+        { "en": "Your Japanese is amazing!", "ja": "日本語がすごいですね！", "type": "variation" }
+      ]
+    },
+    {
+      "id": "asking-opinion",
+      "en": "What do you think?",
+      "ja": "どう思いますか？",
+      "level": "beginner",
+      "nuance": "相手の意見を聞くシンプルなフレーズ。会話を続けるのに便利。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20do%20you%20think%3F&op=translate",
+      "expected_responses": [
+        { "en": "I think it's a great idea!", "ja": "素晴らしいアイデアだと思います！" },
+        { "en": "Honestly, I'm not sure.", "ja": "正直なところ、よくわかりません" },
+        { "en": "That's a tough one.", "ja": "難しいですね" }
+      ],
+      "branches": [
+        { "en": "That's a good point.", "ja": "いい指摘ですね", "type": "answer" },
+        { "en": "I agree with you.", "ja": "同意します", "type": "answer" },
+        { "en": "I'm not sure about that.", "ja": "それについてはよくわかりません", "type": "answer" }
+      ]
+    },
+    {
+      "id": "small-talk-hobby",
+      "en": "What do you do for fun?",
+      "ja": "趣味は何ですか？",
+      "level": "beginner",
+      "nuance": "What's your hobby? より自然な聞き方。会話が広がりやすい。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20do%20you%20do%20for%20fun%3F&op=translate",
+      "expected_responses": [
+        { "en": "I love hiking and photography.", "ja": "ハイキングと写真が大好きです" },
+        { "en": "Mostly reading and cooking.", "ja": "主に読書と料理です" },
+        { "en": "What about you?", "ja": "あなたは？" }
+      ],
+      "branches": [
+        { "en": "I'm into ~.", "ja": "〜にハマっています", "type": "pattern" },
+        { "en": "I love traveling / cooking / hiking.", "ja": "旅行 / 料理 / ハイキングが大好きです", "type": "variation" },
+        { "en": "Me too!", "ja": "私もです！", "type": "answer" }
+      ]
+    }
+  ]
+}

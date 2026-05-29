@@ -1,0 +1,200 @@
+{
+  "scene_id": "sightseeing",
+  "scene_label": "観光",
+  "scene_icon": "🗺️",
+  "mindset": {
+    "flow": ["入口でチケット購入", "入館・セキュリティチェックがある場合も", "案内図・音声ガイドを確認", "写真撮影OKかを確認してから撮る"],
+    "from_them": [
+      { "en": "How many tickets?", "ja": "何枚ですか？" },
+      { "en": "Adult or child?", "ja": "大人ですか、子供ですか？" },
+      { "en": "No photography please.", "ja": "撮影はご遠慮ください" },
+      { "en": "The next tour starts at ~.", "ja": "次のツアーは〜時開始です" }
+    ],
+    "from_you": [
+      { "en": "Two tickets, please.", "ja": "2枚ください" },
+      { "en": "Is there a guided tour in English?", "ja": "英語のガイドツアーはありますか？" },
+      { "en": "Could you take a photo of us?", "ja": "写真を撮ってもらえますか？" },
+      { "en": "Where can I buy souvenirs?", "ja": "お土産はどこで買えますか？" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "ticket-one",
+      "en": "Two tickets, please.",
+      "ja": "2枚ください",
+      "level": "beginner",
+      "nuance": "観光スポットのチケット購入の定番。数字を変えるだけ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Two%20tickets%2C%20please.&op=translate",
+      "expected_responses": [
+        { "en": "That'll be $30.", "ja": "30ドルです" },
+        { "en": "Adult or child?", "ja": "大人ですか、子供ですか？" },
+        { "en": "Do you have a student ID?", "ja": "学生証はお持ちですか？" }
+      ],
+      "branches": [
+        { "en": "One adult and one child, please.", "ja": "大人1枚と子供1枚をください", "type": "variation" },
+        { "en": "adult / child / senior / student", "ja": "大人 / 子供 / シニア / 学生", "type": "vocabulary" },
+        { "en": "Do you have a student discount?", "ja": "学生割引はありますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "opening-hours",
+      "en": "What are the opening hours?",
+      "ja": "営業時間は何時から何時までですか？",
+      "level": "beginner",
+      "nuance": "事前に確認しておくと安心。定休日の確認も合わせてできる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20are%20the%20opening%20hours%3F&op=translate",
+      "expected_responses": [
+        { "en": "We're open from 9 a.m. to 6 p.m.", "ja": "午前9時から午後6時まで開いています" },
+        { "en": "We're closed on Mondays.", "ja": "月曜日は定休日です" },
+        { "en": "Last entry is at 5 p.m.", "ja": "最終入場は午後5時です" }
+      ],
+      "branches": [
+        { "en": "What day are you closed?", "ja": "定休日はいつですか？", "type": "related" },
+        { "en": "Are you open on Sundays?", "ja": "日曜日は開いていますか？", "type": "related" },
+        { "en": "What time does it close?", "ja": "何時に閉まりますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "photo-request",
+      "en": "Could you take a photo of us?",
+      "ja": "写真を撮ってもらえますか？",
+      "level": "beginner",
+      "nuance": "旅の定番お願い。撮ってあげるときは「こちらこそどうぞ」でOK。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Could%20you%20take%20a%20photo%20of%20us%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course! Say cheese!", "ja": "もちろん！はいチーズ！" },
+        { "en": "Should I take a few?", "ja": "何枚か撮りましょうか？" },
+        { "en": "Sorry, I'm in a hurry.", "ja": "すみません、急いでいます" }
+      ],
+      "branches": [
+        { "en": "Just press this button.", "ja": "このボタンを押すだけでいいです", "type": "related" },
+        { "en": "Can you take one more?", "ja": "もう1枚撮ってもらえますか？", "type": "related" },
+        { "en": "Can I take a photo here?", "ja": "ここで写真を撮っていいですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "guided-tour",
+      "en": "Is there a guided tour in English?",
+      "ja": "英語のガイドツアーはありますか？",
+      "level": "intermediate",
+      "nuance": "英語のガイドツアーを探すときに使う。日本語ガイドがある施設も意外と多い。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20there%20a%20guided%20tour%20in%20English%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, the next one starts at 2 p.m.", "ja": "はい、次は午後2時からです" },
+        { "en": "Sorry, we only offer tours in French.", "ja": "申し訳ありませんが、フランス語のツアーのみです" },
+        { "en": "We have audio guides in English.", "ja": "英語の音声ガイドをご用意しています" }
+      ],
+      "branches": [
+        { "en": "When does the next tour start?", "ja": "次のツアーはいつ始まりますか？", "type": "related" },
+        { "en": "How long does the tour take?", "ja": "ツアーはどのくらいかかりますか？", "type": "related" },
+        { "en": "Is there an audio guide?", "ja": "音声ガイドはありますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "recommend-spot",
+      "en": "What's the best thing to see here?",
+      "ja": "ここで一番のおすすめは何ですか？",
+      "level": "beginner",
+      "nuance": "地元の人やガイドにおすすめを聞く会話のきっかけフレーズ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%27s%20the%20best%20thing%20to%20see%20here%3F&op=translate",
+      "expected_responses": [
+        { "en": "Definitely the main gallery on the third floor.", "ja": "絶対に3階のメインギャラリーです" },
+        { "en": "Don't miss the sunset view from the top.", "ja": "上からの夕日の景色は見逃せません" },
+        { "en": "The temporary exhibition is amazing right now.", "ja": "今の特別展がすごいですよ" }
+      ],
+      "branches": [
+        { "en": "What do you recommend?", "ja": "おすすめは何ですか？", "type": "variation" },
+        { "en": "Is it worth visiting?", "ja": "行く価値はありますか？", "type": "related" },
+        { "en": "What's popular with tourists?", "ja": "観光客に人気なのは何ですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "museum-exhibit",
+      "en": "Where is the ~ exhibit?",
+      "ja": "〜の展示はどこですか？",
+      "level": "beginner",
+      "nuance": "美術館や博物館で目当ての展示を探すときに使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20is%20the%20modern%20art%20exhibit%3F&op=translate",
+      "expected_responses": [
+        { "en": "It's on the second floor, to your right.", "ja": "2階の右側です" },
+        { "en": "Follow the signs for Gallery B.", "ja": "ギャラリーBの案内表示に従ってください" },
+        { "en": "That exhibit is closed for renovation.", "ja": "その展示は改装のため閉鎖中です" }
+      ],
+      "branches": [
+        { "en": "Is photography allowed inside?", "ja": "館内での撮影は許可されていますか？", "type": "related" },
+        { "en": "Where is the gift shop?", "ja": "ギフトショップはどこですか？", "type": "related" },
+        { "en": "Where is the restroom?", "ja": "トイレはどこですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "entry-fee",
+      "en": "Is there an entry fee?",
+      "ja": "入場料はありますか？",
+      "level": "beginner",
+      "nuance": "無料の観光スポットも多いので事前に確認。free admission = 入場無料。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20there%20an%20entry%20fee%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, it's $15 for adults.", "ja": "はい、大人は15ドルです" },
+        { "en": "It's free admission!", "ja": "入場無料です！" },
+        { "en": "Free on the first Sunday of each month.", "ja": "毎月第1日曜日は無料です" }
+      ],
+      "branches": [
+        { "en": "It's free admission.", "ja": "入場無料です", "type": "answer" },
+        { "en": "How much is the admission?", "ja": "入場料はいくらですか？", "type": "related" },
+        { "en": "Is it included in the city pass?", "ja": "シティパスに含まれていますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "local-food",
+      "en": "What's the local specialty?",
+      "ja": "地元の名物は何ですか？",
+      "level": "beginner",
+      "nuance": "地元ならではの食べ物を知りたいときに使う。旅の醍醐味フレーズ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%27s%20the%20local%20specialty%3F&op=translate",
+      "expected_responses": [
+        { "en": "You have to try the clam chowder here.", "ja": "ここのクラムチャウダーは絶対食べてみて" },
+        { "en": "The fish tacos are famous around here.", "ja": "この辺りはフィッシュタコスが有名です" },
+        { "en": "Go to the market, it's the best place.", "ja": "市場に行くといいですよ、最高です" }
+      ],
+      "branches": [
+        { "en": "Where can I try it?", "ja": "どこで食べられますか？", "type": "related" },
+        { "en": "What's this dish called?", "ja": "この料理は何という名前ですか？", "type": "related" },
+        { "en": "Is it spicy?", "ja": "辛いですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "souvenir",
+      "en": "Where can I buy souvenirs?",
+      "ja": "お土産はどこで買えますか？",
+      "level": "beginner",
+      "nuance": "観光スポット内や近くのショップを案内してもらえる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20can%20I%20buy%20souvenirs%3F&op=translate",
+      "expected_responses": [
+        { "en": "The gift shop is on the ground floor.", "ja": "ギフトショップは1階です" },
+        { "en": "There's a market just outside.", "ja": "外にマーケットがあります" },
+        { "en": "The main shopping street is nearby.", "ja": "近くにメインのショッピング通りがあります" }
+      ],
+      "branches": [
+        { "en": "Do you have anything typical of this area?", "ja": "この地域らしいものはありますか？", "type": "related" },
+        { "en": "Can you wrap it for travel?", "ja": "旅行用に包んでもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "map-request",
+      "en": "Do you have a map of the area?",
+      "ja": "このエリアの地図はありますか？",
+      "level": "beginner",
+      "nuance": "観光案内所やホテルで配っていることが多い。無料の場合がほとんど。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20have%20a%20map%20of%20the%20area%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, here's a free map.", "ja": "はい、無料地図をどうぞ" },
+        { "en": "Sorry, we're out of maps.", "ja": "すみません、地図が切れています" },
+        { "en": "You can download our app instead.", "ja": "代わりにアプリをダウンロードいただけます" }
+      ],
+      "branches": [
+        { "en": "Is there a tourist information center?", "ja": "観光案内所はありますか？", "type": "related" },
+        { "en": "Can you mark it on the map?", "ja": "地図に印をつけてもらえますか？", "type": "related" }
+      ]
+    }
+  ]
+}

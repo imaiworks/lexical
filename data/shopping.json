@@ -1,0 +1,217 @@
+{
+  "scene_id": "shopping",
+  "scene_label": "ショッピング",
+  "scene_icon": "🛍️",
+  "mindset": {
+    "flow": ["入店すると声をかけられる", "「見ているだけ」か「手伝って」かを伝える", "試着・サイズ確認", "レジへ → 支払い方法を聞かれる"],
+    "from_them": [
+      { "en": "Can I help you?", "ja": "何かお探しですか？" },
+      { "en": "How did it fit?", "ja": "サイズはいかがでしたか？" },
+      { "en": "Cash or card?", "ja": "現金ですか、カードですか？" },
+      { "en": "Would you like a bag?", "ja": "袋はご入用ですか？" }
+    ],
+    "from_you": [
+      { "en": "I'm just looking, thanks.", "ja": "見ているだけです" },
+      { "en": "Do you have this in a different size?", "ja": "別のサイズはありますか？" },
+      { "en": "Can I try this on?", "ja": "試着してもいいですか？" },
+      { "en": "Can I pay by card?", "ja": "カードで払えますか？" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "just-looking",
+      "en": "I'm just looking, thanks.",
+      "ja": "見ているだけです、ありがとう",
+      "level": "beginner",
+      "nuance": "店員に声をかけられたときの定番の返し。笑顔で言えばOK。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20just%20looking%2C%20thanks.&op=translate",
+      "expected_responses": [
+        { "en": "No problem! Let me know if you need anything.", "ja": "わかりました！何かあればお声がけください" },
+        { "en": "Take your time!", "ja": "ごゆっくりどうぞ！" }
+      ],
+      "branches": [
+        { "en": "Can I help you?", "ja": "何かお探しですか？（店員から）", "type": "related" },
+        { "en": "Actually, I need some help.", "ja": "実は手伝ってほしいのですが", "type": "related" }
+      ]
+    },
+    {
+      "id": "do-you-have",
+      "en": "Do you have this in a different color?",
+      "ja": "これの別の色はありますか？",
+      "level": "beginner",
+      "nuance": "色・サイズ違いを聞く定番フレーズ。in a different ~ で応用できる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20have%20this%20in%20a%20different%20color%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, we have it in black and white.", "ja": "はい、黒と白があります" },
+        { "en": "I'm sorry, this is the only color we have.", "ja": "申し訳ありませんが、この色のみです" },
+        { "en": "Let me check in the back.", "ja": "バックヤードを確認してきます" }
+      ],
+      "branches": [
+        { "en": "Do you have this in a different size?", "ja": "これの別のサイズはありますか？", "type": "variation" },
+        { "en": "Do you have a bigger / smaller one?", "ja": "もっと大きい / 小さいものはありますか？", "type": "related" },
+        { "en": "small / medium / large / XL", "ja": "サイズ表現", "type": "vocabulary" }
+      ]
+    },
+    {
+      "id": "try-on",
+      "en": "Can I try this on?",
+      "ja": "試着してもいいですか？",
+      "level": "beginner",
+      "nuance": "服を試着したいときの一言。フィッティングルームは fitting room。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20try%20this%20on%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course! The fitting rooms are over there.", "ja": "もちろんです！試着室はあちらです" },
+        { "en": "How many items do you have?", "ja": "何点お持ちですか？" },
+        { "en": "How did it fit?", "ja": "サイズはいかがでしたか？" }
+      ],
+      "branches": [
+        { "en": "Where is the fitting room?", "ja": "試着室はどこですか？", "type": "related" },
+        { "en": "It fits well.", "ja": "よく合っています", "type": "answer" },
+        { "en": "It's a bit too tight / loose.", "ja": "少しきつい / ゆるいです", "type": "answer" },
+        { "en": "It doesn't fit.", "ja": "サイズが合いません", "type": "answer" }
+      ]
+    },
+    {
+      "id": "how-much",
+      "en": "How much is this?",
+      "ja": "これはいくらですか？",
+      "level": "beginner",
+      "nuance": "値段を聞く最もシンプルなフレーズ。指差せば通じる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=How%20much%20is%20this%3F&op=translate",
+      "expected_responses": [
+        { "en": "That's $29.99.", "ja": "29ドル99セントです" },
+        { "en": "It's on sale for $20.", "ja": "セール中で20ドルです" },
+        { "en": "Let me check the price for you.", "ja": "値段を確認してきます" }
+      ],
+      "branches": [
+        { "en": "Is tax included?", "ja": "税込みですか？", "type": "related" },
+        { "en": "Is there a discount?", "ja": "割引はありますか？", "type": "related" },
+        { "en": "Do you have anything cheaper?", "ja": "もっと安いものはありますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "payment",
+      "en": "Can I pay by card?",
+      "ja": "カードで払えますか？",
+      "level": "beginner",
+      "nuance": "現金が必要な店もあるので確認するのが無難。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20pay%20by%20card%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, we accept all major cards.", "ja": "はい、主要なカードは全て使えます" },
+        { "en": "Sorry, cash only.", "ja": "申し訳ありませんが、現金のみです" },
+        { "en": "We accept card for purchases over $10.", "ja": "10ドル以上のお買い上げでカードが使えます" }
+      ],
+      "branches": [
+        { "en": "cash / credit card / contactless", "ja": "現金 / クレジットカード / タッチ決済", "type": "vocabulary" },
+        { "en": "Do you accept Apple Pay?", "ja": "Apple Payは使えますか？", "type": "related" },
+        { "en": "Can I split the payment?", "ja": "支払いを分けられますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "receipt",
+      "en": "Can I have a receipt?",
+      "ja": "レシートをもらえますか？",
+      "level": "beginner",
+      "nuance": "海外では自動でレシートをくれない場合もある。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20have%20a%20receipt%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course, here you go.", "ja": "もちろんです、どうぞ" },
+        { "en": "Would you like it printed or by email?", "ja": "印刷版とメール版、どちらがよいですか？" }
+      ],
+      "branches": [
+        { "en": "Can I have a gift receipt?", "ja": "ギフト用のレシートをもらえますか？", "type": "related" },
+        { "en": "Can you wrap it as a gift?", "ja": "ギフト包装してもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "return-exchange",
+      "en": "I'd like to return this.",
+      "ja": "これを返品したいのですが",
+      "level": "intermediate",
+      "nuance": "返品はreturn、交換はexchange。レシートを持参するのが基本。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27d%20like%20to%20return%20this.&op=translate",
+      "expected_responses": [
+        { "en": "Do you have your receipt?", "ja": "レシートはお持ちですか？" },
+        { "en": "What's the reason for the return?", "ja": "返品の理由を教えていただけますか？" },
+        { "en": "We can offer a refund or store credit.", "ja": "返金またはストアクレジットでご対応できます" }
+      ],
+      "branches": [
+        { "en": "I'd like to exchange this.", "ja": "これを交換したいのですが", "type": "variation" },
+        { "en": "Here's my receipt.", "ja": "レシートです", "type": "related" },
+        { "en": "It's defective.", "ja": "不良品でした", "type": "related" },
+        { "en": "It was a gift.", "ja": "プレゼントでもらったものです", "type": "related" }
+      ]
+    },
+    {
+      "id": "where-is-item",
+      "en": "Where can I find ~?",
+      "ja": "〜はどこにありますか？",
+      "level": "beginner",
+      "nuance": "大型スーパーや百貨店で商品の場所を聞くときの定番。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20can%20I%20find%20the%20dairy%20section%3F&op=translate",
+      "expected_responses": [
+        { "en": "It's on the second floor.", "ja": "2階にあります" },
+        { "en": "Aisle 5, on your left.", "ja": "5番通路の左側です" },
+        { "en": "Let me take you there.", "ja": "ご案内します" }
+      ],
+      "branches": [
+        { "en": "the dairy section / the bakery / the pharmacy", "ja": "乳製品売り場 / パン屋 / 薬局", "type": "vocabulary" },
+        { "en": "Is it on this floor?", "ja": "この階にありますか？", "type": "related" },
+        { "en": "Which floor is ~?", "ja": "〜は何階ですか？", "type": "pattern" }
+      ]
+    },
+    {
+      "id": "out-of-stock",
+      "en": "Is this in stock?",
+      "ja": "これは在庫がありますか？",
+      "level": "intermediate",
+      "nuance": "売り切れかどうか確認するフレーズ。in stock = 在庫あり。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20this%20in%20stock%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, we have plenty in stock.", "ja": "はい、在庫は十分あります" },
+        { "en": "I'm sorry, it's currently out of stock.", "ja": "申し訳ありません、現在在庫切れです" },
+        { "en": "We're expecting a new shipment next week.", "ja": "来週入荷予定です" }
+      ],
+      "branches": [
+        { "en": "It's out of stock.", "ja": "在庫切れです", "type": "related" },
+        { "en": "When will it be back in stock?", "ja": "いつ入荷しますか？", "type": "related" },
+        { "en": "Can you order it for me?", "ja": "取り寄せてもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "duty-free",
+      "en": "Is this duty-free?",
+      "ja": "これは免税ですか？",
+      "level": "intermediate",
+      "nuance": "免税店や空港ショップで使う。duty-free = 免税品。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20this%20duty-free%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, everything here is duty-free.", "ja": "はい、こちらは全て免税です" },
+        { "en": "You'll need to show your passport.", "ja": "パスポートを見せていただく必要があります" },
+        { "en": "The tax refund is processed at the exit.", "ja": "税金の払い戻しは出口で手続きします" }
+      ],
+      "branches": [
+        { "en": "Can I get a tax refund?", "ja": "税金の払い戻しを受けられますか？", "type": "related" },
+        { "en": "I need to show my passport.", "ja": "パスポートを見せる必要があります", "type": "related" }
+      ]
+    },
+    {
+      "id": "bag",
+      "en": "Do you have a bag?",
+      "ja": "袋はありますか？",
+      "level": "beginner",
+      "nuance": "海外ではレジ袋が有料や廃止の国が多い。先に確認するのが無難。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20have%20a%20bag%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, bags are 10 cents each.", "ja": "はい、袋は1枚10セントです" },
+        { "en": "Sorry, we don't offer plastic bags.", "ja": "申し訳ありませんが、ビニール袋のご用意はありません" },
+        { "en": "We have paper bags for free.", "ja": "紙袋は無料でご用意しています" }
+      ],
+      "branches": [
+        { "en": "I don't need a bag.", "ja": "袋は要りません", "type": "answer" },
+        { "en": "Can I get a paper bag?", "ja": "紙袋をもらえますか？", "type": "related" },
+        { "en": "I brought my own bag.", "ja": "マイバッグを持ってきました", "type": "related" }
+      ]
+    }
+  ]
+}

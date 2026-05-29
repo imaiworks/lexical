@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Lexical</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="scene-header">
+    <button class="back-btn" onclick="history.back()">‹</button>
+    <h2 class="scene-title" id="scene-title">読み込み中...</h2>
+  </header>
+
+  <main>
+    <div class="chunk-list" id="chunk-list"></div>
+  </main>
+
+  <!-- 全画面カードモーダル -->
+  <div class="card-modal" id="card-modal">
+    <div class="card-modal-inner">
+      <div class="card-handle"></div>
+      <button class="card-close" id="card-close">✕</button>
+      <div class="card-en" id="card-en"></div>
+      <div class="card-ja" id="card-ja"></div>
+      <div class="card-nuance" id="card-nuance"></div>
+      <div class="card-responses" id="card-responses">
+        <div class="card-responses-title">👆 返答の例（タップで発音）</div>
+        <div class="response-cards" id="response-cards"></div>
+        <div class="pointing-hint">相手に画面を見せて指差ししてもらえます</div>
+      </div>
+      <button class="card-listen-btn" id="card-listen-btn">
+        🔊 発音を聞く
+      </button>
+    </div>
+  </div>
+
+  <script src="scene.js"></script>
+</body>
+</html>

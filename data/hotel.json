@@ -1,0 +1,230 @@
+{
+  "scene_id": "hotel",
+  "scene_label": "ホテル",
+  "scene_icon": "🏨",
+  "mindset": {
+    "flow": ["フロントでチェックイン", "ルームキーと朝食情報を受け取る", "滞在中は何でもフロントへ電話", "チェックアウトは前日夜か当日朝に確認"],
+    "from_them": [
+      { "en": "Do you have a reservation?", "ja": "ご予約はありますか？" },
+      { "en": "Can I see your ID?", "ja": "身分証を見せてください" },
+      { "en": "How will you be paying?", "ja": "お支払い方法は？" },
+      { "en": "Enjoy your stay!", "ja": "ごゆっくりどうぞ！" }
+    ],
+    "from_you": [
+      { "en": "I have a reservation.", "ja": "予約しています" },
+      { "en": "My name is ~.", "ja": "〜という名前です" },
+      { "en": "What time is checkout?", "ja": "チェックアウトは何時ですか？" },
+      { "en": "Can I get a late checkout?", "ja": "レイトチェックアウトはできますか？" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "hotel-checkin",
+      "en": "I have a reservation.",
+      "ja": "予約しています",
+      "level": "beginner",
+      "nuance": "フロントに着いたら最初に言う一言。名前を聞かれるので答えるだけ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20a%20reservation.&op=translate",
+      "expected_responses": [
+        { "en": "Can I get your name?", "ja": "お名前をお聞かせください" },
+        { "en": "Can I see your passport or ID?", "ja": "パスポートか身分証を見せてください" },
+        { "en": "I'm sorry, I can't find your reservation.", "ja": "申し訳ありませんが、予約が見当たりません" }
+      ],
+      "branches": [
+        { "en": "My name is ~.", "ja": "〜です（名前）", "type": "pattern" },
+        { "en": "I booked online.", "ja": "オンラインで予約しました", "type": "related" },
+        { "en": "Here's my confirmation number.", "ja": "予約番号です", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-checkout-time",
+      "en": "What time is checkout?",
+      "ja": "チェックアウトは何時ですか？",
+      "level": "beginner",
+      "nuance": "チェックイン時または翌朝に確認しておくと安心。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%20time%20is%20checkout%3F&op=translate",
+      "expected_responses": [
+        { "en": "Checkout is at 11 a.m.", "ja": "チェックアウトは午前11時です" },
+        { "en": "You can request a late checkout at the front desk.", "ja": "フロントでレイトチェックアウトをご依頼いただけます" }
+      ],
+      "branches": [
+        { "en": "Can I get a late checkout?", "ja": "レイトチェックアウトはできますか？", "type": "related" },
+        { "en": "Can I store my luggage here?", "ja": "荷物を預かってもらえますか？", "type": "related" },
+        { "en": "I'd like to check out now.", "ja": "今チェックアウトしたいのですが", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-room-problem",
+      "en": "There's a problem with my room.",
+      "ja": "部屋に問題があります",
+      "level": "beginner",
+      "nuance": "困ったことがあったらまずこれ。具体的な問題を続けて言う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=There%27s%20a%20problem%20with%20my%20room.&op=translate",
+      "expected_responses": [
+        { "en": "I'm sorry to hear that. What seems to be the problem?", "ja": "申し訳ありません。どのような問題ですか？" },
+        { "en": "I'll send someone up right away.", "ja": "すぐにスタッフを向かわせます" },
+        { "en": "Would you like to change rooms?", "ja": "お部屋を変更されますか？" }
+      ],
+      "branches": [
+        { "en": "The air conditioning isn't working.", "ja": "エアコンが動きません", "type": "related" },
+        { "en": "The shower is broken.", "ja": "シャワーが壊れています", "type": "related" },
+        { "en": "Could you fix it?", "ja": "修理してもらえますか？", "type": "related" },
+        { "en": "Can I change rooms?", "ja": "部屋を変えてもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-extra-towels",
+      "en": "Can I get extra towels?",
+      "ja": "タオルを追加でもらえますか？",
+      "level": "beginner",
+      "nuance": "フロントに電話するか、直接言いに行く。extra = 追加の、は覚えておくと便利。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20get%20extra%20towels%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course! How many do you need?", "ja": "もちろんです！いくつ必要ですか？" },
+        { "en": "We'll bring them up shortly.", "ja": "すぐにお持ちします" }
+      ],
+      "branches": [
+        { "en": "Can I get extra ~?", "ja": "〜を追加でもらえますか？（パターン）", "type": "pattern" },
+        { "en": "pillow / blanket / toiletries", "ja": "枕 / 毛布 / アメニティ", "type": "vocabulary" },
+        { "en": "Can you bring it to room ~?", "ja": "〜号室に持ってきてもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-wifi",
+      "en": "What's the Wi-Fi password?",
+      "ja": "Wi-Fiのパスワードは何ですか？",
+      "level": "beginner",
+      "nuance": "チェックイン時に聞いておくのがベスト。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=What%27s%20the%20Wi-Fi%20password%3F&op=translate",
+      "expected_responses": [
+        { "en": "It's on the card in your room.", "ja": "お部屋のカードに記載されています" },
+        { "en": "The network is 'HotelGuest' and the password is 1234.", "ja": "ネットワーク名は HotelGuest、パスワードは1234です" },
+        { "en": "Wi-Fi is free and connects automatically.", "ja": "Wi-Fiは無料で自動的に接続されます" }
+      ],
+      "branches": [
+        { "en": "Is Wi-Fi free?", "ja": "Wi-Fiは無料ですか？", "type": "related" },
+        { "en": "The Wi-Fi isn't connecting.", "ja": "Wi-Fiに繋がりません", "type": "related" },
+        { "en": "What's the network name?", "ja": "ネットワーク名は何ですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-wakeup-call",
+      "en": "Can I get a wake-up call at 7?",
+      "ja": "7時にモーニングコールをお願いできますか？",
+      "level": "beginner",
+      "nuance": "フロントに電話してリクエストする。時間の部分を入れ替えるだけ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20get%20a%20wake-up%20call%20at%207%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course! We'll call you at 7 a.m.", "ja": "もちろんです！午前7時にお電話します" },
+        { "en": "Can I confirm your room number?", "ja": "部屋番号を確認させてください" }
+      ],
+      "branches": [
+        { "en": "at 6 a.m. / at 7:30", "ja": "午前6時 / 7時半に", "type": "vocabulary" },
+        { "en": "Could you set an alarm for ~?", "ja": "〜にアラームをセットしてもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-restaurant",
+      "en": "Is breakfast included?",
+      "ja": "朝食は含まれていますか？",
+      "level": "beginner",
+      "nuance": "予約確認時または到着時に確認しておくと便利。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20breakfast%20included%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, breakfast is included. It's served from 7 to 10.", "ja": "はい、朝食込みです。7時から10時のご提供です" },
+        { "en": "No, breakfast is not included.", "ja": "いいえ、朝食は含まれていません" },
+        { "en": "You can add breakfast for $15 per person.", "ja": "お一人様15ドルで朝食を追加できます" }
+      ],
+      "branches": [
+        { "en": "What time is breakfast served?", "ja": "朝食は何時からですか？", "type": "related" },
+        { "en": "Where is the restaurant?", "ja": "レストランはどこですか？", "type": "related" },
+        { "en": "Can I have breakfast in my room?", "ja": "部屋で朝食を食べられますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-concierge",
+      "en": "Can you recommend a good restaurant nearby?",
+      "ja": "近くのおすすめレストランを教えてもらえますか？",
+      "level": "intermediate",
+      "nuance": "コンシェルジュに相談する定番フレーズ。nearby = 近くの。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20you%20recommend%20a%20good%20restaurant%20nearby%3F&op=translate",
+      "expected_responses": [
+        { "en": "I'd recommend the place around the corner.", "ja": "角を曲がったところのお店がおすすめです" },
+        { "en": "Would you like me to make a reservation?", "ja": "ご予約しましょうか？" },
+        { "en": "It's about a 5-minute walk from here.", "ja": "ここから徒歩約5分です" }
+      ],
+      "branches": [
+        { "en": "Can you make a reservation for me?", "ja": "予約をしてもらえますか？", "type": "related" },
+        { "en": "How far is it from here?", "ja": "ここからどのくらいの距離ですか？", "type": "related" },
+        { "en": "Can I walk there?", "ja": "歩いて行けますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-noise",
+      "en": "It's too noisy.",
+      "ja": "うるさすぎます",
+      "level": "intermediate",
+      "nuance": "隣室や外の騒音を訴えるときに使う。丁寧に言うなら It's a bit noisy. と和らげる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=It%27s%20too%20noisy.&op=translate",
+      "expected_responses": [
+        { "en": "I'm sorry about that. We'll look into it.", "ja": "申し訳ありません。確認します" },
+        { "en": "Would you like to move to a quieter room?", "ja": "静かなお部屋に移動されますか？" }
+      ],
+      "branches": [
+        { "en": "Could you move me to a quieter room?", "ja": "静かな部屋に移してもらえますか？", "type": "related" },
+        { "en": "The room next door is very loud.", "ja": "隣の部屋がとてもうるさいです", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-bill",
+      "en": "Can I see the bill?",
+      "ja": "請求書を見せてもらえますか？",
+      "level": "beginner",
+      "nuance": "チェックアウト時に明細を確認する。請求は bill または invoice。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20see%20the%20bill%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course, here you go.", "ja": "もちろんです、こちらです" },
+        { "en": "Is there anything you'd like to clarify?", "ja": "ご不明な点はございますか？" },
+        { "en": "How would you like to pay?", "ja": "お支払い方法はいかがですか？" }
+      ],
+      "branches": [
+        { "en": "I think there's a mistake.", "ja": "間違いがあると思います", "type": "related" },
+        { "en": "I didn't use the minibar.", "ja": "ミニバーは使っていません", "type": "related" },
+        { "en": "Can I pay by credit card?", "ja": "クレジットカードで支払えますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-key",
+      "en": "My key card doesn't work.",
+      "ja": "カードキーが使えません",
+      "level": "beginner",
+      "nuance": "部屋に入れないときに使う。フロントに言えばすぐ対応してくれる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=My%20key%20card%20doesn%27t%20work.&op=translate",
+      "expected_responses": [
+        { "en": "I'll reprogram it for you right away.", "ja": "すぐに再設定します" },
+        { "en": "Can I see your room number?", "ja": "部屋番号を教えてください" }
+      ],
+      "branches": [
+        { "en": "I locked myself out.", "ja": "鍵を部屋に置いたまま閉め出されました", "type": "related" },
+        { "en": "Can I get a new key card?", "ja": "新しいカードキーをもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hotel-do-not-disturb",
+      "en": "Please don't disturb me.",
+      "ja": "起こさないでください",
+      "level": "beginner",
+      "nuance": "ドアのサインと同じ意味。電話口でも使える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Please%20don%27t%20disturb%20me.&op=translate",
+      "expected_responses": [
+        { "en": "Of course, we'll leave you undisturbed.", "ja": "もちろんです、お邪魔しません" },
+        { "en": "Understood. Have a good rest.", "ja": "承知しました。ゆっくりお休みください" }
+      ],
+      "branches": [
+        { "en": "Do Not Disturb", "ja": "起こさないでください（ドアサイン）", "type": "vocabulary" },
+        { "en": "Can you clean the room later?", "ja": "後で部屋を掃除してもらえますか？", "type": "related" },
+        { "en": "Please make up the room.", "ja": "部屋を掃除してください", "type": "related" }
+      ]
+    }
+  ]
+}

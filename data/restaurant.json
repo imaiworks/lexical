@@ -1,0 +1,234 @@
+{
+  "scene_id": "restaurant",
+  "scene_label": "レストラン・カフェ",
+  "scene_icon": "🍽️",
+  "mindset": {
+    "flow": ["入口で人数を伝える", "席に案内される", "メニューを受け取り注文", "食事", "会計をお願いする"],
+    "from_them": [
+      { "en": "How many?", "ja": "何名様ですか？" },
+      { "en": "Are you ready to order?", "ja": "ご注文はお決まりですか？" },
+      { "en": "Anything else?", "ja": "他にご注文はありますか？" },
+      { "en": "For here or to go?", "ja": "店内ですか、お持ち帰りですか？" },
+      { "en": "How would you like to pay?", "ja": "お支払いはどうされますか？" }
+    ],
+    "from_you": [
+      { "en": "Table for two, please.", "ja": "2名です" },
+      { "en": "I'll have the ~.", "ja": "〜にします" },
+      { "en": "That's all, thank you.", "ja": "以上です" },
+      { "en": "Check, please.", "ja": "お会計をお願いします" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "can-i-get",
+      "en": "Can I get a large coffee?",
+      "ja": "ラージコーヒーをください",
+      "level": "beginner",
+      "nuance": "一番カジュアルで自然な注文フレーズ。I'd like より口語的。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20get%20a%20large%20coffee%3F&op=translate",
+      "expected_responses": [
+        { "en": "Sure! Anything else?", "ja": "もちろん！他にご注文は？" },
+        { "en": "Coming right up!", "ja": "すぐにお持ちします！" },
+        { "en": "Sorry, we're out of large.", "ja": "申し訳ありません、ラージは売り切れです" }
+      ],
+      "branches": [
+        { "en": "Can I get a ~?", "ja": "〜をもらえますか？（パターン）", "type": "pattern" },
+        { "en": "large / medium / small", "ja": "サイズ表現", "type": "vocabulary" },
+        { "en": "I'd like a large coffee.", "ja": "ラージコーヒーをお願いします（少し丁寧）", "type": "related" },
+        { "en": "One large coffee, please.", "ja": "ラージコーヒーひとつ（最もシンプル）", "type": "related" }
+      ]
+    },
+    {
+      "id": "for-here-or-to-go",
+      "en": "For here or to go?",
+      "ja": "店内ですか、お持ち帰りですか？",
+      "level": "beginner",
+      "nuance": "店員が聞いてくる定番フレーズ。答えは For here. か To go. だけでOK。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=For%20here%20or%20to%20go%3F&op=translate",
+      "expected_responses": [
+        { "en": "For here, please.", "ja": "店内でお願いします" },
+        { "en": "To go, please.", "ja": "持ち帰りでお願いします" }
+      ],
+      "branches": [
+        { "en": "For here.", "ja": "店内で食べます", "type": "answer" },
+        { "en": "To go.", "ja": "持ち帰りです", "type": "answer" },
+        { "en": "Eat in or take away?", "ja": "イギリス英語での言い方", "type": "variation" }
+      ]
+    },
+    {
+      "id": "anything-else",
+      "en": "Anything else?",
+      "ja": "他にご注文はありますか？",
+      "level": "beginner",
+      "nuance": "店員が追加注文を確認する定番フレーズ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Anything%20else%3F&op=translate",
+      "expected_responses": [
+        { "en": "That's all, thank you.", "ja": "以上です、ありがとう" },
+        { "en": "Actually, can I also get ~?", "ja": "あ、〜も追加できますか？" }
+      ],
+      "branches": [
+        { "en": "That's all, thank you.", "ja": "以上です、ありがとう", "type": "answer" },
+        { "en": "Actually, can I also get ~?", "ja": "あ、〜も追加できますか？", "type": "answer" }
+      ]
+    },
+    {
+      "id": "table-reservation",
+      "en": "I have a reservation for two.",
+      "ja": "2名で予約しています",
+      "level": "beginner",
+      "nuance": "レストランの入口で伝える定番フレーズ。人数と名前を準備しておく。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20a%20reservation%20for%20two.&op=translate",
+      "expected_responses": [
+        { "en": "Can I get your name?", "ja": "お名前をお聞かせください" },
+        { "en": "Right this way, please.", "ja": "こちらへどうぞ" },
+        { "en": "I'm sorry, I don't see your reservation.", "ja": "申し訳ありませんが、予約が見当たりません" }
+      ],
+      "branches": [
+        { "en": "The reservation is under ~.", "ja": "〜名で予約しています", "type": "pattern" },
+        { "en": "Do you have a table for two?", "ja": "2名分のテーブルはありますか？（予約なし）", "type": "variation" },
+        { "en": "Can we sit outside?", "ja": "外の席に座れますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "menu-please",
+      "en": "Can I see the menu?",
+      "ja": "メニューを見せてもらえますか？",
+      "level": "beginner",
+      "nuance": "着席後に店員に頼む。Do you have an English menu? も合わせて覚える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20see%20the%20menu%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course, here you go.", "ja": "もちろんです、どうぞ" },
+        { "en": "We have an English menu, one moment.", "ja": "英語メニューがあります、少々お待ちください" },
+        { "en": "We only have a digital menu.", "ja": "デジタルメニューのみとなっています" }
+      ],
+      "branches": [
+        { "en": "Do you have an English menu?", "ja": "英語のメニューはありますか？", "type": "related" },
+        { "en": "What do you recommend?", "ja": "おすすめは何ですか？", "type": "related" },
+        { "en": "What's today's special?", "ja": "本日のおすすめ料理は何ですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "order-ready",
+      "en": "Are you ready to order?",
+      "ja": "ご注文はお決まりですか？",
+      "level": "beginner",
+      "nuance": "店員から聞かれる定番フレーズ。まだなら Just a minute. と言えばOK。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Are%20you%20ready%20to%20order%3F&op=translate",
+      "expected_responses": [
+        { "en": "Just a minute, please.", "ja": "もう少し待ってください" },
+        { "en": "Yes, I'll have the ~.", "ja": "はい、〜にします" }
+      ],
+      "branches": [
+        { "en": "Just a minute, please.", "ja": "もう少し待ってください", "type": "answer" },
+        { "en": "I'll have the ~.", "ja": "〜にします", "type": "answer" },
+        { "en": "I'll go with the same.", "ja": "同じものにします", "type": "answer" }
+      ]
+    },
+    {
+      "id": "allergy",
+      "en": "I'm allergic to nuts.",
+      "ja": "ナッツアレルギーがあります",
+      "level": "intermediate",
+      "nuance": "アレルギーは必ず伝える。命に関わることなので明確に伝えよう。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20allergic%20to%20nuts.&op=translate",
+      "expected_responses": [
+        { "en": "Thank you for letting us know.", "ja": "教えていただきありがとうございます" },
+        { "en": "We'll make sure to avoid that.", "ja": "必ず避けるようにします" },
+        { "en": "I'm sorry, most dishes contain nuts.", "ja": "申し訳ありませんが、ほとんどの料理にナッツが入っています" }
+      ],
+      "branches": [
+        { "en": "I'm allergic to ~.", "ja": "〜アレルギーがあります（パターン）", "type": "pattern" },
+        { "en": "gluten / dairy / shellfish / eggs", "ja": "グルテン / 乳製品 / 甲殻類 / 卵", "type": "vocabulary" },
+        { "en": "Does this contain ~?", "ja": "これには〜が含まれていますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "bill-please",
+      "en": "Check, please.",
+      "ja": "お会計をお願いします",
+      "level": "beginner",
+      "nuance": "アメリカでは Check please. イギリスでは Bill please. が一般的。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Check%2C%20please.&op=translate",
+      "expected_responses": [
+        { "en": "Of course, I'll be right back.", "ja": "もちろん、すぐに参ります" },
+        { "en": "How would you like to pay?", "ja": "お支払い方法はいかがですか？" },
+        { "en": "You can pay at the register.", "ja": "レジでお支払いいただけます" }
+      ],
+      "branches": [
+        { "en": "Can we split the bill?", "ja": "割り勘にできますか？", "type": "related" },
+        { "en": "I'll pay for everyone.", "ja": "全員分払います", "type": "related" },
+        { "en": "Separate checks, please.", "ja": "別々に会計してください", "type": "related" }
+      ]
+    },
+    {
+      "id": "taste-feedback",
+      "en": "This is delicious!",
+      "ja": "これは美味しい！",
+      "level": "beginner",
+      "nuance": "料理への感想は店員や料理人に喜ばれる。積極的に使おう。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=This%20is%20delicious!&op=translate",
+      "expected_responses": [
+        { "en": "Thank you so much!", "ja": "ありがとうございます！" },
+        { "en": "I'm glad you're enjoying it!", "ja": "お気に召していただけて嬉しいです！" }
+      ],
+      "branches": [
+        { "en": "It's amazing!", "ja": "最高です！", "type": "variation" },
+        { "en": "What's in this?", "ja": "これには何が入っていますか？", "type": "related" },
+        { "en": "I love it!", "ja": "大好きです！", "type": "variation" }
+      ]
+    },
+    {
+      "id": "wrong-order",
+      "en": "I think this isn't what I ordered.",
+      "ja": "注文したものと違うと思うのですが",
+      "level": "intermediate",
+      "nuance": "丁寧に伝えるためにI think を使うのがポイント。断言より柔らかくなる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20think%20this%20isn%27t%20what%20I%20ordered.&op=translate",
+      "expected_responses": [
+        { "en": "I'm so sorry! Let me fix that.", "ja": "大変申し訳ありません！すぐに直します" },
+        { "en": "Could you tell me what you ordered?", "ja": "何をご注文されたか教えていただけますか？" },
+        { "en": "I apologize for the confusion.", "ja": "ご迷惑をおかけして申し訳ありません" }
+      ],
+      "branches": [
+        { "en": "I ordered the ~, not the ~.", "ja": "〜を頼みました、〜ではなく", "type": "related" },
+        { "en": "Could you check my order?", "ja": "注文を確認してもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "water-please",
+      "en": "Can I have some water?",
+      "ja": "水をもらえますか？",
+      "level": "beginner",
+      "nuance": "海外ではお水は有料の国も多い。tap water（水道水）なら無料のことが多い。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20have%20some%20water%3F&op=translate",
+      "expected_responses": [
+        { "en": "Still or sparkling?", "ja": "炭酸なしですか、炭酸ありですか？" },
+        { "en": "Of course! Here you go.", "ja": "もちろんです！どうぞ" },
+        { "en": "We only have bottled water, is that okay?", "ja": "ボトル水のみですが、よろしいですか？" }
+      ],
+      "branches": [
+        { "en": "Still or sparkling?", "ja": "炭酸なし / 炭酸あり？（聞かれる）", "type": "related" },
+        { "en": "Still, please.", "ja": "炭酸なしをお願いします", "type": "answer" },
+        { "en": "Sparkling, please.", "ja": "炭酸水をお願いします", "type": "answer" },
+        { "en": "Tap water is fine.", "ja": "水道水で大丈夫です", "type": "answer" }
+      ]
+    },
+    {
+      "id": "takeout-order",
+      "en": "I'd like to place a takeout order.",
+      "ja": "テイクアウトを注文したいのですが",
+      "level": "beginner",
+      "nuance": "電話やカウンターでテイクアウトを頼むとき。place an order = 注文する。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27d%20like%20to%20place%20a%20takeout%20order.&op=translate",
+      "expected_responses": [
+        { "en": "Sure! What can I get you?", "ja": "もちろんです！ご注文をどうぞ" },
+        { "en": "It'll be about 15 minutes.", "ja": "約15分かかります" },
+        { "en": "Can I get a name for the order?", "ja": "お名前をいただけますか？" }
+      ],
+      "branches": [
+        { "en": "How long will it take?", "ja": "どのくらいかかりますか？", "type": "related" },
+        { "en": "Can I pick it up in 20 minutes?", "ja": "20分後に取りに行けますか？", "type": "related" }
+      ]
+    }
+  ]
+}

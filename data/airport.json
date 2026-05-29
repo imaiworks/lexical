@@ -1,0 +1,224 @@
+{
+  "scene_id": "airport",
+  "scene_label": "空港",
+  "scene_icon": "✈️",
+  "mindset": {
+    "flow": ["チェックインカウンターへ", "荷物を預ける・席を選ぶ", "セキュリティチェック通過", "ゲートへ移動・搭乗", "到着後：入国審査 → 荷物受取 → 税関"],
+    "from_them": [
+      { "en": "May I see your passport?", "ja": "パスポートを見せてください" },
+      { "en": "Window or aisle?", "ja": "窓側と通路側、どちらですか？" },
+      { "en": "Any bags to check?", "ja": "預け荷物はありますか？" },
+      { "en": "What's the purpose of your visit?", "ja": "渡航目的は何ですか？" },
+      { "en": "How long will you stay?", "ja": "滞在期間はどのくらいですか？" }
+    ],
+    "from_you": [
+      { "en": "I'd like to check in.", "ja": "チェックインをお願いします" },
+      { "en": "Window seat, please.", "ja": "窓側をお願いします" },
+      { "en": "I have one bag to check.", "ja": "預け荷物が1つあります" },
+      { "en": "I'm here for sightseeing.", "ja": "観光で来ました" },
+      { "en": "About a week.", "ja": "約1週間です" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "check-in-counter",
+      "en": "I'd like to check in.",
+      "ja": "チェックインをお願いします",
+      "level": "beginner",
+      "nuance": "カウンターに着いたら最初に言う一言。これだけで通じる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27d%20like%20to%20check%20in.&op=translate",
+      "expected_responses": [
+        { "en": "May I see your passport?", "ja": "パスポートを見せてください" },
+        { "en": "Do you have any bags to check?", "ja": "預け荷物はありますか？" },
+        { "en": "Which flight are you on?", "ja": "何便をご利用ですか？" }
+      ],
+      "branches": [
+        { "en": "I have a reservation under ~.", "ja": "〜名で予約しています", "type": "pattern" },
+        { "en": "Here's my passport.", "ja": "パスポートです", "type": "related" },
+        { "en": "I'm on the ~ flight to ~.", "ja": "〜行きの〜便です", "type": "related" }
+      ]
+    },
+    {
+      "id": "window-or-aisle",
+      "en": "Can I have a window seat?",
+      "ja": "窓側の席をお願いできますか？",
+      "level": "beginner",
+      "nuance": "チェックイン時に席のリクエストができる。aisle seatは通路側。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20have%20a%20window%20seat%3F&op=translate",
+      "expected_responses": [
+        { "en": "Of course! You're in seat 14A.", "ja": "もちろんです！14A席です" },
+        { "en": "I'm sorry, window seats are all taken.", "ja": "申し訳ありませんが、窓側は全て埋まっています" },
+        { "en": "Would you like an exit row instead?", "ja": "非常口列はいかがですか？" }
+      ],
+      "branches": [
+        { "en": "aisle seat", "ja": "通路側の席", "type": "vocabulary" },
+        { "en": "window seat", "ja": "窓側の席", "type": "vocabulary" },
+        { "en": "exit row seat", "ja": "非常口列の席（足元広い）", "type": "vocabulary" },
+        { "en": "Can I sit near the front?", "ja": "前の方の席にできますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "baggage-allowance",
+      "en": "How many bags can I check?",
+      "ja": "預け荷物はいくつまでですか？",
+      "level": "intermediate",
+      "nuance": "荷物の個数・重量制限を確認するフレーズ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=How%20many%20bags%20can%20I%20check%3F&op=translate",
+      "expected_responses": [
+        { "en": "You're allowed one bag up to 23kg.", "ja": "23kgまでの荷物を1つお預けいただけます" },
+        { "en": "Each additional bag is $30.", "ja": "追加の荷物は1つ30ドルです" },
+        { "en": "Your bag is overweight, it's $50 extra.", "ja": "重量オーバーのため50ドル追加料金があります" }
+      ],
+      "branches": [
+        { "en": "What's the weight limit?", "ja": "重量制限は何kgですか？", "type": "related" },
+        { "en": "My bag is overweight.", "ja": "荷物が重量オーバーです", "type": "related" },
+        { "en": "carry-on / checked bag", "ja": "機内持ち込み / 預け荷物", "type": "vocabulary" }
+      ]
+    },
+    {
+      "id": "security-items",
+      "en": "Do I need to take off my shoes?",
+      "ja": "靴を脱ぐ必要がありますか？",
+      "level": "beginner",
+      "nuance": "セキュリティチェックで迷ったときに使える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20I%20need%20to%20take%20off%20my%20shoes%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, please remove your shoes.", "ja": "はい、靴を脱いでください" },
+        { "en": "No, just walk through.", "ja": "いいえ、そのまま通ってください" },
+        { "en": "Please put your laptop in a separate tray.", "ja": "PCは別のトレーに入れてください" }
+      ],
+      "branches": [
+        { "en": "Please put your belongings in the tray.", "ja": "荷物をトレーに入れてください（言われる側）", "type": "related" },
+        { "en": "Is this allowed in carry-on?", "ja": "これは機内持ち込みできますか？", "type": "related" },
+        { "en": "liquids / laptops / belt", "ja": "液体 / PC / ベルト（取り出すもの）", "type": "vocabulary" }
+      ]
+    },
+    {
+      "id": "customs-declaration",
+      "en": "I have nothing to declare.",
+      "ja": "申告するものはありません",
+      "level": "beginner",
+      "nuance": "税関で言う定番フレーズ。物があれば I have ~ to declare. に変える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20nothing%20to%20declare.&op=translate",
+      "expected_responses": [
+        { "en": "Please proceed.", "ja": "お通りください" },
+        { "en": "Can I see your customs form?", "ja": "税関申告書を見せてください" },
+        { "en": "Please open your bag.", "ja": "バッグを開けてください" }
+      ],
+      "branches": [
+        { "en": "I have ~ to declare.", "ja": "〜を申告します", "type": "pattern" },
+        { "en": "What is the purpose of your visit?", "ja": "渡航目的は？（聞かれる）", "type": "related" },
+        { "en": "Tourism / Business / Transit", "ja": "観光 / 出張 / 乗り継ぎ", "type": "vocabulary" }
+      ]
+    },
+    {
+      "id": "immigration",
+      "en": "I'm here for sightseeing.",
+      "ja": "観光で来ました",
+      "level": "beginner",
+      "nuance": "入国審査で渡航目的を答える定番。シンプルにこれだけでOK。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20here%20for%20sightseeing.&op=translate",
+      "expected_responses": [
+        { "en": "How long will you stay?", "ja": "どのくらい滞在しますか？" },
+        { "en": "Do you have a return ticket?", "ja": "帰りの航空券はお持ちですか？" },
+        { "en": "Welcome, enjoy your stay!", "ja": "ようこそ、楽しんでください！" }
+      ],
+      "branches": [
+        { "en": "I'm here on business.", "ja": "出張で来ました", "type": "variation" },
+        { "en": "I'm visiting a friend.", "ja": "友人を訪ねてきました", "type": "variation" },
+        { "en": "How long will you stay?", "ja": "どのくらい滞在しますか？（聞かれる）", "type": "related" },
+        { "en": "About a week.", "ja": "約1週間です", "type": "answer" }
+      ]
+    },
+    {
+      "id": "where-is-gate",
+      "en": "Where is gate B12?",
+      "ja": "B12ゲートはどこですか？",
+      "level": "beginner",
+      "nuance": "ゲートを探すときの基本。番号部分を入れ替えるだけ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20is%20gate%20B12%3F&op=translate",
+      "expected_responses": [
+        { "en": "Take the escalator up and turn left.", "ja": "エスカレーターを上がって左に曲がってください" },
+        { "en": "Follow the signs, it's about a 10-minute walk.", "ja": "案内表示に従ってください。約10分歩きます" },
+        { "en": "It's at the end of this terminal.", "ja": "このターミナルの突き当たりです" }
+      ],
+      "branches": [
+        { "en": "Where is the ~?", "ja": "〜はどこですか？（汎用）", "type": "pattern" },
+        { "en": "baggage claim / arrivals / departures", "ja": "手荷物受取 / 到着 / 出発", "type": "vocabulary" },
+        { "en": "Is this the right terminal?", "ja": "ターミナルはここで合っていますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "boarding",
+      "en": "Is boarding started?",
+      "ja": "搭乗は始まっていますか？",
+      "level": "beginner",
+      "nuance": "ゲートで搭乗開始を確認するときに使える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20boarding%20started%3F&op=translate",
+      "expected_responses": [
+        { "en": "We'll begin boarding in 15 minutes.", "ja": "あと15分で搭乗開始です" },
+        { "en": "Yes, we're now boarding group 1.", "ja": "はい、グループ1の搭乗が始まっています" },
+        { "en": "Please wait at the gate.", "ja": "ゲートでお待ちください" }
+      ],
+      "branches": [
+        { "en": "Now boarding group ~.", "ja": "グループ〜の方からご搭乗です（アナウンス）", "type": "related" },
+        { "en": "May I see your boarding pass?", "ja": "搭乗券を見せてください（言われる）", "type": "related" },
+        { "en": "Here you go.", "ja": "どうぞ（渡すとき）", "type": "answer" }
+      ]
+    },
+    {
+      "id": "flight-delay",
+      "en": "Is the flight delayed?",
+      "ja": "フライトは遅延していますか？",
+      "level": "intermediate",
+      "nuance": "掲示板を見てもよくわからないときに直接聞く。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Is%20the%20flight%20delayed%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, it's delayed by about 2 hours.", "ja": "はい、約2時間遅延しています" },
+        { "en": "No, we're on schedule.", "ja": "いいえ、予定通りです" },
+        { "en": "We're still waiting for an update.", "ja": "まだ情報待ちです" }
+      ],
+      "branches": [
+        { "en": "The flight is delayed by ~ hours.", "ja": "〜時間遅延しています", "type": "related" },
+        { "en": "When is the new departure time?", "ja": "新しい出発時刻はいつですか？", "type": "related" },
+        { "en": "The flight is cancelled.", "ja": "フライトがキャンセルになりました", "type": "related" }
+      ]
+    },
+    {
+      "id": "lost-baggage",
+      "en": "My baggage hasn't arrived.",
+      "ja": "荷物が出てきません",
+      "level": "intermediate",
+      "nuance": "バゲージクレームで荷物が来ないときに使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=My%20baggage%20hasn%27t%20arrived.&op=translate",
+      "expected_responses": [
+        { "en": "Can I see your baggage claim tag?", "ja": "荷物タグを見せてください" },
+        { "en": "I'll check the system for you.", "ja": "システムを確認します" },
+        { "en": "We'll deliver it to your hotel.", "ja": "ホテルにお届けします" }
+      ],
+      "branches": [
+        { "en": "I'd like to report lost baggage.", "ja": "荷物の紛失を報告したいのですが", "type": "related" },
+        { "en": "Here is my baggage claim tag.", "ja": "荷物タグです", "type": "related" },
+        { "en": "Can you deliver it to my hotel?", "ja": "ホテルに届けてもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "transit",
+      "en": "I'm in transit to ~.",
+      "ja": "〜へ乗り継ぎです",
+      "level": "intermediate",
+      "nuance": "乗り継ぎ便のチェックインや入国審査でよく使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20in%20transit%20to%20Tokyo.&op=translate",
+      "expected_responses": [
+        { "en": "You'll need to go through security again.", "ja": "もう一度セキュリティを通る必要があります" },
+        { "en": "Please proceed to gate C.", "ja": "Cゲートへお進みください" },
+        { "en": "Do you have your boarding pass for the next flight?", "ja": "次のフライトの搭乗券はお持ちですか？" }
+      ],
+      "branches": [
+        { "en": "Where is the transit counter?", "ja": "乗り継ぎカウンターはどこですか？", "type": "related" },
+        { "en": "Do I need to go through customs?", "ja": "税関を通る必要がありますか？", "type": "related" },
+        { "en": "How much time do I have?", "ja": "乗り継ぎ時間はどのくらいありますか？", "type": "related" }
+      ]
+    }
+  ]
+}

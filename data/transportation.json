@@ -1,0 +1,199 @@
+{
+  "scene_id": "transportation",
+  "scene_label": "交通・移動",
+  "scene_icon": "🚕",
+  "mindset": {
+    "flow": ["タクシー：乗車 → 行先を伝える → 到着 → 支払い", "バス：行先確認 → 乗車 → 降車ボタンor声がけ", "地下鉄：路線確認 → チケット購入 → 乗換確認"],
+    "from_them": [
+      { "en": "Where to?", "ja": "どちらまで？" },
+      { "en": "Is this address correct?", "ja": "この住所で合っていますか？" },
+      { "en": "That'll be ~ dollars.", "ja": "〜ドルになります" },
+      { "en": "Transfer at ~ station.", "ja": "〜駅で乗り換えてください" }
+    ],
+    "from_you": [
+      { "en": "Can you take me to ~?", "ja": "〜までお願いします" },
+      { "en": "How much will it cost?", "ja": "いくらかかりますか？" },
+      { "en": "You can stop here.", "ja": "ここで止めてください" },
+      { "en": "Does this bus go to ~?", "ja": "このバスは〜に行きますか？" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "taxi-to",
+      "en": "Can you take me to ~?",
+      "ja": "〜まで連れて行ってもらえますか？",
+      "level": "beginner",
+      "nuance": "タクシーに乗ったらまずこれ。住所やホテル名を続ける。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20you%20take%20me%20to%20the%20hotel%3F&op=translate",
+      "expected_responses": [
+        { "en": "Sure, hop in!", "ja": "もちろん、乗ってください！" },
+        { "en": "That'll be about 20 minutes.", "ja": "約20分かかります" },
+        { "en": "Sorry, that's out of my area.", "ja": "申し訳ありませんが、私の担当エリア外です" }
+      ],
+      "branches": [
+        { "en": "Take me to this address, please.", "ja": "この住所までお願いします（紙を見せる）", "type": "related" },
+        { "en": "To the airport, please.", "ja": "空港までお願いします", "type": "variation" },
+        { "en": "Please take the highway.", "ja": "高速道路を使ってください", "type": "related" }
+      ]
+    },
+    {
+      "id": "taxi-how-much",
+      "en": "How much will it cost to ~?",
+      "ja": "〜まではいくらかかりますか？",
+      "level": "beginner",
+      "nuance": "乗る前に金額確認するのが安全。メーター制かどうかも確認する。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=How%20much%20will%20it%20cost%20to%20the%20airport%3F&op=translate",
+      "expected_responses": [
+        { "en": "About $25, depending on traffic.", "ja": "交通状況次第ですが約25ドルです" },
+        { "en": "It's on the meter.", "ja": "メーター制です" },
+        { "en": "Flat rate is $30.", "ja": "定額30ドルです" }
+      ],
+      "branches": [
+        { "en": "Is there a meter?", "ja": "メーターはありますか？", "type": "related" },
+        { "en": "That's too expensive.", "ja": "高すぎます", "type": "related" },
+        { "en": "Can you give me a flat rate?", "ja": "定額でお願いできますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "taxi-stop-here",
+      "en": "You can stop here.",
+      "ja": "ここで止めてください",
+      "level": "beginner",
+      "nuance": "目的地の手前で降りたいときや、場所を指示するときに使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=You%20can%20stop%20here.&op=translate",
+      "expected_responses": [
+        { "en": "That'll be $18.50.", "ja": "18ドル50セントです" },
+        { "en": "Do you need a receipt?", "ja": "領収書は必要ですか？" }
+      ],
+      "branches": [
+        { "en": "Please stop at the corner.", "ja": "角で止めてください", "type": "related" },
+        { "en": "Keep the change.", "ja": "おつりはいいです", "type": "related" },
+        { "en": "Can I get a receipt?", "ja": "領収書をもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "bus-where",
+      "en": "Does this bus go to ~?",
+      "ja": "このバスは〜に行きますか？",
+      "level": "beginner",
+      "nuance": "バス停やバス内で確認するときに使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Does%20this%20bus%20go%20to%20downtown%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, it does.", "ja": "はい、行きます" },
+        { "en": "No, you need the number 5 bus.", "ja": "いいえ、5番のバスに乗ってください" },
+        { "en": "You'll need to transfer at the next stop.", "ja": "次のバス停で乗り換えが必要です" }
+      ],
+      "branches": [
+        { "en": "Which bus goes to ~?", "ja": "〜に行くのはどのバスですか？", "type": "related" },
+        { "en": "Where do I get off for ~?", "ja": "〜にはどこで降りますか？", "type": "related" },
+        { "en": "Can you tell me when to get off?", "ja": "降りる時に教えてもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "subway-ticket",
+      "en": "One ticket to ~ please.",
+      "ja": "〜まで1枚ください",
+      "level": "beginner",
+      "nuance": "窓口での切符購入の基本。自動販売機が主流の国では使わない場合も。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=One%20ticket%20to%20downtown%20please.&op=translate",
+      "expected_responses": [
+        { "en": "That's $3.50.", "ja": "3ドル50セントです" },
+        { "en": "Single or return?", "ja": "片道ですか、往復ですか？" },
+        { "en": "You can use the machine over there.", "ja": "あちらの機械をお使いください" }
+      ],
+      "branches": [
+        { "en": "A round trip to ~, please.", "ja": "〜まで往復1枚ください", "type": "related" },
+        { "en": "Where can I buy a ticket?", "ja": "切符はどこで買えますか？", "type": "related" },
+        { "en": "Is there a day pass?", "ja": "1日乗車券はありますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "subway-which-line",
+      "en": "Which line should I take to ~?",
+      "ja": "〜に行くには何線に乗ればいいですか？",
+      "level": "intermediate",
+      "nuance": "乗り換えが必要な場合に聞くフレーズ。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Which%20line%20should%20I%20take%20to%20get%20to%20downtown%3F&op=translate",
+      "expected_responses": [
+        { "en": "Take the red line to Central, then transfer to the blue line.", "ja": "レッドラインでセントラル駅まで行き、ブルーラインに乗り換えてください" },
+        { "en": "It's direct, no transfer needed.", "ja": "直通なので乗り換えは不要です" },
+        { "en": "It's about 4 stops from here.", "ja": "ここから約4駅です" }
+      ],
+      "branches": [
+        { "en": "Do I need to transfer?", "ja": "乗り換えは必要ですか？", "type": "related" },
+        { "en": "Where do I transfer?", "ja": "どこで乗り換えますか？", "type": "related" },
+        { "en": "How many stops is it?", "ja": "いくつ目の駅ですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "train-platform",
+      "en": "Which platform does the train to ~ leave from?",
+      "ja": "〜行きの電車は何番ホームですか？",
+      "level": "intermediate",
+      "nuance": "大きな駅でホームを探すときに使う。platform = ホーム（番線）。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Which%20platform%20does%20the%20train%20to%20London%20leave%20from%3F&op=translate",
+      "expected_responses": [
+        { "en": "Platform 3, over there.", "ja": "3番ホームです、あちらです" },
+        { "en": "Check the departure board.", "ja": "出発案内板を確認してください" },
+        { "en": "The next train leaves in 8 minutes.", "ja": "次の電車は8分後に出発します" }
+      ],
+      "branches": [
+        { "en": "Is this the right platform?", "ja": "このホームで合っていますか？", "type": "related" },
+        { "en": "When is the next train to ~?", "ja": "次の〜行きはいつですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "uber",
+      "en": "I have a ride booked.",
+      "ja": "配車を予約しています",
+      "level": "beginner",
+      "nuance": "UberやLyft等で待ち合わせするときに使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20have%20a%20ride%20booked.&op=translate",
+      "expected_responses": [
+        { "en": "Are you ~? I'm your driver.", "ja": "〜さんですか？ドライバーです" },
+        { "en": "I'm parked just around the corner.", "ja": "すぐ角のところに停めています" }
+      ],
+      "branches": [
+        { "en": "Are you my driver?", "ja": "あなたが私のドライバーですか？", "type": "related" },
+        { "en": "I'll be right there.", "ja": "すぐ行きます", "type": "related" },
+        { "en": "Can you wait a moment?", "ja": "少し待ってもらえますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "directions-lost",
+      "en": "Excuse me, I'm lost.",
+      "ja": "すみません、迷ってしまいました",
+      "level": "beginner",
+      "nuance": "道に迷ったときの第一声。これで助けを求める姿勢が伝わる。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Excuse%20me%2C%20I%27m%20lost.&op=translate",
+      "expected_responses": [
+        { "en": "No problem! Where are you trying to go?", "ja": "大丈夫です！どこに行きたいですか？" },
+        { "en": "Sorry, I'm not from around here.", "ja": "すみません、この辺りに詳しくないんです" },
+        { "en": "Let me look it up on my phone.", "ja": "スマホで調べますね" }
+      ],
+      "branches": [
+        { "en": "How do I get to ~?", "ja": "〜にはどうやって行きますか？", "type": "related" },
+        { "en": "Can you show me on the map?", "ja": "地図で教えてもらえますか？", "type": "related" },
+        { "en": "Is it far from here?", "ja": "ここから遠いですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "directions-walking",
+      "en": "Can I walk there from here?",
+      "ja": "ここから歩いて行けますか？",
+      "level": "beginner",
+      "nuance": "タクシーに乗るべきか判断したいときに使う。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Can%20I%20walk%20there%20from%20here%3F&op=translate",
+      "expected_responses": [
+        { "en": "Yes, it's about a 10-minute walk.", "ja": "はい、歩いて約10分です" },
+        { "en": "It's quite far, I'd take a taxi.", "ja": "かなり遠いので、タクシーをお勧めします" },
+        { "en": "Go straight, then turn left at the light.", "ja": "まっすぐ進んで、信号を左に曲がってください" }
+      ],
+      "branches": [
+        { "en": "It's about a 10-minute walk.", "ja": "歩いて約10分です", "type": "answer" },
+        { "en": "Go straight / Turn left / Turn right", "ja": "まっすぐ / 左折 / 右折", "type": "vocabulary" },
+        { "en": "It's on your right / left.", "ja": "右 / 左側にあります", "type": "vocabulary" }
+      ]
+    }
+  ]
+}

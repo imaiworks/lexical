@@ -1,0 +1,200 @@
+{
+  "scene_id": "emergency",
+  "scene_label": "緊急・トラブル",
+  "scene_icon": "🆘",
+  "mindset": {
+    "flow": ["まず安全を確保する", "助けを呼ぶ・緊急番号に電話（米911 英999）", "状況をシンプルに伝える", "指示に従う・記録を残す"],
+    "from_them": [
+      { "en": "What's wrong?", "ja": "どうしましたか？" },
+      { "en": "Where are you?", "ja": "今どこにいますか？" },
+      { "en": "Are you hurt?", "ja": "けがはしていますか？" },
+      { "en": "Can I see your ID?", "ja": "身分証を見せてください" }
+    ],
+    "from_you": [
+      { "en": "Help!", "ja": "助けてください！" },
+      { "en": "Call an ambulance!", "ja": "救急車を呼んでください！" },
+      { "en": "I lost my wallet.", "ja": "財布をなくしました" },
+      { "en": "I'm not feeling well.", "ja": "気分が悪いです" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "call-help",
+      "en": "Help!",
+      "ja": "助けてください！",
+      "level": "beginner",
+      "nuance": "緊急時の第一声。これだけで注意を引ける。大声でためらわずに。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Help!&op=translate",
+      "expected_responses": [
+        { "en": "What's wrong? Are you okay?", "ja": "どうしましたか？大丈夫ですか？" },
+        { "en": "I'll call the police!", "ja": "警察を呼びます！" },
+        { "en": "Stay calm, I'm here to help.", "ja": "落ち着いて、助けますよ" }
+      ],
+      "branches": [
+        { "en": "Call the police!", "ja": "警察を呼んでください！", "type": "related" },
+        { "en": "Call an ambulance!", "ja": "救急車を呼んでください！", "type": "related" },
+        { "en": "Is there a doctor?", "ja": "医者はいますか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "call-ambulance",
+      "en": "I need an ambulance.",
+      "ja": "救急車が必要です",
+      "level": "beginner",
+      "nuance": "緊急電話（911、999など）でも使える。場所を聞かれるので答える準備を。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20an%20ambulance.&op=translate",
+      "expected_responses": [
+        { "en": "What's your location?", "ja": "今どこにいますか？" },
+        { "en": "Is the person conscious?", "ja": "意識はありますか？" },
+        { "en": "Help is on the way.", "ja": "助けが向かっています" }
+      ],
+      "branches": [
+        { "en": "Someone collapsed.", "ja": "人が倒れました", "type": "related" },
+        { "en": "There's been an accident.", "ja": "事故がありました", "type": "related" },
+        { "en": "We are at ~.", "ja": "現在地は〜です", "type": "related" }
+      ]
+    },
+    {
+      "id": "not-feeling-well",
+      "en": "I'm not feeling well.",
+      "ja": "気分が悪いです",
+      "level": "beginner",
+      "nuance": "体調不良を伝える万能フレーズ。具体的な症状を続けると伝わりやすい。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%27m%20not%20feeling%20well.&op=translate",
+      "expected_responses": [
+        { "en": "Do you need to sit down?", "ja": "座りますか？" },
+        { "en": "Should I call a doctor?", "ja": "医者を呼びましょうか？" },
+        { "en": "What symptoms do you have?", "ja": "どんな症状ですか？" }
+      ],
+      "branches": [
+        { "en": "I have a fever.", "ja": "熱があります", "type": "variation" },
+        { "en": "I have a stomachache.", "ja": "お腹が痛いです", "type": "variation" },
+        { "en": "I feel dizzy.", "ja": "めまいがします", "type": "variation" },
+        { "en": "I'm allergic to ~.", "ja": "〜にアレルギーがあります", "type": "related" }
+      ]
+    },
+    {
+      "id": "lost-wallet",
+      "en": "I lost my wallet.",
+      "ja": "財布をなくしました",
+      "level": "beginner",
+      "nuance": "紛失したものを変えるだけで応用できる。lost = 紛失した。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20lost%20my%20wallet.&op=translate",
+      "expected_responses": [
+        { "en": "When and where did you last have it?", "ja": "最後に持っていたのはいつ、どこですか？" },
+        { "en": "You should report it to the police.", "ja": "警察に届け出た方がいいです" },
+        { "en": "Did you check at the lost and found?", "ja": "遺失物係には確認しましたか？" }
+      ],
+      "branches": [
+        { "en": "I lost my passport.", "ja": "パスポートをなくしました", "type": "variation" },
+        { "en": "My bag was stolen.", "ja": "バッグを盗まれました", "type": "variation" },
+        { "en": "Where is the lost and found?", "ja": "遺失物係はどこですか？", "type": "related" },
+        { "en": "I need to report a theft.", "ja": "盗難を届け出たいのですが", "type": "related" }
+      ]
+    },
+    {
+      "id": "police",
+      "en": "I need to go to the police station.",
+      "ja": "警察署に行く必要があります",
+      "level": "intermediate",
+      "nuance": "盗難・紛失の届け出には警察証明書が必要。保険請求にも使える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20to%20go%20to%20the%20police%20station.&op=translate",
+      "expected_responses": [
+        { "en": "The nearest station is two blocks away.", "ja": "最寄りの警察署は2ブロック先です" },
+        { "en": "I can call them for you.", "ja": "私が電話しましょうか" },
+        { "en": "Do you need an interpreter?", "ja": "通訳は必要ですか？" }
+      ],
+      "branches": [
+        { "en": "I need a police report.", "ja": "警察の証明書が必要です", "type": "related" },
+        { "en": "I want to report a crime.", "ja": "犯罪を届け出たいのですが", "type": "related" },
+        { "en": "Where is the nearest police station?", "ja": "最寄りの警察署はどこですか？", "type": "related" }
+      ]
+    },
+    {
+      "id": "hospital",
+      "en": "Where is the nearest hospital?",
+      "ja": "最寄りの病院はどこですか？",
+      "level": "beginner",
+      "nuance": "緊急ではないが医療が必要なときに。pharmacy = 薬局も合わせて覚える。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Where%20is%20the%20nearest%20hospital%3F&op=translate",
+      "expected_responses": [
+        { "en": "It's about a 5-minute drive.", "ja": "車で約5分です" },
+        { "en": "I'll take you there.", "ja": "連れて行きます" },
+        { "en": "Call 911 if it's an emergency.", "ja": "緊急の場合は911に電話してください" }
+      ],
+      "branches": [
+        { "en": "I need to see a doctor.", "ja": "医師に診てもらいたいのですが", "type": "related" },
+        { "en": "Do you have travel insurance?", "ja": "旅行保険はお持ちですか？（聞かれる）", "type": "related" },
+        { "en": "I have travel insurance.", "ja": "旅行保険に入っています", "type": "answer" }
+      ]
+    },
+    {
+      "id": "language-barrier",
+      "en": "Do you speak Japanese?",
+      "ja": "日本語は話せますか？",
+      "level": "beginner",
+      "nuance": "英語が難しくなったときの切り札。意外と話せる人がいることも。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Do%20you%20speak%20Japanese%3F&op=translate",
+      "expected_responses": [
+        { "en": "Sorry, I don't.", "ja": "すみません、話せません" },
+        { "en": "A little! Let me try.", "ja": "少しなら！やってみます" },
+        { "en": "Let me find someone who does.", "ja": "話せる人を探します" }
+      ],
+      "branches": [
+        { "en": "Can you speak slowly?", "ja": "ゆっくり話してもらえますか？", "type": "related" },
+        { "en": "Can you write it down?", "ja": "書いてもらえますか？", "type": "related" },
+        { "en": "I don't understand.", "ja": "わかりません", "type": "related" }
+      ]
+    },
+    {
+      "id": "embassy",
+      "en": "I need to contact the Japanese embassy.",
+      "ja": "日本大使館に連絡する必要があります",
+      "level": "intermediate",
+      "nuance": "パスポート紛失や緊急事態のとき。大使館の連絡先は事前にメモしておく。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20to%20contact%20the%20Japanese%20embassy.&op=translate",
+      "expected_responses": [
+        { "en": "I'll help you find the number.", "ja": "番号を探すのをお手伝いします" },
+        { "en": "You can use this phone.", "ja": "この電話を使ってください" }
+      ],
+      "branches": [
+        { "en": "I need an emergency passport.", "ja": "緊急パスポートが必要です", "type": "related" },
+        { "en": "My passport was stolen.", "ja": "パスポートを盗まれました", "type": "related" }
+      ]
+    },
+    {
+      "id": "fire",
+      "en": "Fire! Get out!",
+      "ja": "火事！逃げてください！",
+      "level": "beginner",
+      "nuance": "火災のときは大声で周囲に知らせる。消火器はfire extinguisher。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=Fire!%20Get%20out!&op=translate",
+      "expected_responses": [
+        { "en": "Everyone evacuate now!", "ja": "全員今すぐ避難してください！" },
+        { "en": "Use the emergency exit!", "ja": "非常口を使ってください！" }
+      ],
+      "branches": [
+        { "en": "Where is the emergency exit?", "ja": "非常口はどこですか？", "type": "related" },
+        { "en": "Call the fire department!", "ja": "消防署に電話してください！", "type": "related" }
+      ]
+    },
+    {
+      "id": "pharmacy",
+      "en": "I need something for a headache.",
+      "ja": "頭痛薬が欲しいのですが",
+      "level": "beginner",
+      "nuance": "薬局で症状を伝えるシンプルな方法。something for ~ = 〜の薬。",
+      "google_translate_url": "https://translate.google.com/?sl=en&tl=ja&text=I%20need%20something%20for%20a%20headache.&op=translate",
+      "expected_responses": [
+        { "en": "We have ibuprofen or acetaminophen.", "ja": "イブプロフェンとアセトアミノフェンがあります" },
+        { "en": "Do you have any allergies?", "ja": "アレルギーはありますか？" },
+        { "en": "Take two tablets with water.", "ja": "水と一緒に2錠服用してください" }
+      ],
+      "branches": [
+        { "en": "something for a cold / stomachache / fever", "ja": "風邪薬 / 胃薬 / 解熱剤", "type": "vocabulary" },
+        { "en": "Do you have ~ without a prescription?", "ja": "処方箋なしで〜はありますか？", "type": "pattern" },
+        { "en": "How many times a day should I take it?", "ja": "1日何回飲めばいいですか？", "type": "related" }
+      ]
+    }
+  ]
+}
