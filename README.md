@@ -3,7 +3,7 @@
 **フレーズで入って、フレーズを広げて、フレーズから文法を知る。**  
 旅行・仕事・日常、すぐ使える英語を Lexical Approach で。
 
-🔗 https://imaiworks.github.io/lexical/
+🔗 https://lexical.litmake.com
 
 ---
 
